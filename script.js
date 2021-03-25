@@ -16,6 +16,7 @@ start.addEventListener("input", calculateRate);
 function updateDaysView() {
     daysView.innerHTML = days.value;
 }
+console.log(days);
 
 function calculateRate() {
     result.innerHTML = Math.floor(
