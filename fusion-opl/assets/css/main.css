@@ -31,6 +31,7 @@ a {
   -moz-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
+
 }
 
 a:hover {
@@ -49,9 +50,37 @@ p {
 }
 
 ul, ol {
+  font-size: 16px;
+  color: #222222;
   list-style: outside none none;
   margin: 0;
   padding: 0;
+}
+
+.oberpunkt{
+font-size: 20px;
+color: #222222;
+list-style: outside none none;
+margin: 0;
+padding: 0;
+
+
+}
+.unterpunkt a{
+  font-size: 16px;
+  color: #222222;
+  list-style: outside none none;
+  margin: 5px;
+  margin-left: 5px;
+
+}
+.unterpunkt:hover a{
+  font-size: 18px;
+  color: #F63854;
+  list-style: outside none none;
+  margin: 5px;
+  margin-left: 5px;
+
 }
 
 ul li, ol li {
