@@ -31,10 +31,12 @@ a {
   -moz-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
+  color: #888888;
 }
 
 a:hover {
   text-decoration: none;
+  color: #e99d42;
 }
 
 a a:focus {
@@ -244,7 +246,7 @@ a.back-to-top i {
   height: 40px;
   line-height: 40px;
   color: #fff;
-  background: #F63854;
+  background: #e99d42;
   border-radius: 30px;
   text-align: center;
   transition: all 0.2s ease-in-out;
@@ -1355,6 +1357,10 @@ textarea {
   border-radius: 0;
   background: transparent;
   color: #F63854;
+}
+
+.logo-footer {
+  max-width: 20px;
 }
 
 #copyright .copyright-content {
