@@ -31,7 +31,11 @@ a {
   -moz-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
+<<<<<<< HEAD
   color: #888888;
+=======
+
+>>>>>>> 647aec7bfc6b885a1ba3c9126f6cdf4787718307
 }
 
 a:hover {
@@ -51,9 +55,37 @@ p {
 }
 
 ul, ol {
+  font-size: 16px;
+  color: #222222;
   list-style: outside none none;
   margin: 0;
   padding: 0;
+}
+
+.oberpunkt{
+font-size: 22px;
+color: #222222;
+list-style: outside none none;
+margin: 0;
+padding: 0;
+
+
+}
+.unterpunkt a{
+  font-size: 16px;
+  color: #222222;
+  list-style: outside none none;
+  margin: 5px;
+  margin-left: 5px;
+
+}
+.unterpunkt:hover a{
+  font-size: 18px;
+  color: #F63854;
+  list-style: outside none none;
+  margin: 5px;
+  margin-left: 5px;
+
 }
 
 ul li, ol li {
@@ -81,7 +113,38 @@ a:not([href]):not([tabindex]) {
   font-weight: 700;
   position: relative;
 }
+.accordion {
+  background-color: #ffffff;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  right: 20px;
+  font-family: 'Arvo', serif;
+}
 
+
+
+.accordion:after {
+  content: '\002B';
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+
+.panel {
+    margin-left: 60px;
+    padding: 5 18px;
+  max-height: 0;
+  overflow: hidden;
+  margin: 10px;
+  transition: max-height 0.5s ease-out;
+}
 .shape {
   height: 1px;
   margin: 0 auto 30px;
@@ -648,7 +711,7 @@ hr {
 }
 
 .navbar li.active a.nav-link {
-  color: #preset;
+  color: #e99d42;
 }
 
 .dropdown-toggle::after {
@@ -1276,7 +1339,7 @@ textarea {
 
 /*cta
 */
-#cta{background: ;}
+#cta{background: #e99d42;}
 
 /* Footer Area Start */
 .footer-area {
