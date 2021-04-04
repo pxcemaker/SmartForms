@@ -31,11 +31,6 @@ a {
   -moz-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
-<<<<<<< HEAD
-  color: #888888;
-=======
-
->>>>>>> 647aec7bfc6b885a1ba3c9126f6cdf4787718307
 }
 
 a:hover {
