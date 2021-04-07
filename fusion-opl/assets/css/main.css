@@ -482,7 +482,8 @@ hr {
   border-radius: 4px;
   text-align: center;
   margin: 15px 0;
-  box-shadow: 0 0 12px #F4F4F4;
+  
+  border: solid #e99d42;
   transition: all 0.3s ease-in-out 0s;
   -moz-transition: all 0.3s ease-in-out 0s;
   -webkit-transition: all 0.3s ease-in-out 0s;
@@ -490,7 +491,7 @@ hr {
 }
 
 .services-item .icon {
-  border: 1px solid #f1f1f1;
+  border: 1px solid #e99d42;
   width: 70px;
   height: 70px;
   border-radius: 50%;
@@ -829,8 +830,9 @@ hr {
 #hero-area .header-button {
   margin-top: 20px;
   color: #222222;
+  left: 0;
   /*Anpassung*/
-  display: flex;
+  
   height: 45px;
 }
 
@@ -1365,6 +1367,8 @@ textarea {
 
 .footer-area .textwidget p {
   color: #333;
+  padding: 8px;
+
 }
 
 .footer-area .footer-link li {
