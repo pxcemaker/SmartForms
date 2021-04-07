@@ -818,7 +818,7 @@ hr {
   padding: 180px 0 80px;
 }
 
-#hero-area .contents .head-title {
+#hero-area .head-title {
   color: #222222;
   font-size: 42px;
   font-weight: 700;
@@ -826,16 +826,19 @@ hr {
   margin-bottom: 10px;
 }
 
-#hero-area .contents .header-button {
+#hero-area .header-button {
   margin-top: 20px;
   color: #222222;
   /*Anpassung*/
   display: flex;
-  justify-content: center;
+  height: 45px;
 }
 
-#hero-area .contents .header-button .btn {
+#hero-area .header-button .btn {
   margin-right: 10px;
+  width: 150px;
+  height: 45px;
+  margin: auto;
 }
 
 .sloder-img {
