@@ -1,3 +1,49 @@
 .app-profile {
-  padding: 10px;
+}
+
+#profilesection {
+  background-color: #E99D42;
+  height: 30em;
+  font-weight: bold;
+  color: #EAD3BD;
+}
+
+#username {
+  font-size: 3em;
+}
+
+h1 {
+  font-size: 3em;
+  color: #EAD3BD;
+  line-height: 1.3em;
+  margin: 20px;
+}
+
+.contentcontainer {
+  padding-left: 80px;
+  padding-right: 80px;
+  width: inherit;
+}
+
+.onesurveyelement {
+  padding: 20px;
+  margin: 10px;
+  width: 28%;
+  display: inline-block;
+  background-color: #551868;
+  vertical-align: top;
+  border-radius: 20px;
+}
+
+#profilepicture {
+  width: 150px;
+  height: 150px;
+  background-color: #FFFFFF;
+  display: inline-block;
+  border-radius: 20px;
+}
+
+#profiletext {
+  padding: 30px;
+  display: inline-block;
 }
