@@ -31,11 +31,7 @@ a {
   -moz-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
-<<<<<<< HEAD
   color: #888888;
-=======
-
->>>>>>> 647aec7bfc6b885a1ba3c9126f6cdf4787718307
 }
 
 a:hover {
@@ -81,7 +77,7 @@ padding: 0;
 }
 .unterpunkt:hover a{
   font-size: 18px;
-  color: #F63854;
+  color: #3b2878;
   list-style: outside none none;
   margin: 5px;
   margin-left: 5px;
@@ -150,7 +146,7 @@ a:not([href]):not([tabindex]) {
   margin: 0 auto 30px;
   position: relative;
   width: 60px;
-  background-color: #F63854;
+  background-color: #3b2878;
 }
 
 .padding-none {
@@ -192,16 +188,16 @@ a:not([href]):not([tabindex]) {
 }
 
 .btn-common {
-  background-color: #F63854;
+  background-color: #3b2878;
   position: relative;
   z-index: 1;
   text-transform: uppercase;
 }
 
 .btn-common:hover {
-  color: #F63854;
+  color: #3b2878;
   background: transparent;
-  border: 1px dotted #F63854;
+  border: 1px dotted #3b2878;
   box-shadow: 0 6px 22px rgba(0, 0, 0, 0.1);
   transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
@@ -209,23 +205,23 @@ a:not([href]):not([tabindex]) {
 }
 
 .btn-border {
-  color: #F63854;
+  color: #3b2878;
   background-color: transparent;
-  border: 1px solid #F63854;
+  border: 1px solid #3b2878;
   border-radius: 30px;
   text-transform: uppercase;
 }
 
 .btn-border:hover {
   color: #fff;
-  border-color: #F63854;
-  background-color: #F63854;
+  border-color: #3b2878;
+  background-color: #3b2878;
 }
 
 .btn-border:focus {
   color: #fff;
-  border-color: #F63854;
-  background-color: #F63854;
+  border-color: #3b2878;
+  background-color: #3b2878;
 }
 
 .btn-lg {
@@ -236,12 +232,12 @@ a:not([href]):not([tabindex]) {
 
 .btn-rm {
   padding: 7px 0px;
-  color: #F63854;
+  color: #3b2878;
   text-transform: capitalize;
 }
 
 .btn-rm:hover {
-  color: #F63854;
+  color: #3b2878;
 }
 
 button:focus {
@@ -249,7 +245,7 @@ button:focus {
 }
 
 .icon-close, .icon-check {
-  color: #F63854;
+  color: #3b2878;
 }
 
 .social-icon a {
@@ -352,7 +348,7 @@ a.back-to-top:hover, a.back-to-top:focus {
   height: 100%;
   border-radius: 100%;
   border: 7px solid transparent;
-  border-top-color: #F63854;
+  border-top-color: #3b2878;
 }
 
 #loader-1:before {
@@ -440,7 +436,7 @@ hr {
 }
 
 #features .box-item .icon i {
-  color: #F63854;
+  color: #3b2878;
   font-size: 30px;
   -webkit-transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
@@ -469,7 +465,7 @@ hr {
 }
 
 #features .box-item:hover h4 {
-  color: #F63854;
+  color: #3b2878;
 }
 
 #features .show-box {
@@ -486,7 +482,8 @@ hr {
   border-radius: 4px;
   text-align: center;
   margin: 15px 0;
-  box-shadow: 0 0 12px #F4F4F4;
+  
+  border: solid #e99d42;
   transition: all 0.3s ease-in-out 0s;
   -moz-transition: all 0.3s ease-in-out 0s;
   -webkit-transition: all 0.3s ease-in-out 0s;
@@ -494,7 +491,7 @@ hr {
 }
 
 .services-item .icon {
-  border: 1px solid #f1f1f1;
+  border: 1px solid #e99d42;
   width: 70px;
   height: 70px;
   border-radius: 50%;
@@ -507,7 +504,7 @@ hr {
 
 .services-item .icon i {
   font-size: 30px;
-  color: #F63854;
+  color: #3b2878;
   line-height: 70px;
   transition: all 0.3s ease-in-out 0s;
   -moz-transition: all 0.3s ease-in-out 0s;
@@ -528,7 +525,7 @@ hr {
 }
 
 .services-item .services-content h3 a:hover {
-  color: #F63854;
+  color: #3b2878;
 }
 
 .services-item:hover {
@@ -536,7 +533,7 @@ hr {
 }
 
 .services-item:hover .icon {
-  background: #F63854;
+  background: #3b2878;
 }
 
 .services-item:hover .icon i {
@@ -606,18 +603,18 @@ hr {
 
 .top-nav-collapse .navbar-nav .nav-link:hover {
   cursor: pointer;
-  color: #F63854 !important;
-  border-color: #F63854 !important;
+  color: #3b2878 !important;
+  border-color: #3b2878 !important;
 }
 
 .top-nav-collapse .navbar-nav .nav-link:hover {
-  color: #F63854 !important;
+  color: #3b2878 !important;
 }
 
 .navbar-expand-md .navbar-toggler {
   background: transparent;
-  border: 1px solid #F63854;
-  color: #F63854;
+  border: 1px solid #3b2878;
+  color: #3b2878;
   border-radius: 4px;
   cursor: pointer;
 }
@@ -627,8 +624,8 @@ hr {
 }
 
 .top-nav-collapse .navbar-nav li.active a.nav-link {
-  color: #F63854 !important;
-  border-color: #F63854;
+  color: #3b2878 !important;
+  border-color: #3b2878;
 }
 
 .indigo {
@@ -665,7 +662,7 @@ hr {
 }
 
 .navbar-expand-md .navbar-nav .nav-link:before {
-  background-color: #F63854;
+  background-color: #3b2878;
   content: '';
   display: block;
   height: 2px;
@@ -692,14 +689,14 @@ hr {
 .navbar-expand-md .navbar-nav .nav-link.active,
 .navbar-expand-md .navbar-nav .nav-link.open,
 .navbar-expand-md .navbar-nav .open > .nav-link {
-  color: #F63854 !important;
+  color: #3b2878 !important;
   width: 100%;
 }
 
 .navbar-expand-md .navbar-nav .nav-link:hover,
 .navbar-expand-md .navbar-nav .nav-link:hover::before,
 .navbar-expand-md .navbar-nav .nav-link:focus {
-  color: #F63854;
+  color: #3b2878;
   width: 100%;
   transition: width 1s;
   -webkit-transition: width 1s;
@@ -795,7 +792,7 @@ hr {
 .dropdown .dropdown-item:focus,
 .dropdown .dropdown-item:hover,
 .dropdown .dropdown-item.active {
-  color: #F63854;
+  color: #3b2878;
   background: #f7f7f7;
 }
 
@@ -822,7 +819,7 @@ hr {
   padding: 180px 0 80px;
 }
 
-#hero-area .contents .head-title {
+#hero-area .head-title {
   color: #222222;
   font-size: 42px;
   font-weight: 700;
@@ -830,13 +827,20 @@ hr {
   margin-bottom: 10px;
 }
 
-#hero-area .contents .header-button {
+#hero-area .header-button {
   margin-top: 20px;
   color: #222222;
+  left: 0;
+  /*Anpassung*/
+  
+  height: 45px;
 }
 
-#hero-area .contents .header-button .btn {
+#hero-area .header-button .btn {
   margin-right: 10px;
+  width: 150px;
+  height: 45px;
+  margin: auto;
 }
 
 .sloder-img {
@@ -925,7 +929,7 @@ hr {
 }
 
 .team-item .info-text h3 a:hover {
-  color: #F63854;
+  color: #3b2878;
 }
 
 .team-item .info-text p {
@@ -990,7 +994,7 @@ hr {
 }
 
 #pricing .table .icon-box i {
-  color: #F63854;
+  color: #3b2878;
   line-height: 80px;
   font-size: 30px;
   -webkit-transition: all .3s linear;
@@ -1007,7 +1011,7 @@ hr {
 
 #pricing .table .pricing-header .price-value {
   font-size: 24px;
-  color: #F63854;
+  color: #3b2878;
   position: relative;
   text-align: center;
   font-weight: 700;
@@ -1048,7 +1052,7 @@ hr {
 }
 
 #pricing .table:hover .icon-box {
-  background: #F63854;
+  background: #3b2878;
 }
 
 #pricing .table:hover .icon-box i {
@@ -1061,7 +1065,7 @@ hr {
 }
 
 #pricing #active-tb .icon-box {
-  background: #F63854;
+  background: #3b2878;
 }
 
 #pricing #active-tb .icon-box i {
@@ -1074,7 +1078,7 @@ hr {
 
 .testimonial {
   position: relative;
-  background-color: #F63854;
+  background-color: #3b2878;
 }
 
 .testimonial-item {
@@ -1106,7 +1110,7 @@ hr {
 }
 
 .testimonial-item .content .star-icon i {
-  color: #F63854;
+  color: #3b2878;
 }
 
 .testimonial-item .info h2 {
@@ -1137,7 +1141,7 @@ hr {
 .testimonial-item .info .indicator {
   font-size: 26px;
   font-weight: 700;
-  color: #F63854;
+  color: #3b2878;
 }
 
 .testimonial-item .icon-social {
@@ -1222,7 +1226,7 @@ hr {
 }
 
 .owl-carousel button.owl-dot.active span, .owl-carousel button.owl-dot.clickable, .owl-carousel button.owl-dot:hover span {
-  background: #F63854;
+  background: #3b2878;
 }
 
 .slick-slider {
@@ -1262,7 +1266,7 @@ hr {
 }
 
 .form-control:focus {
-  border-color: #F63854;
+  border-color: #3b2878;
   box-shadow: none;
   outline: none;
 }
@@ -1317,7 +1321,7 @@ textarea {
 }
 
 .contact-right .contact-icon {
-  background: #F63854;
+  background: #3b2878;
   color: #fff;
   border-radius: 4px;
   font-size: 20px;
@@ -1363,6 +1367,8 @@ textarea {
 
 .footer-area .textwidget p {
   color: #333;
+  padding: 8px;
+
 }
 
 .footer-area .footer-link li {
@@ -1377,7 +1383,7 @@ textarea {
 }
 
 .footer-area .footer-link li a:hover {
-  color: #F63854;
+  color: #3b2878;
 }
 
 .footer-area .address li {
@@ -1419,7 +1425,7 @@ textarea {
   height: 52px;
   border-radius: 0;
   background: transparent;
-  color: #F63854;
+  color: #3b2878;
 }
 
 .logo-footer {
@@ -1440,7 +1446,7 @@ textarea {
 }
 
 #copyright p a {
-  color: #F63854;
+  color: #3b2878;
 }
 
 .social-icon a {
@@ -1482,4 +1488,13 @@ textarea {
 
 .social-icon .google:hover {
   background: #CE332A;
+}
+
+/* ==========================================================================
+   Eigene Anpassungen
+   ========================================================================== */
+
+
+#start-btn {
+  
 }
