@@ -828,14 +828,17 @@ hr {
 3. Hero Area
 ========================================================================== */
 #hero-area {
-  background-image: url(../img/hero-area.svg);
+  background-image: url(../img/smartformBild.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 650px;
   position: relative;
   overflow: hidden;
-  padding: 180px 0 80px;
+ padding: 280px 0 80px;
+padding-bottom: 300px;
+border-bottom-left-radius: 90px;
+border-bottom-right-radius: 90px;
 }
 
 #hero-area .head-title {
