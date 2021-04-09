@@ -224,17 +224,17 @@ a:not([href]):not([tabindex]) {
 
 
 .btn-border {
-  color: #3b2878;
+  color: #ffffff;
   background-color: transparent;
-  border: 1px solid #3b2878;
+  border: 1px solid #ffffff;
   border-radius: 30px;
   text-transform: uppercase;
 }
 
 .btn-border:hover {
   color: #fff;
-  border-color: #3b2878;
-  background-color: #3b2878;
+  border-color: #E99D42;
+  background-color: #E99D42;
 }
 
 .btn-border:focus {
@@ -864,6 +864,7 @@ line-height: 110px;
   width: 150px;
   height: 45px;
   margin: auto;
+    margin-top: 30px;
 }
 
 .sloder-img {
