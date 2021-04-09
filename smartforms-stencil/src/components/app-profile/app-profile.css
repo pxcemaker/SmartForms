@@ -3,7 +3,7 @@
 
 #profilesection {
   position: relative;
-  background-color: #E99D42;
+  background-color: var(--gelb);
   height: 30em;
   font-weight: bold;
   color: #EAD3BD;

@@ -7,6 +7,12 @@
 
   Any global CSS variables should also be applied here.
 */
+:root {
+  --lila: #3b2878;
+  --gelb: #e99d42;
+  --beige: #edddca;
+  --verlauf: linear-gradient(48deg, rgba(233,157,66,1) 0%, rgba(59,40,120,1) 34%, rgba(59,40,120,1) 100%);
+}
 
 body {
   margin: 0px;
