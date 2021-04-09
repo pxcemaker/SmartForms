@@ -18,7 +18,7 @@ export class AppProfile {
     return '';
   }
   componentWillLoad() {
-    return fetch('/assets/blubb.json')
+    return fetch('/assets/surveymock.json')
       .then(response => response.json())
       .then(data => {
         this.content = data;
@@ -30,7 +30,7 @@ export class AppProfile {
       return (
         <div class="app-profile">
           <div id="profilesection">
-            <div class="contentcontainer">
+            <div class="contentcontainer profilecontent">
               <div id="profilepicture"></div>
               <div id="profiletext">
                 <p id="username">Username</p>
@@ -44,10 +44,21 @@ export class AppProfile {
               <h1>
                 Umfragen<br></br>Übersicht
               </h1>
+              <div id="newsurveybutton" class="surveyelement">
+                <p>+</p>
+              </div>
+
               {this.content.map(umfrage => (
-                <div class="onesurveyelement">
-                  <div>{umfrage.title}</div>
-                  <div>{umfrage.body}</div>
+                <div class="putinline">
+                  <div class="onesurveyelement surveyelement"></div>
+                  <div class="surveyelementtext surveyelement">
+                    <div>
+                      <h2>{umfrage.title}</h2>
+                    </div>
+                    <div>
+                      <p>{umfrage.numberOfQuestions} Fragen</p>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
@@ -63,5 +74,8 @@ class Umfrage {
   userId: number;
   id: number;
   title: string;
-  body: string;
+  numberOfQuestions: number;
+  creationDate: string;
+  lastEdited: string;
+  status: string;
 }
