@@ -1,16 +1,19 @@
+@import '../../global/app.scss';
+
 .app-profile {
 }
 
 #profilesection {
   position: relative;
-  background-color: var(--gelb);
+  background-color: $yellow;
   height: 30em;
   font-weight: bold;
-  color: #EAD3BD;
+  color: #ead3bd;
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
 }
 
+/*
 .contentcontainer {
   padding-left: 80px;
   padding-right: 80px;
@@ -94,3 +97,4 @@ height: 5em;
   font-size: 4em;
   padding: 0;
 }
+*/

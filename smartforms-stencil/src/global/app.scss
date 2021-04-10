@@ -7,14 +7,21 @@
 
   Any global CSS variables should also be applied here.
 */
+@import '../../node_modules/bootstrap/scss/_functions.scss';
+@import '../../node_modules/bootstrap/scss/_variables.scss';
+@import '../../node_modules/bootstrap/scss/_mixins.scss';
+
 :root {
   --lila: #3b2878;
   --gelb: #e99d42;
   --beige: #edddca;
-  --verlauf: linear-gradient(48deg, rgba(233,157,66,1) 0%, rgba(59,40,120,1) 34%, rgba(59,40,120,1) 100%);
+  --verlauf: linear-gradient(48deg, rgba(233, 157, 66, 1) 0%, rgba(59, 40, 120, 1) 34%, rgba(59, 40, 120, 1) 100%);
 }
 
+$yellow: red;
+
 body {
+  background-color: $gray-900;
   margin: 0px;
   padding: 0px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
