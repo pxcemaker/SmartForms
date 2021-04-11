@@ -83,7 +83,6 @@ h1 {
 
 .empty-plate {
   border: 1px solid #656565;
-  text-align: center;
 }
 
 .empty-plus {
@@ -91,12 +90,23 @@ h1 {
   font-weight: lighter;
   line-height: 4.5rem;
   padding: 0;
+  transition: 0.2s;
+}
+
+.empty-plate:hover {
+  box-shadow: 0 0.2rem 0.4rem 0.2rem rgba(27, 38, 49, 0.1);
+}
+
+.empty-plate:hover .empty-plus {
+  color: #e99d42;
+  font-weight: bold;
 }
 
 .surveyplate {
   height: 4.5rem;
   border-radius: 2.5rem;
   margin-bottom: 0.5rem;
+  text-align: center;
 }
 
 .first-plate {
@@ -128,4 +138,27 @@ h1 {
   font-size: 0.8rem;
   font-weight: lighter;
   line-height: 0.8rem;
+}
+
+.surveyplate .icons {
+  margin: 0 auto;
+  font-size: 2rem;
+  line-height: 4.5rem;
+  padding: 0;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.surveyplate:hover .icons {
+  opacity: 1;
+}
+
+i {
+  margin: 0 0.5rem 0 0.5rem;
+  color: white;
+  transition: 0.2s;
+}
+
+.icons i:hover {
+  color: #e99d42;
 }
