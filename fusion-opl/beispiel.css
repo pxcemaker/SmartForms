@@ -11,6 +11,7 @@ body {
     display: flex;
     height: 300px;
     flex-direction: column;
+    box-sizing: border-box;
 }
 
 .checkbox-kasten {
@@ -59,7 +60,91 @@ input[type="checkbox"] {
 
   /*Checkboxen: Ende*/
 
-  /*Radio-Buttons: Anfang*/
+  /*Radio-Buttons: Anfang --> https://blog.kulturbanause.de/2015/03/formular-styling-mit-css-select-listen-radio-buttons-und-checkboxen-individuell-gestalten/ */
+  /* remove standard-styles */
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border:none;
+    border-radius: 0;
+    font-size: 1em;
+    width: 100%
+  } 
   
+  /* graceful degradation for ie8 */
+  input[type='checkbox'],
+  input[type='radio'] {
+    width:auto;
+    float:left;
+    margin-right: .75em;
+    background:transparent;
+    border:none;
+  }
+  
+  input[type='checkbox']:checked,
+  input[type='checkbox']:not(:checked),
+  input[type='radio']:checked,
+  input[type='radio']:not(:checked) {
+    background: transparent;
+    position: relative;
+    visibility: hidden;
+    margin:0;
+    padding:0;
+  }
+  
+  input[type='checkbox'] + label,
+  input[type='radio'] + label {
+    cursor: pointer;
+  }
+  
+  input[type='checkbox']:checked + label::before,
+input[type='checkbox']:not(:checked) + label::before,
+input[type='radio']:checked + label::before,
+input[type='radio']:not(:checked) + label::before {
+    content:' ';
+    display:inline-block;
+    width: 17px;
+    height:17px;
+    position: relative;
+    top:4px;
+    border: 1px solid #bbb;
+    background: white;
+    margin-right: 1em;
+    box-shadow: inset 0 1px 1px 0 rgba(0,0,0,.1);
+}
+
+input[type=radio]:checked + label::before,
+input[type=radio]:not(:checked) + label::before {
+  border-radius: 30px;
+}
+
+input[type='checkbox']:hover  + label::before,
+input[type='radio']:hover  + label::before {
+  background:#ddd;
+  box-shadow: inset 0 0 0 2px white;
+}
+
+input[type='checkbox']:checked  + label::before,
+input[type='radio']:checked  + label::before {
+  background:#e99d42;
+  box-shadow: inset 0 0 0 2px white;
+}
   /*Radio-Buttons: Ende*/
+
+/*Text einzeilig: Anfang*/
+input[type='text']{
+    width: 200%;
+    padding: .75em 1em .5em 1em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+/*Text einzeilig: Ende*/
+
+/*Text mehrzeilig: Anfang*/
+textarea {
+    width: 200%;
+    padding: .75em 1em .5em 1em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+/*Text mehrzeilig: Ende*/
 
