@@ -1519,6 +1519,6 @@ textarea {
    ========================================================================== */
 
 
-#start-btn {
-  
+.beispielcontainer {
+  border-bottom: grey solid 1px;
 }
