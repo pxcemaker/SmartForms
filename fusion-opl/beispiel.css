@@ -9,7 +9,7 @@ body {
 
 .checkbox-container {
     display: flex;
-    height: 300px;
+    height: auto;
     flex-direction: column;
     box-sizing: border-box;
 }
@@ -25,6 +25,7 @@ body {
     margin: 5px;
     padding-left: 20px;
     display: flex;
+    overflow: hidden;
 
 }
 
@@ -105,7 +106,7 @@ input[type='radio']:not(:checked) + label::before {
     content:' ';
     display:inline-block;
     width: 17px;
-    height:17px;
+    height: 17px;
     position: relative;
     top:4px;
     border: 1px solid #bbb;
@@ -141,10 +142,145 @@ input[type='text']{
 /*Text einzeilig: Ende*/
 
 /*Text mehrzeilig: Anfang*/
+
+.mehrzeilig-container {
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.mehrzeilig-kasten {
+    background-color: #fff;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 7px 20px 0px rgba(50, 50, 50, 0.41);
+    -moz-box-shadow:    0px 7px 20px 0px rgba(50, 50, 50, 0.41);
+    box-shadow:         0px 7px 20px 0px rgba(50, 50, 50, 0.41);
+    width: 30%;
+    height: 140px;
+    margin: 5px;
+    padding-left: 20px;
+    display: flex;
+    overflow: hidden;
+
+}
+
+.mehrzeilig-content {
+    align-self: center;
+}
+
 textarea {
-    width: 200%;
+    width: auto;
+    resize: none;
     padding: .75em 1em .5em 1em;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 14pt;
+    border: none;
 }
 /*Text mehrzeilig: Ende*/
+
+
+/*Range: Anfang*/
+.range-container {
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%; /* Width of the outside container */
+}
+
+.range-kasten {
+    background-color: #fff;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 7px 20px 0px rgba(50, 50, 50, 0.41);
+    -moz-box-shadow:    0px 7px 20px 0px rgba(50, 50, 50, 0.41);
+    box-shadow:         0px 7px 20px 0px rgba(50, 50, 50, 0.41);
+    width: 30%;
+    height: 70px;
+    margin: 5px;
+    padding-left: 20px;
+    display: flex;
+    overflow: auto;
+    flex-direction: column;
+}
+
+.range-content {
+    align-self: left;
+}
+
+  
+/* The slider itself */
+.form-range {
+-webkit-appearance: none;  /* Override default CSS styles */
+appearance: none;
+width: 10em; /* Full-width */
+height: 10px; /* Specified height */
+background: #d3d3d3; /* Grey background */
+outline: none; /* Remove outline */
+opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+-webkit-transition: .2s; /* 0.2 seconds transition on hover */
+transition: opacity .2s;
+border-radius: 12px;
+}
+
+/* Mouse-over effects */
+.form-range:hover {
+opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.form-range::-webkit-slider-thumb {
+-webkit-appearance: none; /* Override default look */
+appearance: none;
+width: 25px; /* Set a specific slider handle width */
+height: 25px; /* Slider handle height */
+border-radius: 50%;
+border: 1px solid #bbb;
+background:#e99d42;
+box-shadow: inset 0 0 0 2px white;
+cursor: pointer; /* Cursor on hover */
+}
+
+.form-range::-moz-range-thumb {
+width: 25px; /* Set a specific slider handle width */
+height: 25px; /* Slider handle height */
+border: transparent;
+border-radius: 50%;
+background:#e99d42;
+box-shadow: inset 0 0 0 2px white;
+cursor: pointer; /* Cursor on hover */
+}
+/*Range: Ende*/
+
+
+/*Pick-a-picture: Anfang*/
+.bilder-container {
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.bilder-kasten {
+    background-color: #fff;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 7px 20px 0px rgba(50, 50, 50, 0.41);
+    -moz-box-shadow:    0px 7px 20px 0px rgba(50, 50, 50, 0.41);
+    box-shadow:         0px 7px 20px 0px rgba(50, 50, 50, 0.41);
+    width: 30%;
+    height: 140px;
+    margin: 5px;
+    padding-left: 20px;
+    display: flex;
+    overflow: hidden;
+
+}
+
+.bilder-content {
+    align-self: center;
+}
+/*Pick-a-Picture: Ende*/
+
+
+
 
