@@ -2,11 +2,10 @@ import { Component, Host, h } from '@stencil/core';
 
 @Component({
   tag: 'app-dokumentation',
-  styleUrl: 'app-dokumentation.css',
+  styleUrl: 'app-dokumentation.scss',
   shadow: true,
 })
 export class AppDokumentation {
-
   render() {
     return (
       <Host>
@@ -14,5 +13,4 @@ export class AppDokumentation {
       </Host>
     );
   }
-
 }

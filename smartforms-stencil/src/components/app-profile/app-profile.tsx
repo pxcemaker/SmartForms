@@ -29,27 +29,33 @@ export class AppProfile {
     if (this.match && this.match.params.name) {
       return (
         <div class="app-profile">
-          <div id="profilesection">
-            <div class="contentcontainer profilecontent">
-              <div id="profilepicture"></div>
-              <div id="profiletext">
-                <p id="username">Username</p>
-                <p id="usermail">usermail@e-mail.de</p>
-                <button id="">Profil bearbeiten</button>
+          <div class="container">
+            <div id="profilesection" class="row">
+              <div class="col-sm-4">
+                <div id="profilepicture"></div>
+              </div>
+              <div class="col-sm-6">
+                <div id="profiletext">
+                  <p id="username">Username</p>
+                  <p id="usermail">usermail@e-mail.de</p>
+                  <button id="" class="btn btn-secondary btn-sm">
+                    Profil bearbeiten
+                  </button>
+                </div>
               </div>
             </div>
           </div>
-          <div class="contentcontainer">
-            <div id="overview">
-              <h1>
-                Umfragen<br></br>Übersicht
-              </h1>
-              <div id="newsurveybutton" class="surveyelement">
-                <p>+</p>
-              </div>
 
+          <div class="container">
+            <h1>
+              Umfragen<br></br>Übersicht
+            </h1>
+            <div id="newsurveybutton" class="surveyelement">
+              <p>+</p>
+            </div>
+            <div id="overview" class="row">
               {this.content.map(umfrage => (
-                <div class="putinline">
+                <div class="col-sm">
                   <div class="onesurveyelement surveyelement"></div>
                   <div class="surveyelementtext surveyelement">
                     <div>
