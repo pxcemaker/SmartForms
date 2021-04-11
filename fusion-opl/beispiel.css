@@ -1,0 +1,65 @@
+body {
+    background-color: #edddca;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 14pt;
+    padding: 20px;
+}
+
+/*Checkboxen: Anfang*/
+
+.checkbox-container {
+    display: flex;
+    height: 300px;
+    flex-direction: column;
+}
+
+.checkbox-kasten {
+    background-color: #fff;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 7px 20px 0px rgba(50, 50, 50, 0.41);
+    -moz-box-shadow:    0px 7px 20px 0px rgba(50, 50, 50, 0.41);
+    box-shadow:         0px 7px 20px 0px rgba(50, 50, 50, 0.41);
+    width: 30%;
+    height: 70px;
+    margin: 5px;
+    padding-left: 20px;
+    display: flex;
+
+}
+
+.checkbox-content {
+    align-self: center;
+}
+
+label {
+    margin-left: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 14pt;
+}
+
+input[type="checkbox"] {
+    position: absolute;
+    left: -100px;
+  }
+  input[type="checkbox"]+label::before {
+    width: 15px;
+    height: 15px;
+    border-radius: 5px;
+    border: 2px solid #e99d42;
+    background-color: #fff;
+    display: block;
+    content: "";
+    float: left;
+    margin-right: 5px;
+  }
+  input[type="checkbox"]:checked+label::before {
+    box-shadow: inset 0px 0px 0px 3px #fff;
+    background-color: #e99d42;
+  }
+
+  /*Checkboxen: Ende*/
+
+  /*Radio-Buttons: Anfang*/
+  
+  /*Radio-Buttons: Ende*/
+
