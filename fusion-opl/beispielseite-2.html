@@ -50,18 +50,53 @@
     <div class="checkbox-container">
         <div class="checkbox-kasten">
            <div class="checkbox-content">
-                <input type="text" name="textfeld" required>
+                <input type="text" name="textfeld" placeholder="Gib hier deinen Text ein..." required>
             </div>
         </div>    
     </div>
 
     <p>Text mehrzeilig:</p>
-    <div class="checkbox-container">
-        <div class="checkbox-kasten">
-           <div class="checkbox-content">
-                <textarea></textarea>
+    <div class="mehrzeilig-container">
+        <div class="mehrzeilig-kasten">
+           <div class="mehrzeilig-content">
+                <textarea rows="4" placeholder="Gib hier deinen Text ein..."></textarea>
             </div>
         </div>    
+    </div>
+
+    <p>Range:</p>
+    <div class="range-container">
+        <div class="range-kasten">
+           <div class="range-content">
+                <label for="range-ohne" class="form-label">Range ohne Steps</label>
+                <input type="range" class="form-range" id="range-ohne">
+            </div>
+        </div>   
+        <div class="range-kasten">
+            <div class="range-content">
+                <label for="range-mit" class="form-label">Range mit Steps</label>
+                <input type="range" class="form-range" min="0" max="5" id="range-mit">
+            </div>
+         </div>    
+    </div>
+
+    <p>Bilder:</p>
+    <div class="bilder-container">  
+        <div class="bilder-kasten">
+            <div class="bilder-content">
+                <img src="assets/img/smartform-logo-grey.png">
+            </div>
+        </div>   
+        <div class="bilder-kasten">
+            <div class="bilder-content">
+                <img src="assets/img/smartform-logo.png">
+            </div>
+         </div> 
+         <div class="bilder-kasten">
+            <div class="bilder-content">
+                <img src="assets/img/location.png">
+            </div>
+         </div>     
     </div>
 </body>
 </html>
