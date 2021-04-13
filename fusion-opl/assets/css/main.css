@@ -700,7 +700,7 @@ hr {
 .navbar-expand-md .navbar-nav li a:hover,
 .navbar-expand-md .navbar-nav li .active > a,
 .navbar-expand-md .navbar-nav li a:focus {
-  color: #fff;
+  color: #3b2878;
   outline: none;
 }
 
