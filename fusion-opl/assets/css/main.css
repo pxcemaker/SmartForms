@@ -495,13 +495,12 @@ hr {
   width: 100%;
 }
 
-/* Services Item */
+/* Services Item  BEHALTEN*/
 .services-item {
   padding: 20px;
   border-radius: 4px;
   text-align: center;
   margin: 15px 0;
-  
   border: solid #e99d42;
   transition: all 0.3s ease-in-out 0s;
   -moz-transition: all 0.3s ease-in-out 0s;
@@ -556,7 +555,7 @@ hr {
 } */
 
 .services-item:hover .icon i {
-  color: #fff;
+  color: #e99d42;
 }
 
 #service {
@@ -1533,7 +1532,7 @@ textarea {
 #slider{
   padding-left: 250px;
   z-index: -10;
-  margin-bottom: 10px;
+
 }
 #sliderTitel
 {
@@ -1542,3 +1541,4 @@ textarea {
   font-size: 80px;
   font-weight: 700;
 }
+
