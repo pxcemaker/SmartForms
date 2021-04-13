@@ -1,3 +1,5 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css");
+
 :root {
   --purple: #551868;
   --yellow: #e99d42;
@@ -19,10 +21,11 @@ h1 {
 .profilegridcontainer {
   display: grid;
   grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
   padding: 10rem 0 10rem;
 }
 .profile-grid-item {
-  text-align: center;
+  margin-bottom: 2.5rem;
 }
 
 .profilearea {
@@ -48,10 +51,6 @@ h1 {
   text-align: left;
 }
 
-.profiletexts .settings {
-  padding-top: 3.5rem;
-}
-
 .userdata {
   font-size: 1rem;
   font-weight: 600;
@@ -67,8 +66,8 @@ h1 {
 
 .settings {
   text-align: left;
-  font-size: 0.8rem;
-  color: gray;
+  font-size: 0.6rem;
+  color: #707070;
 }
 
 .survey-grid-container {
@@ -83,6 +82,7 @@ h1 {
 
 .empty-plate {
   border: 1px solid #656565;
+  transition: 0.2s;
 }
 
 .empty-plus {
