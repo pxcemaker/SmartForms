@@ -7,6 +7,10 @@ body {
     padding: 20px;
 }
 
+p {
+  margin-top: 60px;
+}
+
 /*Checkboxen: Anfang*/
 
 .checkbox-container {
@@ -297,10 +301,39 @@ cursor: pointer; /* Cursor on hover */
     -webkit-box-shadow: 0px 7px 20px 0px rgba(50, 50, 50, 0.41);
     -moz-box-shadow:    0px 7px 20px 0px rgba(50, 50, 50, 0.41);
     box-shadow:         0px 7px 20px 0px rgba(50, 50, 50, 0.41);
-    border: solid #e99d42;
+    background-color: #e99d42;
 }
 /*Pick-a-Picture: Ende*/
 
+/*Rating: Anfang*/
+.rating-kasten {
+  background-color: #fff;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 7px 20px 0px rgba(50, 50, 50, 0.41);
+  -moz-box-shadow:    0px 7px 20px 0px rgba(50, 50, 50, 0.41);
+  box-shadow:         0px 7px 20px 0px rgba(50, 50, 50, 0.41);
+  width: 70px;
+  height: 70px;
+  margin: 5px 3px 0px 3px;
+  display: flex;
+  overflow: visible;
+  align-content: center;
+  justify-content: center;
+  flex-grow: 0;
+}
+
+.rating-content {
+  align-self: center;
+  background-color: #fff;
+}
+
+.rating-kasten:hover {
+  -webkit-box-shadow: 0px 7px 20px 0px rgba(50, 50, 50, 0.41);
+  -moz-box-shadow:    0px 7px 20px 0px rgba(50, 50, 50, 0.41);
+  box-shadow:         0px 7px 20px 0px rgba(50, 50, 50, 0.41);
+  background-color: #e99d42;
+}
+/*Rating: Ende*/
 
 
 
