@@ -7,6 +7,8 @@ const saveBtn = document.querySelector("#speichern");
 
 let idCounter = 0; //hier muss geschaut werden, ob im LokalStorage bereits Items, damit vorhandene Einträge nicht überschrieben werden 
 
+const fragenContainer = document.getElementById("fragen-container");
+
 //Seiten-Setup implementiert die benötigten Setup-Funktionen
 function seitenSetup() {
     setupAddBtn();
@@ -66,10 +68,10 @@ window.addEventListener("load", seitenSetup);
 
 function generateListItem() {
 
-    const itemTitle = collectItemTitle();
-    const itemDescription = collectItemDescription();
+    const itemFrage = collectitemFrage();
+    const itemAntwort = collectitemAntwort();
 
-    objItem = saveListItem(itemTitle, itemDescription);
+    objItem = saveListItem(itemFrage, itemAntwort);
 
     createItem(objItem);
     
@@ -85,27 +87,28 @@ function updateCounter() {
 
 //Die einzelnen Properties werden abgefragt und an die Funktion addNewListItem übergeben
 
-function collectItemTitle() {
-    let itemTitle = titleInput.value;/*prompt("Gib hier den Titel des neuen Listelements ein.");*/
-    return itemTitle;
+function collectitemFrage() {
+    let itemFrage = titleInput.value;/*prompt("Gib hier den Titel des neuen Listelements ein.");*/
+    return itemFrage;
 }
 
-function collectItemDescription() {
-    let itemDescription = descriptionInput.value;/*prompt("Gib hier die Beschreibung des neuen Listelements ein.");*/
-    return itemDescription;
+function collectitemAntwort() {
+    let itemAntwort = descriptionInput.value;/*prompt("Gib hier die Beschreibung des neuen Listelements ein.");*/
+    return itemAntwort;
 }
 
 
 
 //Die Funktion nimmt die Properties entgegen und erzeugt aus diesen ein JSON-Objekt, dass im localStorage gespeichert wird, gibt gleichzeitig aber auch ein JS-Objekt an addNewListItem zurück, die dieses an createItem übergibt
-function saveListItem( itemTitle, itemDescription ) { // Das Objekt wird als [object Object] gelogt https://stackoverflow.com/questions/23805377/localstorage-getitem-logsobject-object/23805458
-    let obj = {
-        "itemTitle": itemTitle,
-        "itemDescription": itemDescription
-    }
- 
+function saveListItem( itemFrage, itemAntwort ) { // Das Objekt wird als [object Object] gelogt https://stackoverflow.com/questions/23805377/localstorage-getitem-logsobject-object/23805458
     updateCounter();
-    
+
+    let obj = {
+        "fragenId": idCounter+1,
+        "itemFrage": itemFrage,
+        "itemAntwort": itemAntwort
+    }
+
     localStorage.setItem(idCounter, JSON.stringify(obj)); // Hilfe zum LocalStorage https://www.mediaevent.de/javascript/local-storage.html
     //console.log(localStorage.getItem(listenId));
 
@@ -115,8 +118,18 @@ function saveListItem( itemTitle, itemDescription ) { // Das Objekt wird als [ob
 //createItem nimmt die Properties aus dem JS-Objekt und füllt damit teilweise die variablen Bereiche im HTML-Baustein. Außerdem werden entsprechende Klassen gesetzt
 function createItem(objItem) {
     console.log(`Hier würde ein Element erstellt werden:
-    Titel: ${objItem.itemTitle}
-    Beschreibung: ${objItem.itemDescription}`);
+    Titel: ${objItem.itemFrage}
+    Beschreibung: ${objItem.itemAntwort}`);
+
+    const newFrage = document.createElement("div");
+    newFrage.classList.add("frage");
+    newFrage.innerHTML = `
+            <p>Frage ${objItem.fragenId}: ${objItem.itemFrage}</p>
+            <p>Antwort: ${objItem.itemAntwort}
+    `
+
+ 
+    fragenContainer.appendChild(newFrage); //div hinzufügen
 }
 
 
