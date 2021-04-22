@@ -16,7 +16,7 @@ p {
 .checkbox-container {
     display: flex;
     height: auto;
-    flex-direction: column;
+    flex-direction: row;
     box-sizing: border-box;
 }
 

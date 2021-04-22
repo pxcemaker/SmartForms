@@ -6,8 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beispielseite Antworttypen</title>
     <link rel="stylesheet" href="beispiel.css">
+    <link rel="stylesheet" href="modalbox.css">
+    <script src="beispielseite.js" defer></script>
 </head>
 <body>
+    <div class="wrapper-header">
+        <div class="add-container"> 
+            <button class="a-button" id="add">+</button> 
+        </div>
+    </div>
     <p>Checkboxen:</p>
     <div class="checkbox-container">
         <div class="checkbox-kasten">
@@ -106,5 +113,18 @@
         <div class="rating-kasten"></div>
         <div class="rating-kasten"></div>
     </div>
+    <div id="modalbox" class="inaktiv">
+        <div id="modalbox-inhalt">
+            <div class="loeschen">
+                <button id="close">X</button>
+            </div>
+            <h4>Titel:</h4>
+            <input type="text" id="ae-titel">
+            <h4>Beschreibung:</h4>
+            <textarea rows="4" id="ae-beschreibung"></textarea>
+            <div class="anpassen">
+                <button id="speichern">Speichern</button>
+            </div>
+        </div>
 </body>
 </html>
