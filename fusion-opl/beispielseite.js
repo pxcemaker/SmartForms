@@ -16,6 +16,8 @@ function seitenSetup() {
     updateCounter();
 
     setupModal();
+    
+    setupStoredItems();
 }
 
 //Setup-Funktionen der einzelnen Buttons
@@ -50,6 +52,13 @@ function setupSaveBtn() {
     saveBtn.addEventListener("click", generateListItem);
     saveBtn.addEventListener("click", toggleDisplayModalBox);
     saveBtn.addEventListener("click", deleteInputs);
+}
+
+function setupStoredItems() {
+    for(i = 0; i < localStorage.length; i++){
+        let itemObj = JSON.parse(localStorage.getItem(i));
+        createItem(itemObj);
+    }
 }
 
 /*function buildTagButtons() {
