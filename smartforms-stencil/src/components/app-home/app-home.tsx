@@ -176,6 +176,7 @@ export class AppHome {
             </div>
           </div>
         </section>
+        <app-footer></app-footer>
       </div>
     );
   }
