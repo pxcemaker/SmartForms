@@ -1,0 +1,29 @@
+[
+    {
+      "userId": 1,
+      "id": 1,
+      "title": "Das ist eine Überschrift für eine Umfrage",
+      "numberOfQuestions": 5,
+      "creationDate": "2020-09-19",
+      "lastEdited": "2021-01-23",
+      "status": "closed"
+    },
+    {
+        "userId": 1,
+        "id": 2,
+        "title": "Das ist die zweite Überschrift",
+        "numberOfQuestions": 23,
+        "creationDate": "2021-02-15",
+        "lastEdited": "2021-04-05",
+        "status": "in progress"
+      },
+      {
+        "userId": 1,
+        "id": 3,
+        "title": "Das ist die dritte Umfragenüberschrift",
+        "numberOfQuestions": 8,
+        "creationDate": "2021-03-25",
+        "lastEdited": "2021-04-05",
+        "status": "open"
+      }
+    ]

@@ -1,0 +1,43 @@
+/*
+  Global App CSS
+  ----------------------
+  Use this file for styles that should be applied to all components.
+  For example, "font-family" within the "body" selector is a CSS property
+  most apps will want applied to all components.
+
+  Any global CSS variables should also be applied here.
+*/
+@import '../../node_modules/bootstrap/scss/_functions.scss';
+@import '../../node_modules/bootstrap/scss/_variables.scss';
+@import '../../node_modules/bootstrap/scss/_mixins.scss';
+@import '../../node_modules/bootstrap/scss/_buttons.scss';
+@import '../../node_modules/bootstrap/scss/_containers.scss';
+@import '../../node_modules/bootstrap/scss/_grid.scss';
+
+@import '../../fusion/css/animate.css';
+@import '../../fusion/css/bootstrap.min.css';
+@import '../../fusion/css/magnific-popup.css';
+@import '../../fusion/css/main.css';
+@import '../../fusion/css/nivo-lightbox.css';
+@import '../../fusion/css/owl.carousel.min.css';
+@import '../../fusion/css/owl.theme.css';
+@import '../../fusion/css/responsive.css';
+
+:root {
+  --lila: #3b2878;
+  --gelb: #e99d42;
+  --beige: #edddca;
+  --verlauf: linear-gradient(48deg, rgba(233, 157, 66, 1) 0%, rgba(59, 40, 120, 1) 34%, rgba(59, 40, 120, 1) 100%);
+}
+
+$primary: var(--lila);
+
+$yellow: var(--gelb);
+$purple: var(--lila);
+
+body {
+  background-color: $gray-100;
+  margin: 0px;
+  padding: 0px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
