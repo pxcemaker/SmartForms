@@ -14,6 +14,8 @@ export namespace Components {
     }
     interface SfImgselection {
     }
+    interface SfMultiplechoice {
+    }
     interface SfUploadbutton {
     }
 }
@@ -36,6 +38,12 @@ declare global {
         prototype: HTMLSfImgselectionElement;
         new (): HTMLSfImgselectionElement;
     };
+    interface HTMLSfMultiplechoiceElement extends Components.SfMultiplechoice, HTMLStencilElement {
+    }
+    var HTMLSfMultiplechoiceElement: {
+        prototype: HTMLSfMultiplechoiceElement;
+        new (): HTMLSfMultiplechoiceElement;
+    };
     interface HTMLSfUploadbuttonElement extends Components.SfUploadbutton, HTMLStencilElement {
     }
     var HTMLSfUploadbuttonElement: {
@@ -46,6 +54,7 @@ declare global {
         "example-component": HTMLExampleComponentElement;
         "sf-addformbutton": HTMLSfAddformbuttonElement;
         "sf-imgselection": HTMLSfImgselectionElement;
+        "sf-multiplechoice": HTMLSfMultiplechoiceElement;
         "sf-uploadbutton": HTMLSfUploadbuttonElement;
     }
 }
@@ -58,12 +67,15 @@ declare namespace LocalJSX {
     }
     interface SfImgselection {
     }
+    interface SfMultiplechoice {
+    }
     interface SfUploadbutton {
     }
     interface IntrinsicElements {
         "example-component": ExampleComponent;
         "sf-addformbutton": SfAddformbutton;
         "sf-imgselection": SfImgselection;
+        "sf-multiplechoice": SfMultiplechoice;
         "sf-uploadbutton": SfUploadbutton;
     }
 }
@@ -74,6 +86,7 @@ declare module "@stencil/core" {
             "example-component": LocalJSX.ExampleComponent & JSXBase.HTMLAttributes<HTMLExampleComponentElement>;
             "sf-addformbutton": LocalJSX.SfAddformbutton & JSXBase.HTMLAttributes<HTMLSfAddformbuttonElement>;
             "sf-imgselection": LocalJSX.SfImgselection & JSXBase.HTMLAttributes<HTMLSfImgselectionElement>;
+            "sf-multiplechoice": LocalJSX.SfMultiplechoice & JSXBase.HTMLAttributes<HTMLSfMultiplechoiceElement>;
             "sf-uploadbutton": LocalJSX.SfUploadbutton & JSXBase.HTMLAttributes<HTMLSfUploadbuttonElement>;
         }
     }
