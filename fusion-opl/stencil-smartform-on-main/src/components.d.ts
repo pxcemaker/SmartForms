@@ -12,6 +12,8 @@ export namespace Components {
     }
     interface SfAddformbutton {
     }
+    interface SfUploadbutton {
+    }
 }
 declare global {
     interface HTMLExampleComponentElement extends Components.ExampleComponent, HTMLStencilElement {
@@ -26,9 +28,16 @@ declare global {
         prototype: HTMLSfAddformbuttonElement;
         new (): HTMLSfAddformbuttonElement;
     };
+    interface HTMLSfUploadbuttonElement extends Components.SfUploadbutton, HTMLStencilElement {
+    }
+    var HTMLSfUploadbuttonElement: {
+        prototype: HTMLSfUploadbuttonElement;
+        new (): HTMLSfUploadbuttonElement;
+    };
     interface HTMLElementTagNameMap {
         "example-component": HTMLExampleComponentElement;
         "sf-addformbutton": HTMLSfAddformbuttonElement;
+        "sf-uploadbutton": HTMLSfUploadbuttonElement;
     }
 }
 declare namespace LocalJSX {
@@ -38,9 +47,12 @@ declare namespace LocalJSX {
     }
     interface SfAddformbutton {
     }
+    interface SfUploadbutton {
+    }
     interface IntrinsicElements {
         "example-component": ExampleComponent;
         "sf-addformbutton": SfAddformbutton;
+        "sf-uploadbutton": SfUploadbutton;
     }
 }
 export { LocalJSX as JSX };
@@ -49,6 +61,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "example-component": LocalJSX.ExampleComponent & JSXBase.HTMLAttributes<HTMLExampleComponentElement>;
             "sf-addformbutton": LocalJSX.SfAddformbutton & JSXBase.HTMLAttributes<HTMLSfAddformbuttonElement>;
+            "sf-uploadbutton": LocalJSX.SfUploadbutton & JSXBase.HTMLAttributes<HTMLSfUploadbuttonElement>;
         }
     }
 }

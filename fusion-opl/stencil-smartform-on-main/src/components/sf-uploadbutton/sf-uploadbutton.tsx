@@ -1,16 +1,17 @@
 import { Component, Host, h } from '@stencil/core';
 
 @Component({
-  tag: 'upload-button',
-  styleUrl: 'upload-button.css',
+  tag: 'sf-uploadbutton',
+  styleUrl: 'sf-uploadbutton.css',
   shadow: true,
 })
-export class UploadButton {
+export class SfUploadbutton {
 
   render() {
     return (
       <Host>
-        <slot></slot>
+        <input type="file" id="actual-btn"/>    
+        <label htmlFor="actual-btn">No file chosen</label>
       </Host>
     );
   }
