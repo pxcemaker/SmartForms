@@ -46,15 +46,7 @@
             </h1>
         </div>
 
-        <div class="survey-grid-container">
-            <div class="survey-grid-item">
-                <a href="beispielseite-2.html">
-                    <div class="surveyplate empty-plate">
-                        <p class="empty-plus">+</p>
-                    </div>
-                </a>
-            </div>
-        </div>
+        <sf-addformbutton></sf-addformbutton>
 
         <div class="survey-grid-container">
             <div class="survey-grid-item">
