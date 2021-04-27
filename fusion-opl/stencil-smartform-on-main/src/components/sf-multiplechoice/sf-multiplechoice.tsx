@@ -10,20 +10,12 @@ export class SfMultiplechoice {
     return (
       <Host>
         <div class="spacetotop">
-          <div class="checkbox-container">
-            <div class="checkbox-kasten">
-              <div class="checkbox-content">
-                <input type="checkbox" id="a" name="a" checked></input>
-                <label>Option A</label>
-              </div>
-            </div>
-
-            <div class="checkbox-kasten">
-              <div class="checkbox-content">
-                <input type="checkbox" id="b" name="b" checked></input>
-                <label>Option B</label>
-              </div>
-            </div>
+          <div class=" grid-container checkbox-kasten">
+            <sf-question></sf-question>
+            <sf-checkbox></sf-checkbox>
+            <sf-checkbox></sf-checkbox>
+            <sf-checkbox></sf-checkbox>
+            <sf-checkbox></sf-checkbox>
           </div>
         </div>
       </Host>
