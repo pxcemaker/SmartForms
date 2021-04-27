@@ -10,6 +10,8 @@ export namespace Components {
         "exampleProp": string;
         "exampleToUpperCase": () => Promise<void>;
     }
+    interface ModalBox {
+    }
     interface SfAddformbutton {
     }
     interface SfUploadbutton {
@@ -21,6 +23,12 @@ declare global {
     var HTMLExampleComponentElement: {
         prototype: HTMLExampleComponentElement;
         new (): HTMLExampleComponentElement;
+    };
+    interface HTMLModalBoxElement extends Components.ModalBox, HTMLStencilElement {
+    }
+    var HTMLModalBoxElement: {
+        prototype: HTMLModalBoxElement;
+        new (): HTMLModalBoxElement;
     };
     interface HTMLSfAddformbuttonElement extends Components.SfAddformbutton, HTMLStencilElement {
     }
@@ -36,6 +44,7 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "example-component": HTMLExampleComponentElement;
+        "modal-box": HTMLModalBoxElement;
         "sf-addformbutton": HTMLSfAddformbuttonElement;
         "sf-uploadbutton": HTMLSfUploadbuttonElement;
     }
@@ -45,12 +54,15 @@ declare namespace LocalJSX {
         "exampleProp"?: string;
         "onExampleEvent"?: (event: CustomEvent<string>) => void;
     }
+    interface ModalBox {
+    }
     interface SfAddformbutton {
     }
     interface SfUploadbutton {
     }
     interface IntrinsicElements {
         "example-component": ExampleComponent;
+        "modal-box": ModalBox;
         "sf-addformbutton": SfAddformbutton;
         "sf-uploadbutton": SfUploadbutton;
     }
@@ -60,6 +72,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "example-component": LocalJSX.ExampleComponent & JSXBase.HTMLAttributes<HTMLExampleComponentElement>;
+            "modal-box": LocalJSX.ModalBox & JSXBase.HTMLAttributes<HTMLModalBoxElement>;
             "sf-addformbutton": LocalJSX.SfAddformbutton & JSXBase.HTMLAttributes<HTMLSfAddformbuttonElement>;
             "sf-uploadbutton": LocalJSX.SfUploadbutton & JSXBase.HTMLAttributes<HTMLSfUploadbuttonElement>;
         }
