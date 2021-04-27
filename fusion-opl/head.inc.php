@@ -27,7 +27,8 @@
     <link rel="stylesheet" href="uebersicht-style.css" />
 
     <!-- von Stencil Projekt -->
-    <script src="stencil-smartform-on/stencil-smartform-on.esm.js" type="module"></script>
-    <link rel="stylesheet" href="stencil-smartform-on/stencil-smartform-on.css" />
+    <script src="stencil-smartform-on-main/dist/stencil-smartform-on/stencil-smartform-on.esm.js" type="module">
+    </script>
+    <link rel="stylesheet" href="stencil-smartform-on-main/dist/stencil-smartform-on/stencil-smartform-on.css" />
 
 </head>

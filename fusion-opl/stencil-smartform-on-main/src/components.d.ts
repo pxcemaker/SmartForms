@@ -14,6 +14,14 @@ export namespace Components {
     }
     interface SfAddformbutton {
     }
+    interface SfCheckbox {
+    }
+    interface SfImgselection {
+    }
+    interface SfMultiplechoice {
+    }
+    interface SfQuestion {
+    }
     interface SfUploadbutton {
     }
 }
@@ -36,6 +44,30 @@ declare global {
         prototype: HTMLSfAddformbuttonElement;
         new (): HTMLSfAddformbuttonElement;
     };
+    interface HTMLSfCheckboxElement extends Components.SfCheckbox, HTMLStencilElement {
+    }
+    var HTMLSfCheckboxElement: {
+        prototype: HTMLSfCheckboxElement;
+        new (): HTMLSfCheckboxElement;
+    };
+    interface HTMLSfImgselectionElement extends Components.SfImgselection, HTMLStencilElement {
+    }
+    var HTMLSfImgselectionElement: {
+        prototype: HTMLSfImgselectionElement;
+        new (): HTMLSfImgselectionElement;
+    };
+    interface HTMLSfMultiplechoiceElement extends Components.SfMultiplechoice, HTMLStencilElement {
+    }
+    var HTMLSfMultiplechoiceElement: {
+        prototype: HTMLSfMultiplechoiceElement;
+        new (): HTMLSfMultiplechoiceElement;
+    };
+    interface HTMLSfQuestionElement extends Components.SfQuestion, HTMLStencilElement {
+    }
+    var HTMLSfQuestionElement: {
+        prototype: HTMLSfQuestionElement;
+        new (): HTMLSfQuestionElement;
+    };
     interface HTMLSfUploadbuttonElement extends Components.SfUploadbutton, HTMLStencilElement {
     }
     var HTMLSfUploadbuttonElement: {
@@ -46,6 +78,10 @@ declare global {
         "example-component": HTMLExampleComponentElement;
         "modal-box": HTMLModalBoxElement;
         "sf-addformbutton": HTMLSfAddformbuttonElement;
+        "sf-checkbox": HTMLSfCheckboxElement;
+        "sf-imgselection": HTMLSfImgselectionElement;
+        "sf-multiplechoice": HTMLSfMultiplechoiceElement;
+        "sf-question": HTMLSfQuestionElement;
         "sf-uploadbutton": HTMLSfUploadbuttonElement;
     }
 }
@@ -58,12 +94,24 @@ declare namespace LocalJSX {
     }
     interface SfAddformbutton {
     }
+    interface SfCheckbox {
+    }
+    interface SfImgselection {
+    }
+    interface SfMultiplechoice {
+    }
+    interface SfQuestion {
+    }
     interface SfUploadbutton {
     }
     interface IntrinsicElements {
         "example-component": ExampleComponent;
         "modal-box": ModalBox;
         "sf-addformbutton": SfAddformbutton;
+        "sf-checkbox": SfCheckbox;
+        "sf-imgselection": SfImgselection;
+        "sf-multiplechoice": SfMultiplechoice;
+        "sf-question": SfQuestion;
         "sf-uploadbutton": SfUploadbutton;
     }
 }
@@ -74,6 +122,10 @@ declare module "@stencil/core" {
             "example-component": LocalJSX.ExampleComponent & JSXBase.HTMLAttributes<HTMLExampleComponentElement>;
             "modal-box": LocalJSX.ModalBox & JSXBase.HTMLAttributes<HTMLModalBoxElement>;
             "sf-addformbutton": LocalJSX.SfAddformbutton & JSXBase.HTMLAttributes<HTMLSfAddformbuttonElement>;
+            "sf-checkbox": LocalJSX.SfCheckbox & JSXBase.HTMLAttributes<HTMLSfCheckboxElement>;
+            "sf-imgselection": LocalJSX.SfImgselection & JSXBase.HTMLAttributes<HTMLSfImgselectionElement>;
+            "sf-multiplechoice": LocalJSX.SfMultiplechoice & JSXBase.HTMLAttributes<HTMLSfMultiplechoiceElement>;
+            "sf-question": LocalJSX.SfQuestion & JSXBase.HTMLAttributes<HTMLSfQuestionElement>;
             "sf-uploadbutton": LocalJSX.SfUploadbutton & JSXBase.HTMLAttributes<HTMLSfUploadbuttonElement>;
         }
     }
