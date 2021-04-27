@@ -1,4 +1,4 @@
-import { Component, Host, h } from '@stencil/core';
+import { Component, Host, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'sf-question-container',
@@ -7,10 +7,15 @@ import { Component, Host, h } from '@stencil/core';
 })
 export class SfQuestionContainer {
 
+  @Prop() answerType: string; //
+  @Prop() questionTitle: string;
+
   render() {
     return (
       <Host>
-        <slot></slot>
+        <div>
+          {this.questionTitle}
+        </div>
       </Host>
     );
   }
