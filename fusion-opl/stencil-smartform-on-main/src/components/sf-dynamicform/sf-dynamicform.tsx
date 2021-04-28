@@ -61,7 +61,7 @@ export class SfDynamicform {
 
   ///{ev => (this.checkboxMap[index].value = ev.detail)}
 
-  renderInputCheckbox() {
+  renderInputBox() {
     if (this.radio == 'checkbox') {
       return <div class="item-1-3 answers">{this.returnEmptyCheckbox()}</div>;
     } else if (this.radio == 'radio') {
@@ -70,7 +70,7 @@ export class SfDynamicform {
     return <div></div>;
   }
 
-  returnCheckbox() {
+  returnAnswers() {
     if (this.radio == 'checkbox') {
       return this.checkboxMap.map(checkboxdef => <sf-checkbox value={checkboxdef.value}></sf-checkbox>);
     } else if (this.radio == 'radio') {
@@ -81,6 +81,8 @@ export class SfDynamicform {
           ))}
         </div>
       );
+    } else if (this.radio == 'rtx') {
+      return <sf-text-area></sf-text-area>;
     }
   }
 
@@ -89,7 +91,7 @@ export class SfDynamicform {
       <div class="grid-container">
         <div class="kasten item-1-1">
           <sf-question></sf-question>
-          {this.returnCheckbox()}
+          {this.returnAnswers()}
         </div>
 
         <div class="kasten item-2-1">
@@ -157,7 +159,7 @@ export class SfDynamicform {
               </div>
             </div>
 
-            {this.renderInputCheckbox()}
+            {this.renderInputBox()}
 
             <button class="item-2-3-btn" type="submit">
               safe
