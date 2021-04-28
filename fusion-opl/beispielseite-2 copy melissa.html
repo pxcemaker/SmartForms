@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beispielseite Antworttypen</title>
+    <link rel="stylesheet" href="beispiel.css">
+    <link rel="stylesheet" href="modalbox copy.css">
+    <script src="stencil-smartform-on-main/dist/stencil-smartform-on/stencil-smartform-on.esm.js" type="module">
+    </script>
+    <link rel="stylesheet" href="stencil-smartform-on-main/dist/stencil-smartform-on/stencil-smartform-on.css" />
+    <script src="beispielseite copy melissa.js"defer></script>
+    <script src="beispielseite copy.js"defer></script>
+</head>
+
+<body>
+    <div class="wrapper-header">
+        <p>Radio-Buttons</p>
+        <div class="add-container">
+            <button class="b-button" id="test1">+</button> 
+            <button class="a-button" id="test1">+</button> 
+        </div>
+    </div>
+
+    <p>Fragen:</p>
+    <div id="fragen-container">
+        <div class="frage" id="frage-0">
+            <p>Frage 0: Ist das eine Beispielfrage?</p>
+            <p>Antwort: Ich bin eine Antwort</p>
+        </div>
+    </div>
+    <p>Checkboxen:</p>
+    <div class="checkbox-container">
+        <div class="checkbox-kasten">
+            <div class="checkbox-content">
+                <input type="checkbox" id="a" name="a" checked>
+                <label for="a">Option A</label>
+            </div>
+        </div>
+
+        <div class="checkbox-kasten">
+            <div class="checkbox-content">
+                <input type="checkbox" id="b" name="b" checked>
+                <label for="b">Option B</label>
+            </div>
+        </div>
+    </div>
+
+    <p>Radio-Buttons:</p>
+    <div class="checkbox-container">
+        <div class="checkbox-kasten">
+            <div class="checkbox-content">
+                <input type="radio" id="radio-1" name="radio" checked>
+                <label for="radio-1">Option A</label>
+            </div>
+        </div>
+
+        <div class="checkbox-kasten">
+            <div class="checkbox-content">
+                <input type="radio" id="radio-2" name="radio" checked>
+                <label for="radio-2">Option B</label>
+            </div>
+        </div>
+    </div>
+
+    <p>Text:</p>
+    <div class="checkbox-container">
+        <div class="checkbox-kasten">
+            <div class="checkbox-content">
+                <input type="text" name="textfeld" placeholder="Gib hier deinen Text ein..." required>
+            </div>
+        </div>
+    </div>
+
+    <p>Text mehrzeilig:</p>
+    <div class="mehrzeilig-container">
+        <div class="mehrzeilig-kasten">
+            <div class="mehrzeilig-content">
+                <textarea rows="4" cols="48" placeholder="Gib hier deinen Text ein..."></textarea>
+            </div>
+        </div>
+    </div>
+
+    <p>Range:</p>
+    <div class="range-container">
+        <div class="range-kasten">
+            <div class="range-content">
+                <label for="range-ohne" class="form-label">Range ohne Steps</label>
+                <input type="range" class="form-range" id="range-ohne">
+            </div>
+        </div>
+        <div class="range-kasten">
+            <div class="range-content">
+                <label for="range-mit" class="form-label">Range mit Steps</label>
+                <input type="range" class="form-range" min="0" max="5" id="range-mit">
+            </div>
+        </div>
+    </div>
+
+    <p>Bilder:</p>
+    <div class="bilder-container">
+        <div class="bilder-kasten">
+            <div class="bilder-content">
+                <img src="assets/img/intro-mobile.png">
+            </div>
+        </div>
+        <div class="bilder-kasten">
+            <div class="bilder-content">
+                <img src="assets/img/smartform-logo.png">
+            </div>
+        </div>
+        <div class="bilder-kasten">
+            <div class="bilder-content">
+                <img src="assets/img/location.png">
+            </div>
+        </div>
+    </div>
+    <p>Rating:</p>
+    <div class="bilder-container">
+        <div class="rating-kasten"></div>
+        <div class="rating-kasten"></div>
+        <div class="rating-kasten"></div>
+        <div class="rating-kasten"></div>
+        <div class="rating-kasten"></div>
+    </div>
+    <div id="modalbox" class="inaktiv">
+        <div id="modalbox-inhalt">
+            <div class="loeschen">
+                <button id="close">X</button>
+            </div>
+            <h4>Frage:</h4>
+            <input type="text" id="ae-titel">
+            <h4>Antwort 1 :</h4>
+            
+            <input type="radio" ></input>
+            <label>  </label>
+            <textarea id="ae-beschreibung"></textarea>
+            <textarea id="ae" class="inaktiv"></textarea> 
+            <button  class="c-button"id="addQues"> +</button>
+            <div id="extraFragen"></div>
+            <div class="anpassen">
+                <button id="speichern">Speichern</button>
+                <example-component></example-component>
+            </div>
+        </div>
+
+        <div id="modalbox2" class="inaktiv">
+            <div id="modalbox-inhalt">
+                <div class="loeschen">
+                    <button id="close">X</button>
+                </div>
+                <h4>Frage:</h4>
+                <input type="text" id="ae-titel">
+                <h4>Antworten</h4>
+                
+                <textarea id="ae-beschreibung"> </textarea>
+                
+                <textarea id="ae" class="inaktiv"> </textarea> 
+                <button  class="c-button"id="addQues"> +</button>
+                <div class="anpassen">
+                    <button id="speichern">Speichern</button>
+                    <example-component></example-component>
+                </div>
+            </div>
+            
+</body>
+<script>
+    let btn1 = document.querySelector('#addQues')
+    let ques = document.querySelector('#ae')
+
+    btn1.addEventListener('click', function(){
+        
+        console.log("test")
+        ques.classList.remove("inaktiv") 
+        console.log("remove")
+       
+        
+    })
+
+</script>
+
+
+</html>

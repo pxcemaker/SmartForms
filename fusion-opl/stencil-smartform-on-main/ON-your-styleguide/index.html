@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="/dist/stencil-smartform-on/stencil-smartform-on.esm.js" type="module"></script>
     <link rel="stylesheet" href="/dist/stencil-smartform-on/stencil-smartform-on.css" />
+    <link rel="stylesheet" href="/fusion-opl/beispiel.css" />
+    <link rel="stylesheet" href="/fusion-opl/modalbox.css" />
     <title>your design guide</title>
     <script type="text/javascript" src="/ON-your-styleguide/script.js" defer></script>
     <script src="beispielseite.js"defer></script>
@@ -18,7 +20,9 @@
     <button id="test"></button>
     <modal-box></modal-box>
     <sf-input-text></sf-input-text>
-    <sf-text-area fragenId="1" fragenText="Ich bin eine Frage?"></sf-text-area>
+    <sf-question-container>
+      <sf-text-area fragenId="1" fragenText="Ich bin eine Frage?"></sf-text-area>
+    <sf-question-container>
   </body>
   <script>
   let btn = document.querySelector('#test')

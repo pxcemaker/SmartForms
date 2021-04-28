@@ -23,6 +23,9 @@ export namespace Components {
     interface SfQuestion {
     }
     interface SfQuestionContainer {
+        "frageText": string;
+        "fragenId": string;
+        "onOff": string;
     }
     interface SfTextArea {
         "frageText": string;
@@ -131,6 +134,9 @@ declare namespace LocalJSX {
     interface SfQuestion {
     }
     interface SfQuestionContainer {
+        "frageText"?: string;
+        "fragenId"?: string;
+        "onOff"?: string;
     }
     interface SfTextArea {
         "frageText"?: string;
