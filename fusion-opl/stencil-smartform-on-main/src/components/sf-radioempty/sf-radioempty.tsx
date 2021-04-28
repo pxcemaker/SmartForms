@@ -17,7 +17,7 @@ export class SfRadioempty {
 
   render() {
     return (
-      <div class="checkbox-kasten">
+      <div class="grid-item checkbox-kasten">
         <div class="checkbox-content">
           <input type="radio" id="radio-1" name="radio"></input>
           <label>

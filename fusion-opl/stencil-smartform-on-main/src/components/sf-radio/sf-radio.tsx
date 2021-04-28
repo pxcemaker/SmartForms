@@ -10,7 +10,7 @@ export class SfRadio {
 
   render() {
     return (
-      <div class="checkbox-kasten">
+      <div>
         <div class="checkbox-content">
           <input type="radio" id="radio-1" name="radio" checked></input>
           <label>{'' + this.value}</label>
