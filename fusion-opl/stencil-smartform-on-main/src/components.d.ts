@@ -10,6 +10,8 @@ export namespace Components {
         "exampleProp": string;
         "exampleToUpperCase": () => Promise<void>;
     }
+    interface ModalBox {
+    }
     interface SfAddformbutton {
     }
     interface SfAnswertype {
@@ -33,6 +35,12 @@ declare global {
     var HTMLExampleComponentElement: {
         prototype: HTMLExampleComponentElement;
         new (): HTMLExampleComponentElement;
+    };
+    interface HTMLModalBoxElement extends Components.ModalBox, HTMLStencilElement {
+    }
+    var HTMLModalBoxElement: {
+        prototype: HTMLModalBoxElement;
+        new (): HTMLModalBoxElement;
     };
     interface HTMLSfAddformbuttonElement extends Components.SfAddformbutton, HTMLStencilElement {
     }
@@ -84,6 +92,7 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "example-component": HTMLExampleComponentElement;
+        "modal-box": HTMLModalBoxElement;
         "sf-addformbutton": HTMLSfAddformbuttonElement;
         "sf-answertype": HTMLSfAnswertypeElement;
         "sf-checkbox": HTMLSfCheckboxElement;
@@ -98,6 +107,8 @@ declare namespace LocalJSX {
     interface ExampleComponent {
         "exampleProp"?: string;
         "onExampleEvent"?: (event: CustomEvent<string>) => void;
+    }
+    interface ModalBox {
     }
     interface SfAddformbutton {
     }
@@ -117,6 +128,7 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "example-component": ExampleComponent;
+        "modal-box": ModalBox;
         "sf-addformbutton": SfAddformbutton;
         "sf-answertype": SfAnswertype;
         "sf-checkbox": SfCheckbox;
@@ -132,6 +144,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "example-component": LocalJSX.ExampleComponent & JSXBase.HTMLAttributes<HTMLExampleComponentElement>;
+            "modal-box": LocalJSX.ModalBox & JSXBase.HTMLAttributes<HTMLModalBoxElement>;
             "sf-addformbutton": LocalJSX.SfAddformbutton & JSXBase.HTMLAttributes<HTMLSfAddformbuttonElement>;
             "sf-answertype": LocalJSX.SfAnswertype & JSXBase.HTMLAttributes<HTMLSfAnswertypeElement>;
             "sf-checkbox": LocalJSX.SfCheckbox & JSXBase.HTMLAttributes<HTMLSfCheckboxElement>;

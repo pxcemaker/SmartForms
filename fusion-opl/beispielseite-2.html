@@ -7,12 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beispielseite Antworttypen</title>
     <link rel="stylesheet" href="beispiel.css">
-    <script src="beispielseite.js"></script>
+    <link rel="stylesheet" href="modalbox.css">
+    <script src="beispielseite.js"defer></script>
 </head>
 
 <body>
     <div class="wrapper-header">
         <div class="add-container">
+            <button class="a-button" id="add">+</button>
             <button class="a-button" id="add">+</button>
         </div>
     </div>
@@ -122,14 +124,16 @@
             <div class="loeschen">
                 <button id="close">X</button>
             </div>
-            <h4>Titel:</h4>
+            <h4>Frage:</h4>
             <input type="text" id="ae-titel">
-            <h4>Beschreibung:</h4>
+            <h4>Antwort:</h4>
             <textarea rows="4" id="ae-beschreibung"></textarea>
             <div class="anpassen">
                 <button id="speichern">Speichern</button>
+                <example-component></example-component>
             </div>
         </div>
 </body>
+
 
 </html>
