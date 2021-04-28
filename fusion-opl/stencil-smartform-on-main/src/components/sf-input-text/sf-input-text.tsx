@@ -7,10 +7,17 @@ import { Component, Host, h } from '@stencil/core';
 })
 export class SfInputText {
 
+
   render() {
     return (
       <Host>
-        <slot></slot>
+        <div class="checkbox-container">
+            <div class="checkbox-kasten">
+                <div class="checkbox-content">
+                    <input type="text" name="textfeld" placeholder="Gib hier deinen Text ein..." required></input>
+                </div>
+            </div>
+         </div>
       </Host>
     );
   }
