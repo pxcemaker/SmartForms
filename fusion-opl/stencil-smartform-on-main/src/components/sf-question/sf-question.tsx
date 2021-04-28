@@ -1,4 +1,4 @@
-import { Component, h } from '@stencil/core';
+import { Component, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'sf-question',
@@ -6,10 +6,12 @@ import { Component, h } from '@stencil/core';
   shadow: true,
 })
 export class SfQuestion {
+  @Prop({ reflect: true }) value: string;
+
   render() {
     return (
       <div class="question">
-        <p>Frage 0: Ist das eine Beispielfrage?</p>
+        <p>{'' + this.value}</p>
       </div>
     );
   }

@@ -86,11 +86,16 @@ export class SfDynamicform {
     }
   }
 
+  returnQuestion() {
+    return <sf-question value={this.question}></sf-question>;
+  }
+
   render() {
     return (
       <div class="grid-container">
         <div class="kasten item-1-1">
-          <sf-question></sf-question>
+          {this.returnQuestion()}
+
           {this.returnAnswers()}
         </div>
 
@@ -102,17 +107,7 @@ export class SfDynamicform {
             </div>
 
             <div class="item-1-2 grid-container">
-              <label class="item-1-1">Frage:</label>
-              <input
-                type="text"
-                id="fquestion"
-                class="item-1-2"
-                name="question"
-                value="question"
-                onInput={() => {
-                  this.question = 'question';
-                }}
-              ></input>
+              <sf-questionempty onQuestionInput={ev => (this.question = ev.detail)}></sf-questionempty>
             </div>
 
             <div class="item-2-2 grid-container">

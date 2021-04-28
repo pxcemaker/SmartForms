@@ -18,11 +18,14 @@ export namespace Components {
     interface SfInputText {
     }
     interface SfQuestion {
+        "value": string;
     }
     interface SfQuestionContainer {
         "frageText": string;
         "fragenId": string;
         "onOff": string;
+    }
+    interface SfQuestionempty {
     }
     interface SfRadio {
         "value": string;
@@ -80,6 +83,12 @@ declare global {
         prototype: HTMLSfQuestionContainerElement;
         new (): HTMLSfQuestionContainerElement;
     };
+    interface HTMLSfQuestionemptyElement extends Components.SfQuestionempty, HTMLStencilElement {
+    }
+    var HTMLSfQuestionemptyElement: {
+        prototype: HTMLSfQuestionemptyElement;
+        new (): HTMLSfQuestionemptyElement;
+    };
     interface HTMLSfRadioElement extends Components.SfRadio, HTMLStencilElement {
     }
     var HTMLSfRadioElement: {
@@ -112,6 +121,7 @@ declare global {
         "sf-input-text": HTMLSfInputTextElement;
         "sf-question": HTMLSfQuestionElement;
         "sf-question-container": HTMLSfQuestionContainerElement;
+        "sf-questionempty": HTMLSfQuestionemptyElement;
         "sf-radio": HTMLSfRadioElement;
         "sf-radioempty": HTMLSfRadioemptyElement;
         "sf-text-area": HTMLSfTextAreaElement;
@@ -132,11 +142,15 @@ declare namespace LocalJSX {
     interface SfInputText {
     }
     interface SfQuestion {
+        "value"?: string;
     }
     interface SfQuestionContainer {
         "frageText"?: string;
         "fragenId"?: string;
         "onOff"?: string;
+    }
+    interface SfQuestionempty {
+        "onQuestionInput"?: (event: CustomEvent<string>) => void;
     }
     interface SfRadio {
         "value"?: string;
@@ -159,6 +173,7 @@ declare namespace LocalJSX {
         "sf-input-text": SfInputText;
         "sf-question": SfQuestion;
         "sf-question-container": SfQuestionContainer;
+        "sf-questionempty": SfQuestionempty;
         "sf-radio": SfRadio;
         "sf-radioempty": SfRadioempty;
         "sf-text-area": SfTextArea;
@@ -176,6 +191,7 @@ declare module "@stencil/core" {
             "sf-input-text": LocalJSX.SfInputText & JSXBase.HTMLAttributes<HTMLSfInputTextElement>;
             "sf-question": LocalJSX.SfQuestion & JSXBase.HTMLAttributes<HTMLSfQuestionElement>;
             "sf-question-container": LocalJSX.SfQuestionContainer & JSXBase.HTMLAttributes<HTMLSfQuestionContainerElement>;
+            "sf-questionempty": LocalJSX.SfQuestionempty & JSXBase.HTMLAttributes<HTMLSfQuestionemptyElement>;
             "sf-radio": LocalJSX.SfRadio & JSXBase.HTMLAttributes<HTMLSfRadioElement>;
             "sf-radioempty": LocalJSX.SfRadioempty & JSXBase.HTMLAttributes<HTMLSfRadioemptyElement>;
             "sf-text-area": LocalJSX.SfTextArea & JSXBase.HTMLAttributes<HTMLSfTextAreaElement>;
