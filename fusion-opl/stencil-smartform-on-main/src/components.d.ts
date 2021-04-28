@@ -25,6 +25,7 @@ export namespace Components {
         "onOff": string;
     }
     interface SfRadio {
+        "value": string;
     }
     interface SfRadioempty {
     }
@@ -138,8 +139,10 @@ declare namespace LocalJSX {
         "onOff"?: string;
     }
     interface SfRadio {
+        "value"?: string;
     }
     interface SfRadioempty {
+        "onRadioAnswer"?: (event: CustomEvent<string>) => void;
     }
     interface SfTextArea {
         "frageText"?: string;

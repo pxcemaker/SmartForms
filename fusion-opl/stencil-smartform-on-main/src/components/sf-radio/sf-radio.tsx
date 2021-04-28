@@ -1,4 +1,4 @@
-import { Component, Host, h } from '@stencil/core';
+import { Component, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'sf-radio',
@@ -6,13 +6,16 @@ import { Component, Host, h } from '@stencil/core';
   shadow: true,
 })
 export class SfRadio {
+  @Prop({ reflect: true }) value: string;
 
   render() {
     return (
-      <Host>
-        <slot></slot>
-      </Host>
+      <div class="checkbox-kasten">
+        <div class="checkbox-content">
+          <input type="radio" id="radio-1" name="radio" checked></input>
+          <label>{'' + this.value}</label>
+        </div>
+      </div>
     );
   }
-
 }

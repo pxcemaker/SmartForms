@@ -9,9 +9,11 @@ export class SfDynamicform {
   @State() question: string;
   @State() radio: string;
   @State() checkboxMap: CheckBoxDef[];
+  @State() radioMap: RadioDef[];
 
   constructor() {
     this.checkboxMap = [new CheckBoxDef('antwort1', 'a'), new CheckBoxDef('antwort2', 'b'), new CheckBoxDef('antwort3', 'c')];
+    this.radioMap = [new RadioDef('antwort1', 'a'), new RadioDef('antwort2', 'b'), new RadioDef('antwort3', 'c')];
   }
 
   @Watch('checkboxMap')
@@ -40,17 +42,40 @@ export class SfDynamicform {
     ));
   }
 
+  returnEmptyRadio() {
+    return this.radioMap.map((radiodef, index) => (
+      <sf-radioempty
+        onRadioAnswer={ev =>
+          (this.radioMap = [...this.radioMap].map(radiodefnew => {
+            if (radiodef.key == radiodefnew.key) {
+              radiodefnew.value = ev.detail;
+              return radiodefnew;
+            } else {
+              return radiodefnew;
+            }
+          }))
+        }
+      ></sf-radioempty>
+    ));
+  }
+
   ///{ev => (this.checkboxMap[index].value = ev.detail)}
 
-  renderInputBox() {
+  renderInputCheckbox() {
     if (this.radio == 'checkbox') {
       return <div class="item-1-3 answers">{this.returnEmptyCheckbox()}</div>;
+    } else if (this.radio == 'radio') {
+      return <div class="item-1-3 answers">{this.returnEmptyRadio()}</div>;
     }
     return <div></div>;
   }
 
   returnCheckbox() {
-    return this.checkboxMap.map(checkboxdef => <sf-checkbox value={checkboxdef.value}></sf-checkbox>);
+    if (this.radio == 'checkbox') {
+      return this.checkboxMap.map(checkboxdef => <sf-checkbox value={checkboxdef.value}></sf-checkbox>);
+    } else if (this.radio == 'radio') {
+      return this.radioMap.map(radiodef => <sf-radio value={radiodef.value}></sf-radio>);
+    }
   }
 
   render() {
@@ -126,7 +151,7 @@ export class SfDynamicform {
               </div>
             </div>
 
-            {this.renderInputBox()}
+            {this.renderInputCheckbox()}
 
             <button class="item-2-3-btn" type="submit">
               safe
@@ -139,6 +164,16 @@ export class SfDynamicform {
 }
 
 class CheckBoxDef {
+  key: string;
+  value: string;
+
+  constructor(key, value) {
+    this.key = key;
+    this.value = value;
+  }
+}
+
+class RadioDef {
   key: string;
   value: string;
 
