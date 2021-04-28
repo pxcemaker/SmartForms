@@ -5,12 +5,14 @@ import { Component, Host, h } from '@stencil/core';
   styleUrl: 'sf-input-text.css',
   shadow: true,
 })
+
 export class SfInputText {
+
 
   render() {
     return (
       <Host>
-        <slot></slot>
+        <input type="text" name="textfeld" placeholder="Gib hier deinen Text ein..." required></input>      
       </Host>
     );
   }

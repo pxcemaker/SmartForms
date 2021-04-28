@@ -1,5 +1,5 @@
 //Die Teile der Modalbox als Konstanten zugänglich
-const modalBox = document.querySelector("#modalbox");
+const modalBox2 = document.querySelector("#modalbox2");
 const closeModal = document.querySelector("#close");
 const titleInput = document.querySelector("#ae-titel");
 const descriptionInput1 = document.querySelector("#ae-beschreibung");
@@ -154,7 +154,7 @@ function createItem(objItem) {
 
 //Modalbox wird sichtbar/unsichtbar
 function toggleDisplayModalBox() {
-    modalBox.classList.toggle("inaktiv");
+    modalBox2.classList.toggle("inaktiv");
 
 }
 

@@ -6,12 +6,6 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface ExampleComponent {
-        "exampleProp": string;
-        "exampleToUpperCase": () => Promise<void>;
-    }
-    interface ModalBox {
-    }
     interface SfAddformbutton {
     }
     interface SfCheckbox {
@@ -28,25 +22,19 @@ export namespace Components {
     interface SfQuestion {
     }
     interface SfQuestionContainer {
+        "frageText": string;
+        "fragenId": string;
+        "onOff": string;
     }
     interface SfTextArea {
+        "frageText": string;
+        "fragenId": string;
+        "onOff": string;
     }
     interface SfUploadbutton {
     }
 }
 declare global {
-    interface HTMLExampleComponentElement extends Components.ExampleComponent, HTMLStencilElement {
-    }
-    var HTMLExampleComponentElement: {
-        prototype: HTMLExampleComponentElement;
-        new (): HTMLExampleComponentElement;
-    };
-    interface HTMLModalBoxElement extends Components.ModalBox, HTMLStencilElement {
-    }
-    var HTMLModalBoxElement: {
-        prototype: HTMLModalBoxElement;
-        new (): HTMLModalBoxElement;
-    };
     interface HTMLSfAddformbuttonElement extends Components.SfAddformbutton, HTMLStencilElement {
     }
     var HTMLSfAddformbuttonElement: {
@@ -108,8 +96,6 @@ declare global {
         new (): HTMLSfUploadbuttonElement;
     };
     interface HTMLElementTagNameMap {
-        "example-component": HTMLExampleComponentElement;
-        "modal-box": HTMLModalBoxElement;
         "sf-addformbutton": HTMLSfAddformbuttonElement;
         "sf-checkbox": HTMLSfCheckboxElement;
         "sf-dynamicform": HTMLSfDynamicformElement;
@@ -123,12 +109,6 @@ declare global {
     }
 }
 declare namespace LocalJSX {
-    interface ExampleComponent {
-        "exampleProp"?: string;
-        "onExampleEvent"?: (event: CustomEvent<string>) => void;
-    }
-    interface ModalBox {
-    }
     interface SfAddformbutton {
     }
     interface SfCheckbox {
@@ -146,14 +126,18 @@ declare namespace LocalJSX {
     interface SfQuestion {
     }
     interface SfQuestionContainer {
+        "frageText"?: string;
+        "fragenId"?: string;
+        "onOff"?: string;
     }
     interface SfTextArea {
+        "frageText"?: string;
+        "fragenId"?: string;
+        "onOff"?: string;
     }
     interface SfUploadbutton {
     }
     interface IntrinsicElements {
-        "example-component": ExampleComponent;
-        "modal-box": ModalBox;
         "sf-addformbutton": SfAddformbutton;
         "sf-checkbox": SfCheckbox;
         "sf-dynamicform": SfDynamicform;
@@ -170,8 +154,6 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "example-component": LocalJSX.ExampleComponent & JSXBase.HTMLAttributes<HTMLExampleComponentElement>;
-            "modal-box": LocalJSX.ModalBox & JSXBase.HTMLAttributes<HTMLModalBoxElement>;
             "sf-addformbutton": LocalJSX.SfAddformbutton & JSXBase.HTMLAttributes<HTMLSfAddformbuttonElement>;
             "sf-checkbox": LocalJSX.SfCheckbox & JSXBase.HTMLAttributes<HTMLSfCheckboxElement>;
             "sf-dynamicform": LocalJSX.SfDynamicform & JSXBase.HTMLAttributes<HTMLSfDynamicformElement>;

@@ -339,7 +339,7 @@ cursor: pointer; /* Cursor on hover */
 /*Rating: Ende*/
 
 #fragen-container {
-  display: flex;
+  display: table-cell;
   flex-direction: row;
 }
 

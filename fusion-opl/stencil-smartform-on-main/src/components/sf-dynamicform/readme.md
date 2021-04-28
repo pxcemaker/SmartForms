@@ -1,16 +1,12 @@
 # sf-dynamicform
 
-
-
 <!-- Auto Generated Below -->
-
 
 ## Properties
 
 | Property | Attribute | Description | Type     | Default     |
 | -------- | --------- | ----------- | -------- | ----------- |
 | `answer` | `answer`  |             | `string` | `undefined` |
-
 
 ## Dependencies
 
@@ -21,6 +17,7 @@
 - [sf-question](../sf-question)
 
 ### Graph
+
 ```mermaid
 graph TD;
   sf-dynamicform --> sf-emptycheckbox
@@ -29,6 +26,6 @@ graph TD;
   style sf-dynamicform fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
-----------------------------------------------
+---
 
-*Built with [StencilJS](https://stenciljs.com/)*
+_Built with [StencilJS](https://stenciljs.com/)_
