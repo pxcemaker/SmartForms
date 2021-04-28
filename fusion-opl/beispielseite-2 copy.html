@@ -12,16 +12,18 @@
     </script>
     <link rel="stylesheet" href="stencil-smartform-on-main/dist/stencil-smartform-on/stencil-smartform-on.css" />
     <script src="beispielseite copy 2.js"defer></script>
+    <script src="beispielseite copy.js"defer></script>
 </head>
 
 <body>
     <div class="wrapper-header">
+        <p>Radio-Buttons</p>
         <div class="add-container">
-           
-            <button class="a-button" id="test1">+</button>
-            <modal-box></modal-box>
+            <button class="b-button" id="test1">+</button> 
+            <button class="a-button" id="test1">+</button> 
         </div>
     </div>
+
     <p>Fragen:</p>
     <div id="fragen-container">
         <div class="frage" id="frage-0">
@@ -136,25 +138,47 @@
             <label>  </label>
             <textarea id="ae-beschreibung"></textarea>
             <textarea id="ae" class="inaktiv"></textarea> 
-            <button  class="b-button"id="addQues"> +</button>
+            <button  class="c-button"id="addQues"> +</button>
             <div id="extraFragen"></div>
             <div class="anpassen">
                 <button id="speichern">Speichern</button>
                 <example-component></example-component>
             </div>
         </div>
+
+        <div id="modalbox2" class="inaktiv">
+            <div id="modalbox-inhalt">
+                <div class="loeschen">
+                    <button id="close">X</button>
+                </div>
+                <h4>Frage:</h4>
+                <input type="text" id="ae-titel">
+                <h4>Antworten</h4>
+                
+                <textarea id="ae-beschreibung"> </textarea>
+                
+                <textarea id="ae" class="inaktiv"> </textarea> 
+                <button  class="c-button"id="addQues"> +</button>
+                <div class="anpassen">
+                    <button id="speichern">Speichern</button>
+                    <example-component></example-component>
+                </div>
+            </div>
+            
 </body>
 <script>
     let btn1 = document.querySelector('#addQues')
     let ques = document.querySelector('#ae')
+
     btn1.addEventListener('click', function(){
         
-        console.log("test123")
-        ques.classList.remove("inaktiv");
-
-        
+        console.log("test")
+        ques.classList.remove("inaktiv") 
+        console.log("remove")
+       
         
     })
+
 </script>
 
 

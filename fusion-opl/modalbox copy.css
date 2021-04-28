@@ -42,13 +42,13 @@
 }
 
 .b-button {
-    border: 2pt solid #ebebeb;
+    border: 2pt solid #42b32b;
     border-radius: 10px;
     background-color: transparent;
     font: 1.5em "Roboto", sans-serif;
     transform: scale(1.02);
     font-weight: 500;
-    color: #ffffff;
+    color: #42b32b;
     margin-right: auto;
     margin-left: 0px;
     margin-top: 20px;
@@ -68,7 +68,33 @@
     color: #f1e532;
     cursor: pointer;
 }
+.c-button {
+    border: 2pt solid #ebebeb;
+    border-radius: 10px;
+    background-color: transparent;
+    font: 1.5em "Roboto", sans-serif;
+    transform: scale(1.02);
+    font-weight: 500;
+    color: #ffffff;
+    margin-right: auto;
+    margin-left: 0px;
+    margin-top: 20px;
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    align-content: center;
+    display: flex; /*damit zentriert werden kann*/
+    justify-content: center; /*horizontal zentrieren*/
+    align-items: center; /*vertikal zentrieren*/
+}
 
+.c-button:hover {
+    transform: scale(1.02);
+    border-color: transparent;
+    background-color: #ebc933;
+    color: #f1e532;
+    cursor: pointer;
+}
 
 /*Modalbox*/
 
@@ -90,7 +116,7 @@
 
 #modalbox-inhalt {
     height: 100%;
-    display: flex;
+    /*display: flex; */
     flex-wrap: wrap;
     flex-flow: column;
 }
@@ -147,7 +173,7 @@
     border: transparent ;
     border-radius: 5px;
     resize: none;
-    width: 90%;
+    width: 80%;
     height: 10%;
     background-color: #F2F2F2;
     font: 10pt "Roboto", sans-serif;

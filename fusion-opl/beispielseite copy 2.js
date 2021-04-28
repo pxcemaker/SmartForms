@@ -30,7 +30,7 @@ function setupDeleteBtns() {
 }
 
 function setupAddBtn() {
-    let addBtns = document.getElementsByClassName("a-button");
+    let addBtns = document.getElementsByClassName("b-button");
     for (addBtn of addBtns) {
         addBtn.addEventListener("click", toggleDisplayModalBox);
     }
@@ -80,6 +80,7 @@ function generateListItem() {
 
     const itemFrage = collectitemFrage();
     const itemAntwort = collectitemAntwort();
+    
     const itemAntwort1 = collectitemAntwort1();
 
     objItem = saveListItem(itemFrage, itemAntwort ,itemAntwort1);
@@ -115,8 +116,10 @@ function collectitemAntwort() {
    
     
     let itemAntwort = descriptionInput1.value;/*prompt("Gib hier die Beschreibung des neuen Listelements ein.");*/
+    
+        return itemAntwort;
 
-    return itemAntwort;
+    
 }
 
 
@@ -146,19 +149,21 @@ function createItem(objItem) {
 
     const newFrage = document.createElement("div");
     newFrage.classList.add("frage");
-    newFrage.innerHTML = `
-            <p>Frage ${objItem.fragenId}: ${objItem.itemFrage}</p>
+    
+        newFrage.innerHTML = `
+        <p>Frage ${objItem.fragenId}: ${objItem.itemFrage}</p>
 
-            <p> <input type="radio" checked>
-            <label></label> ${objItem.itemAntwort}
-             </p>
-            
-            <p> <input type="radio">
-            <label></label> ${objItem.itemAntwort1} </p>
-            
-           
-            
-    `
+        <p> <input type="radio" checked>
+        <label></label> ${objItem.itemAntwort}
+         </p>
+        
+        <p> <input type="radio">
+        <label></label> ${objItem.itemAntwort1} </p>
+        
+`
+    
+    
+   
  
     fragenContainer.appendChild(newFrage) ;//div hinzufügen
     
@@ -188,6 +193,7 @@ function deleteInputTitle() {
 function deleteInputDescription() {
     descriptionInput1.value = "";
     descriptionInput2.value= "";
+    descriptionInput2.classList.toggle("inaktiv");
 }
 
 

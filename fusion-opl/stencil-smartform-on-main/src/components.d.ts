@@ -6,9 +6,6 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface ModalBox {
-        "isOpen": boolean;
-    }
     interface SfAddformbutton {
     }
     interface SfAnswertype {
@@ -33,12 +30,6 @@ export namespace Components {
     }
 }
 declare global {
-    interface HTMLModalBoxElement extends Components.ModalBox, HTMLStencilElement {
-    }
-    var HTMLModalBoxElement: {
-        prototype: HTMLModalBoxElement;
-        new (): HTMLModalBoxElement;
-    };
     interface HTMLSfAddformbuttonElement extends Components.SfAddformbutton, HTMLStencilElement {
     }
     var HTMLSfAddformbuttonElement: {
@@ -106,7 +97,6 @@ declare global {
         new (): HTMLSfUploadbuttonElement;
     };
     interface HTMLElementTagNameMap {
-        "modal-box": HTMLModalBoxElement;
         "sf-addformbutton": HTMLSfAddformbuttonElement;
         "sf-answertype": HTMLSfAnswertypeElement;
         "sf-checkbox": HTMLSfCheckboxElement;
@@ -121,9 +111,6 @@ declare global {
     }
 }
 declare namespace LocalJSX {
-    interface ModalBox {
-        "isOpen"?: boolean;
-    }
     interface SfAddformbutton {
     }
     interface SfAnswertype {
@@ -147,7 +134,6 @@ declare namespace LocalJSX {
     interface SfUploadbutton {
     }
     interface IntrinsicElements {
-        "modal-box": ModalBox;
         "sf-addformbutton": SfAddformbutton;
         "sf-answertype": SfAnswertype;
         "sf-checkbox": SfCheckbox;
@@ -165,7 +151,6 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "modal-box": LocalJSX.ModalBox & JSXBase.HTMLAttributes<HTMLModalBoxElement>;
             "sf-addformbutton": LocalJSX.SfAddformbutton & JSXBase.HTMLAttributes<HTMLSfAddformbuttonElement>;
             "sf-answertype": LocalJSX.SfAnswertype & JSXBase.HTMLAttributes<HTMLSfAnswertypeElement>;
             "sf-checkbox": LocalJSX.SfCheckbox & JSXBase.HTMLAttributes<HTMLSfCheckboxElement>;
