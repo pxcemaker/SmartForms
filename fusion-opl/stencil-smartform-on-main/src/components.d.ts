@@ -22,9 +22,15 @@ export namespace Components {
     }
     interface SfImgselection {
     }
+    interface SfInputText {
+    }
     interface SfMultiplechoice {
     }
     interface SfQuestion {
+    }
+    interface SfQuestionContainer {
+    }
+    interface SfTextArea {
     }
     interface SfUploadbutton {
     }
@@ -72,6 +78,12 @@ declare global {
         prototype: HTMLSfImgselectionElement;
         new (): HTMLSfImgselectionElement;
     };
+    interface HTMLSfInputTextElement extends Components.SfInputText, HTMLStencilElement {
+    }
+    var HTMLSfInputTextElement: {
+        prototype: HTMLSfInputTextElement;
+        new (): HTMLSfInputTextElement;
+    };
     interface HTMLSfMultiplechoiceElement extends Components.SfMultiplechoice, HTMLStencilElement {
     }
     var HTMLSfMultiplechoiceElement: {
@@ -83,6 +95,18 @@ declare global {
     var HTMLSfQuestionElement: {
         prototype: HTMLSfQuestionElement;
         new (): HTMLSfQuestionElement;
+    };
+    interface HTMLSfQuestionContainerElement extends Components.SfQuestionContainer, HTMLStencilElement {
+    }
+    var HTMLSfQuestionContainerElement: {
+        prototype: HTMLSfQuestionContainerElement;
+        new (): HTMLSfQuestionContainerElement;
+    };
+    interface HTMLSfTextAreaElement extends Components.SfTextArea, HTMLStencilElement {
+    }
+    var HTMLSfTextAreaElement: {
+        prototype: HTMLSfTextAreaElement;
+        new (): HTMLSfTextAreaElement;
     };
     interface HTMLSfUploadbuttonElement extends Components.SfUploadbutton, HTMLStencilElement {
     }
@@ -98,8 +122,11 @@ declare global {
         "sf-checkbox": HTMLSfCheckboxElement;
         "sf-dynamicform": HTMLSfDynamicformElement;
         "sf-imgselection": HTMLSfImgselectionElement;
+        "sf-input-text": HTMLSfInputTextElement;
         "sf-multiplechoice": HTMLSfMultiplechoiceElement;
         "sf-question": HTMLSfQuestionElement;
+        "sf-question-container": HTMLSfQuestionContainerElement;
+        "sf-text-area": HTMLSfTextAreaElement;
         "sf-uploadbutton": HTMLSfUploadbuttonElement;
     }
 }
@@ -120,9 +147,15 @@ declare namespace LocalJSX {
     }
     interface SfImgselection {
     }
+    interface SfInputText {
+    }
     interface SfMultiplechoice {
     }
     interface SfQuestion {
+    }
+    interface SfQuestionContainer {
+    }
+    interface SfTextArea {
     }
     interface SfUploadbutton {
     }
@@ -134,8 +167,11 @@ declare namespace LocalJSX {
         "sf-checkbox": SfCheckbox;
         "sf-dynamicform": SfDynamicform;
         "sf-imgselection": SfImgselection;
+        "sf-input-text": SfInputText;
         "sf-multiplechoice": SfMultiplechoice;
         "sf-question": SfQuestion;
+        "sf-question-container": SfQuestionContainer;
+        "sf-text-area": SfTextArea;
         "sf-uploadbutton": SfUploadbutton;
     }
 }
@@ -150,8 +186,11 @@ declare module "@stencil/core" {
             "sf-checkbox": LocalJSX.SfCheckbox & JSXBase.HTMLAttributes<HTMLSfCheckboxElement>;
             "sf-dynamicform": LocalJSX.SfDynamicform & JSXBase.HTMLAttributes<HTMLSfDynamicformElement>;
             "sf-imgselection": LocalJSX.SfImgselection & JSXBase.HTMLAttributes<HTMLSfImgselectionElement>;
+            "sf-input-text": LocalJSX.SfInputText & JSXBase.HTMLAttributes<HTMLSfInputTextElement>;
             "sf-multiplechoice": LocalJSX.SfMultiplechoice & JSXBase.HTMLAttributes<HTMLSfMultiplechoiceElement>;
             "sf-question": LocalJSX.SfQuestion & JSXBase.HTMLAttributes<HTMLSfQuestionElement>;
+            "sf-question-container": LocalJSX.SfQuestionContainer & JSXBase.HTMLAttributes<HTMLSfQuestionContainerElement>;
+            "sf-text-area": LocalJSX.SfTextArea & JSXBase.HTMLAttributes<HTMLSfTextAreaElement>;
             "sf-uploadbutton": LocalJSX.SfUploadbutton & JSXBase.HTMLAttributes<HTMLSfUploadbuttonElement>;
         }
     }
