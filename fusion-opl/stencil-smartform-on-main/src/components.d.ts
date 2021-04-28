@@ -17,14 +17,16 @@ export namespace Components {
     }
     interface SfInputText {
     }
-    interface SfMultiplechoice {
-    }
     interface SfQuestion {
     }
     interface SfQuestionContainer {
         "frageText": string;
         "fragenId": string;
         "onOff": string;
+    }
+    interface SfRadio {
+    }
+    interface SfRadioempty {
     }
     interface SfTextArea {
         "frageText": string;
@@ -65,12 +67,6 @@ declare global {
         prototype: HTMLSfInputTextElement;
         new (): HTMLSfInputTextElement;
     };
-    interface HTMLSfMultiplechoiceElement extends Components.SfMultiplechoice, HTMLStencilElement {
-    }
-    var HTMLSfMultiplechoiceElement: {
-        prototype: HTMLSfMultiplechoiceElement;
-        new (): HTMLSfMultiplechoiceElement;
-    };
     interface HTMLSfQuestionElement extends Components.SfQuestion, HTMLStencilElement {
     }
     var HTMLSfQuestionElement: {
@@ -82,6 +78,18 @@ declare global {
     var HTMLSfQuestionContainerElement: {
         prototype: HTMLSfQuestionContainerElement;
         new (): HTMLSfQuestionContainerElement;
+    };
+    interface HTMLSfRadioElement extends Components.SfRadio, HTMLStencilElement {
+    }
+    var HTMLSfRadioElement: {
+        prototype: HTMLSfRadioElement;
+        new (): HTMLSfRadioElement;
+    };
+    interface HTMLSfRadioemptyElement extends Components.SfRadioempty, HTMLStencilElement {
+    }
+    var HTMLSfRadioemptyElement: {
+        prototype: HTMLSfRadioemptyElement;
+        new (): HTMLSfRadioemptyElement;
     };
     interface HTMLSfTextAreaElement extends Components.SfTextArea, HTMLStencilElement {
     }
@@ -101,9 +109,10 @@ declare global {
         "sf-dynamicform": HTMLSfDynamicformElement;
         "sf-emptycheckbox": HTMLSfEmptycheckboxElement;
         "sf-input-text": HTMLSfInputTextElement;
-        "sf-multiplechoice": HTMLSfMultiplechoiceElement;
         "sf-question": HTMLSfQuestionElement;
         "sf-question-container": HTMLSfQuestionContainerElement;
+        "sf-radio": HTMLSfRadioElement;
+        "sf-radioempty": HTMLSfRadioemptyElement;
         "sf-text-area": HTMLSfTextAreaElement;
         "sf-uploadbutton": HTMLSfUploadbuttonElement;
     }
@@ -121,14 +130,16 @@ declare namespace LocalJSX {
     }
     interface SfInputText {
     }
-    interface SfMultiplechoice {
-    }
     interface SfQuestion {
     }
     interface SfQuestionContainer {
         "frageText"?: string;
         "fragenId"?: string;
         "onOff"?: string;
+    }
+    interface SfRadio {
+    }
+    interface SfRadioempty {
     }
     interface SfTextArea {
         "frageText"?: string;
@@ -143,9 +154,10 @@ declare namespace LocalJSX {
         "sf-dynamicform": SfDynamicform;
         "sf-emptycheckbox": SfEmptycheckbox;
         "sf-input-text": SfInputText;
-        "sf-multiplechoice": SfMultiplechoice;
         "sf-question": SfQuestion;
         "sf-question-container": SfQuestionContainer;
+        "sf-radio": SfRadio;
+        "sf-radioempty": SfRadioempty;
         "sf-text-area": SfTextArea;
         "sf-uploadbutton": SfUploadbutton;
     }
@@ -159,9 +171,10 @@ declare module "@stencil/core" {
             "sf-dynamicform": LocalJSX.SfDynamicform & JSXBase.HTMLAttributes<HTMLSfDynamicformElement>;
             "sf-emptycheckbox": LocalJSX.SfEmptycheckbox & JSXBase.HTMLAttributes<HTMLSfEmptycheckboxElement>;
             "sf-input-text": LocalJSX.SfInputText & JSXBase.HTMLAttributes<HTMLSfInputTextElement>;
-            "sf-multiplechoice": LocalJSX.SfMultiplechoice & JSXBase.HTMLAttributes<HTMLSfMultiplechoiceElement>;
             "sf-question": LocalJSX.SfQuestion & JSXBase.HTMLAttributes<HTMLSfQuestionElement>;
             "sf-question-container": LocalJSX.SfQuestionContainer & JSXBase.HTMLAttributes<HTMLSfQuestionContainerElement>;
+            "sf-radio": LocalJSX.SfRadio & JSXBase.HTMLAttributes<HTMLSfRadioElement>;
+            "sf-radioempty": LocalJSX.SfRadioempty & JSXBase.HTMLAttributes<HTMLSfRadioemptyElement>;
             "sf-text-area": LocalJSX.SfTextArea & JSXBase.HTMLAttributes<HTMLSfTextAreaElement>;
             "sf-uploadbutton": LocalJSX.SfUploadbutton & JSXBase.HTMLAttributes<HTMLSfUploadbuttonElement>;
         }
