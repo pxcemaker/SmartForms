@@ -1,0 +1,204 @@
+.wrapper-header {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    color: #3926a8;
+    display: flex;
+    justify-content: stretch;
+}
+
+.add-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.a-button {
+    border: 2pt solid #3926a8;
+    border-radius: 10px;
+    background-color: transparent;
+    font: 1.5em "Roboto", sans-serif;
+    transform: scale(1.02);
+    font-weight: 500;
+    color: #3926a8;
+    margin-right: auto;
+    margin-left: 0px;
+    margin-top: 20px;
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    align-content: center;
+    display: flex; /*damit zentriert werden kann*/
+    justify-content: center; /*horizontal zentrieren*/
+    align-items: center; /*vertikal zentrieren*/
+}
+
+.a-button:hover {
+    transform: scale(1.02);
+    border-color: transparent;
+    background-color: #3926a8;
+    color: #edddca;
+    cursor: pointer;
+}
+
+.b-button {
+    border: 2pt solid #ebebeb;
+    border-radius: 10px;
+    background-color: transparent;
+    font: 1.5em "Roboto", sans-serif;
+    transform: scale(1.02);
+    font-weight: 500;
+    color: #ffffff;
+    margin-right: auto;
+    margin-left: 0px;
+    margin-top: 20px;
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    align-content: center;
+    display: flex; /*damit zentriert werden kann*/
+    justify-content: center; /*horizontal zentrieren*/
+    align-items: center; /*vertikal zentrieren*/
+}
+
+.b-button:hover {
+    transform: scale(1.02);
+    border-color: transparent;
+    background-color: #ebc933;
+    color: #f1e532;
+    cursor: pointer;
+}
+
+
+/*Modalbox*/
+
+#modalbox {
+    position: fixed;
+    left: 25%;
+    right: auto;
+    top: 15%;
+    bottom: auto;
+    margin: 0px auto;
+    background-color: #3926a8;
+    min-width: 50%;
+    min-height: 50%;
+    border: 3pt solid #F2F2F2;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+
+#modalbox-inhalt {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: column;
+}
+
+#modalbox h4 {
+    color: #F2F2F2;
+}
+
+#close-button {
+    border: 1pt solid #F2F2F2;
+    border-radius: 15px;
+    background-color: transparent;
+    font: 9pt "Roboto", sans-serif;
+    font-weight: 500;
+    color: #F2F2F2;
+    margin-right: 5px;
+    margin-top: 10px;
+    padding: 10px;
+    align-content: center;
+    display: flex; /*damit zentriert werden kann*/
+    justify-content: center; /*horizontal zentrieren*/
+    align-items: center; /*vertikal zentrieren*/
+    max-height: 40px;
+}
+
+
+ #close:hover {
+    transform: scale(1.02);
+    border-color: transparent;
+    background-color: #F2F2F2;
+    color: #3926a8;
+    cursor: pointer;
+}
+
+#modalbox .anpassen-button {
+    color: #F2F2F2;
+}
+
+#modalbox input[type="text"] {
+    padding: 10px;
+    border: transparent ;
+    border-radius: 5px;
+    height: 30px;
+    width: 90%;
+    margin-right: 10px;
+    background-color: #F2F2F2;
+    font: 10pt "Roboto", sans-serif;
+    font-weight: 500;
+    color: #3926a8;
+  }
+
+#modalbox textarea {
+    padding: 10px;
+    border: transparent ;
+    border-radius: 5px;
+    resize: none;
+    width: 90%;
+    height: 10%;
+    background-color: #F2F2F2;
+    font: 10pt "Roboto", sans-serif;
+    font-weight: 500;
+    color: #3926a8;
+  }
+
+  #close {
+    border: 1pt solid #F2F2F2;
+    border-radius: 50%;
+    background-color: transparent;
+    font: 12pt "Roboto", sans-serif;
+    font-weight: 500;
+    color: #F2F2F2;
+    margin-right: 0px;
+    margin-left: auto;
+    margin-top: 5px;
+    padding: 10px;
+    height: 20px;
+    width: 20px;
+    align-content: center;
+    display: flex; /*damit zentriert werden kann*/
+    justify-content: center; /*horizontal zentrieren*/
+    align-items: center; /*vertikal zentrieren*/
+}
+
+#speichern {
+    border: 3pt solid transparent;
+    border-radius: 15px;
+    background-color: #F2F2F2;
+    font: 10pt "Roboto", sans-serif;
+    font-weight: 500;
+    margin-right: 5px;
+    margin-top: 30px;
+    padding: 10px;
+    align-content: center;
+    display: flex; /*damit zentriert werden kann*/
+    justify-content: center; /*horizontal zentrieren*/
+    align-items: center; /*vertikal zentrieren*/
+    width: 50%;
+    max-height: 40px;
+    align-self: flex-end;
+    color: #3926a8;
+}
+
+#speichern:hover {
+    transform: scale(1.02);
+}
+
+.inaktiv {
+    display: none;
+}
+
+  

@@ -1,15 +1,24 @@
-import { Component, Host, h } from '@stencil/core';
+import { Component, Host, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'modal-box',
   styleUrl: 'modal-box.css',
   shadow: true,
 })
+
+
 export class ModalBox {
+
+  @Prop({
+    mutable:true,
+    reflect:true,
+  })
+
+  @Prop() isOpen: boolean
 
   render() {
     return (
-      <Host>
+      <Host class={this.isOpen ? 'modalbox' : 'inaktiv'}>
         <div id="modalbox" class="inaktiv">
         <div id="modalbox-inhalt">
             <div class="loeschen">

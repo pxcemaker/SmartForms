@@ -6,11 +6,8 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface ExampleComponent {
-        "exampleProp": string;
-        "exampleToUpperCase": () => Promise<void>;
-    }
     interface ModalBox {
+        "isOpen": boolean;
     }
     interface SfAddformbutton {
     }
@@ -39,12 +36,6 @@ export namespace Components {
     }
 }
 declare global {
-    interface HTMLExampleComponentElement extends Components.ExampleComponent, HTMLStencilElement {
-    }
-    var HTMLExampleComponentElement: {
-        prototype: HTMLExampleComponentElement;
-        new (): HTMLExampleComponentElement;
-    };
     interface HTMLModalBoxElement extends Components.ModalBox, HTMLStencilElement {
     }
     var HTMLModalBoxElement: {
@@ -118,7 +109,6 @@ declare global {
         new (): HTMLSfUploadbuttonElement;
     };
     interface HTMLElementTagNameMap {
-        "example-component": HTMLExampleComponentElement;
         "modal-box": HTMLModalBoxElement;
         "sf-addformbutton": HTMLSfAddformbuttonElement;
         "sf-answertype": HTMLSfAnswertypeElement;
@@ -134,11 +124,8 @@ declare global {
     }
 }
 declare namespace LocalJSX {
-    interface ExampleComponent {
-        "exampleProp"?: string;
-        "onExampleEvent"?: (event: CustomEvent<string>) => void;
-    }
     interface ModalBox {
+        "isOpen"?: boolean;
     }
     interface SfAddformbutton {
     }
@@ -166,7 +153,6 @@ declare namespace LocalJSX {
     interface SfUploadbutton {
     }
     interface IntrinsicElements {
-        "example-component": ExampleComponent;
         "modal-box": ModalBox;
         "sf-addformbutton": SfAddformbutton;
         "sf-answertype": SfAnswertype;
@@ -185,7 +171,6 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "example-component": LocalJSX.ExampleComponent & JSXBase.HTMLAttributes<HTMLExampleComponentElement>;
             "modal-box": LocalJSX.ModalBox & JSXBase.HTMLAttributes<HTMLModalBoxElement>;
             "sf-addformbutton": LocalJSX.SfAddformbutton & JSXBase.HTMLAttributes<HTMLSfAddformbuttonElement>;
             "sf-answertype": LocalJSX.SfAnswertype & JSXBase.HTMLAttributes<HTMLSfAnswertypeElement>;

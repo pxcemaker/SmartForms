@@ -7,15 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beispielseite Antworttypen</title>
     <link rel="stylesheet" href="beispiel.css">
-    <link rel="stylesheet" href="modalbox.css">
-    <script src="beispielseite copy.js"defer></script>
+    <link rel="stylesheet" href="modalbox copy.css">
+    <script src="stencil-smartform-on-main/dist/stencil-smartform-on/stencil-smartform-on.esm.js" type="module">
+    </script>
+    <link rel="stylesheet" href="stencil-smartform-on-main/dist/stencil-smartform-on/stencil-smartform-on.css" />
+    <script src="beispielseite copy 2.js"defer></script>
 </head>
 
 <body>
     <div class="wrapper-header">
         <div class="add-container">
-            <button class="a-button" id="add">+</button>
-            <button class="a-button" id="add">+</button>
+           
+            <button class="a-button" id="test1">+</button>
+            <modal-box></modal-box>
         </div>
     </div>
     <p>Fragen:</p>
@@ -126,9 +130,12 @@
             </div>
             <h4>Frage:</h4>
             <input type="text" id="ae-titel">
-            
             <h4>Antwort 1 :</h4>
-            <textarea rows="1" id="ae-beschreibung"></textarea>
+            
+            <input type="radio" ></input>
+            <label>  </label>
+            <textarea id="ae-beschreibung"></textarea>
+            <textarea id="ae" class="inaktiv"></textarea> 
             <button  class="b-button"id="addQues"> +</button>
             <div id="extraFragen"></div>
             <div class="anpassen">
@@ -139,12 +146,13 @@
 </body>
 <script>
     let btn1 = document.querySelector('#addQues')
-    let ques = document.querySelector('#extraFragen')
+    let ques = document.querySelector('#ae')
     btn1.addEventListener('click', function(){
-        const newFrage2 = document.createElement("p")
-        newFrage2.innerHTML=  `<textarea rows="1" id="ae-beschreibung1"></textarea> `
-        ques.appendChild(newFrage2);
-        ;
+        
+        console.log("test123")
+        ques.classList.remove("inaktiv");
+
+        
         
     })
 </script>

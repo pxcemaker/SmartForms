@@ -13,11 +13,20 @@
 
   <body>
     <button class="a-button" id="add">+</button>
-    <example-component example-prop="Dies ist ein Property-Inhalt der Webcomponent"> Dies ist der Slot-Inhalt </example-component>
     <p>Ihr könnt all diesen Content verändern und mehr Unterseiten hinzufügen</p>
     <small>Viel Spaß beim kreativ werden :-)</small>
+    <button id="test"></button>
     <modal-box></modal-box>
     <sf-input-text></sf-input-text>
     <sf-text-area fragenId="1" fragenText="Ich bin eine Frage?"></sf-text-area>
   </body>
+  <script>
+  let btn = document.querySelector('#test')
+  let box = document.querySelector('modal-box')
+
+  btn.addEventListener('click' , function(){
+    box.isOpen = true;
+
+  })
+  </script>
 </html>

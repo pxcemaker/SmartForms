@@ -3,7 +3,7 @@ const modalBox = document.querySelector("#modalbox");
 const closeModal = document.querySelector("#close");
 const titleInput = document.querySelector("#ae-titel");
 const descriptionInput1 = document.querySelector("#ae-beschreibung");
-const descriptionInput2 = document.querySelector("#ae-beschreibung1");
+const descriptionInput2 = document.querySelector("#ae");
 const saveBtn = document.querySelector("#speichern");
 
 let idCounter = 0; //hier muss geschaut werden, ob im LokalStorage bereits Items, damit vorhandene Einträge nicht überschrieben werden 
@@ -80,9 +80,9 @@ function generateListItem() {
 
     const itemFrage = collectitemFrage();
     const itemAntwort = collectitemAntwort();
-    const itemAntwort1 = collectitemAntwort();
+    const itemAntwort1 = collectitemAntwort1();
 
-    objItem = saveListItem(itemFrage, itemAntwort , itemAntwort1);
+    objItem = saveListItem(itemFrage, itemAntwort ,itemAntwort1);
 
     createItem(objItem);
     
@@ -103,11 +103,20 @@ function collectitemFrage() {
     return itemFrage;
 }
 
-function collectitemAntwort() {
-    let itemAntwort = descriptionInput1.value;/*prompt("Gib hier die Beschreibung des neuen Listelements ein.");*/
+function collectitemAntwort1() {
+   
     
     let itemAntwort1 = descriptionInput2.value;/*prompt("Gib hier die Beschreibung des neuen Listelements ein.");*/
-    return itemAntwort1 && itemAntwort;
+
+    return itemAntwort1;
+}
+
+function collectitemAntwort() {
+   
+    
+    let itemAntwort = descriptionInput1.value;/*prompt("Gib hier die Beschreibung des neuen Listelements ein.");*/
+
+    return itemAntwort;
 }
 
 
@@ -133,14 +142,19 @@ function saveListItem( itemFrage, itemAntwort , itemAntwort1 ) { // Das Objekt w
 function createItem(objItem) {
     console.log(`Hier würde ein Element erstellt werden:
     Titel: ${objItem.itemFrage}
-    Beschreibung: ${objItem.itemAntwort} : ${objItem.itemAntwort1}`);
+    Beschreibung: ${objItem.itemAntwort  + objItem.itemAntwort1}`);
 
     const newFrage = document.createElement("div");
     newFrage.classList.add("frage");
     newFrage.innerHTML = `
             <p>Frage ${objItem.fragenId}: ${objItem.itemFrage}</p>
-            <p>Antwort1: ${objItem.itemAntwort}</p>
-            <p>Antwort2: ${objItem.itemAntwort1}</p>
+
+            <p> <input type="radio" checked>
+            <label></label> ${objItem.itemAntwort}
+             </p>
+            
+            <p> <input type="radio">
+            <label></label> ${objItem.itemAntwort1} </p>
             
            
             
@@ -155,6 +169,7 @@ function createItem(objItem) {
 //Modalbox wird sichtbar/unsichtbar
 function toggleDisplayModalBox() {
     modalBox.classList.toggle("inaktiv");
+    
 
 }
 
@@ -171,7 +186,8 @@ function deleteInputTitle() {
 }
 
 function deleteInputDescription() {
-    descriptionInput.value = "";
+    descriptionInput1.value = "";
+    descriptionInput2.value= "";
 }
 
 
