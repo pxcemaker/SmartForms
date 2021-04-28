@@ -1,52 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<?php require("head.inc.php"); ?>
 
-    <title>SmartForm</title>
+<body>
 
-     <!-- Style -->
-     <link rel="stylesheet" href="assets/css/umfrage.css">
-      <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" >
- 
-
-    </head>
-    <body>
-  
-      <!-- Header Area wrapper Starts -->
-      <header id="header-wrap">
+    <!-- Header Area wrapper Starts -->
+    <header id="header-wrap">
         <!-- Navbar Start -->
-        <nav class="navbar navbar-expand-md bg-inverse fixed-top scrolling-navbar">
-          <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <a href="umfrage.html" class="navbar-brand"><img src="assets/img/smartform-logo.png" alt=""></a>       
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-              <i class="lni-menu"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-              <ul class="navbar-nav mr-auto w-100 justify-content-end clearfix">
-                <li class="nav-item">
-                  <a class="nav-link" href="HowTo.html">
-                    HowTo
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="FAQ.html">
-                    FAQ
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="btn btn-common" id="registrieren-btn">LOGIN</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
+        <?php require("nav.inc.php"); ?>
         <!-- Navbar End -->
-    </header>
+   
 
      <!-- Hero Area Start -->
      <div id="hero-area" class="hero-area-bg">
@@ -70,7 +31,8 @@
         </div> 
       </div>
       <!-- Hero Area End -->
-
+    
+    </header>
       <p>Checkboxen:</p>
       <div class="checkbox-container">
           <div class="checkbox-kasten">
