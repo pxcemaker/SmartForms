@@ -12,7 +12,11 @@ export namespace Components {
     }
     interface SfAddformbutton {
     }
+    interface SfAnswertype {
+    }
     interface SfCheckbox {
+    }
+    interface SfDynamicform {
     }
     interface SfImgselection {
     }
@@ -36,11 +40,23 @@ declare global {
         prototype: HTMLSfAddformbuttonElement;
         new (): HTMLSfAddformbuttonElement;
     };
+    interface HTMLSfAnswertypeElement extends Components.SfAnswertype, HTMLStencilElement {
+    }
+    var HTMLSfAnswertypeElement: {
+        prototype: HTMLSfAnswertypeElement;
+        new (): HTMLSfAnswertypeElement;
+    };
     interface HTMLSfCheckboxElement extends Components.SfCheckbox, HTMLStencilElement {
     }
     var HTMLSfCheckboxElement: {
         prototype: HTMLSfCheckboxElement;
         new (): HTMLSfCheckboxElement;
+    };
+    interface HTMLSfDynamicformElement extends Components.SfDynamicform, HTMLStencilElement {
+    }
+    var HTMLSfDynamicformElement: {
+        prototype: HTMLSfDynamicformElement;
+        new (): HTMLSfDynamicformElement;
     };
     interface HTMLSfImgselectionElement extends Components.SfImgselection, HTMLStencilElement {
     }
@@ -69,7 +85,9 @@ declare global {
     interface HTMLElementTagNameMap {
         "example-component": HTMLExampleComponentElement;
         "sf-addformbutton": HTMLSfAddformbuttonElement;
+        "sf-answertype": HTMLSfAnswertypeElement;
         "sf-checkbox": HTMLSfCheckboxElement;
+        "sf-dynamicform": HTMLSfDynamicformElement;
         "sf-imgselection": HTMLSfImgselectionElement;
         "sf-multiplechoice": HTMLSfMultiplechoiceElement;
         "sf-question": HTMLSfQuestionElement;
@@ -83,7 +101,11 @@ declare namespace LocalJSX {
     }
     interface SfAddformbutton {
     }
+    interface SfAnswertype {
+    }
     interface SfCheckbox {
+    }
+    interface SfDynamicform {
     }
     interface SfImgselection {
     }
@@ -96,7 +118,9 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "example-component": ExampleComponent;
         "sf-addformbutton": SfAddformbutton;
+        "sf-answertype": SfAnswertype;
         "sf-checkbox": SfCheckbox;
+        "sf-dynamicform": SfDynamicform;
         "sf-imgselection": SfImgselection;
         "sf-multiplechoice": SfMultiplechoice;
         "sf-question": SfQuestion;
@@ -109,7 +133,9 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "example-component": LocalJSX.ExampleComponent & JSXBase.HTMLAttributes<HTMLExampleComponentElement>;
             "sf-addformbutton": LocalJSX.SfAddformbutton & JSXBase.HTMLAttributes<HTMLSfAddformbuttonElement>;
+            "sf-answertype": LocalJSX.SfAnswertype & JSXBase.HTMLAttributes<HTMLSfAnswertypeElement>;
             "sf-checkbox": LocalJSX.SfCheckbox & JSXBase.HTMLAttributes<HTMLSfCheckboxElement>;
+            "sf-dynamicform": LocalJSX.SfDynamicform & JSXBase.HTMLAttributes<HTMLSfDynamicformElement>;
             "sf-imgselection": LocalJSX.SfImgselection & JSXBase.HTMLAttributes<HTMLSfImgselectionElement>;
             "sf-multiplechoice": LocalJSX.SfMultiplechoice & JSXBase.HTMLAttributes<HTMLSfMultiplechoiceElement>;
             "sf-question": LocalJSX.SfQuestion & JSXBase.HTMLAttributes<HTMLSfQuestionElement>;

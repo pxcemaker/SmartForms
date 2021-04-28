@@ -9,14 +9,12 @@ export class SfMultiplechoice {
   render() {
     return (
       <Host>
-        <div class="spacetotop">
-          <div class=" grid-container checkbox-kasten">
-            <sf-question></sf-question>
-            <sf-checkbox></sf-checkbox>
-            <sf-checkbox></sf-checkbox>
-            <sf-checkbox></sf-checkbox>
-            <sf-checkbox></sf-checkbox>
-          </div>
+        <div class=" grid-container checkbox-kasten">
+          <sf-question></sf-question>
+          <sf-checkbox></sf-checkbox>
+          <sf-checkbox></sf-checkbox>
+          <sf-checkbox></sf-checkbox>
+          <sf-checkbox></sf-checkbox>
         </div>
       </Host>
     );
