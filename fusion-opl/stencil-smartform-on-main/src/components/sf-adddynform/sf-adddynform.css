@@ -1,0 +1,10 @@
+:host {
+  display: block;
+}
+
+.btn {
+  width: 5rem;
+  height: 3rem;
+  background-color: #fff;
+  font-size: 2rem;
+}

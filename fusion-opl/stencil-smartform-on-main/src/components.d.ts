@@ -6,12 +6,16 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface SfAdddynform {
+    }
     interface SfAddformbutton {
     }
     interface SfCheckbox {
         "value": string;
     }
     interface SfDynamicform {
+    }
+    interface SfEditformarea {
     }
     interface SfEmptycheckbox {
     }
@@ -41,6 +45,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLSfAdddynformElement extends Components.SfAdddynform, HTMLStencilElement {
+    }
+    var HTMLSfAdddynformElement: {
+        prototype: HTMLSfAdddynformElement;
+        new (): HTMLSfAdddynformElement;
+    };
     interface HTMLSfAddformbuttonElement extends Components.SfAddformbutton, HTMLStencilElement {
     }
     var HTMLSfAddformbuttonElement: {
@@ -58,6 +68,12 @@ declare global {
     var HTMLSfDynamicformElement: {
         prototype: HTMLSfDynamicformElement;
         new (): HTMLSfDynamicformElement;
+    };
+    interface HTMLSfEditformareaElement extends Components.SfEditformarea, HTMLStencilElement {
+    }
+    var HTMLSfEditformareaElement: {
+        prototype: HTMLSfEditformareaElement;
+        new (): HTMLSfEditformareaElement;
     };
     interface HTMLSfEmptycheckboxElement extends Components.SfEmptycheckbox, HTMLStencilElement {
     }
@@ -114,9 +130,11 @@ declare global {
         new (): HTMLSfUploadbuttonElement;
     };
     interface HTMLElementTagNameMap {
+        "sf-adddynform": HTMLSfAdddynformElement;
         "sf-addformbutton": HTMLSfAddformbuttonElement;
         "sf-checkbox": HTMLSfCheckboxElement;
         "sf-dynamicform": HTMLSfDynamicformElement;
+        "sf-editformarea": HTMLSfEditformareaElement;
         "sf-emptycheckbox": HTMLSfEmptycheckboxElement;
         "sf-input-text": HTMLSfInputTextElement;
         "sf-question": HTMLSfQuestionElement;
@@ -129,12 +147,17 @@ declare global {
     }
 }
 declare namespace LocalJSX {
+    interface SfAdddynform {
+        "onAddDynForm"?: (event: CustomEvent<any>) => void;
+    }
     interface SfAddformbutton {
     }
     interface SfCheckbox {
         "value"?: string;
     }
     interface SfDynamicform {
+    }
+    interface SfEditformarea {
     }
     interface SfEmptycheckbox {
         "onCheckboxAnswer"?: (event: CustomEvent<string>) => void;
@@ -166,9 +189,11 @@ declare namespace LocalJSX {
     interface SfUploadbutton {
     }
     interface IntrinsicElements {
+        "sf-adddynform": SfAdddynform;
         "sf-addformbutton": SfAddformbutton;
         "sf-checkbox": SfCheckbox;
         "sf-dynamicform": SfDynamicform;
+        "sf-editformarea": SfEditformarea;
         "sf-emptycheckbox": SfEmptycheckbox;
         "sf-input-text": SfInputText;
         "sf-question": SfQuestion;
@@ -184,9 +209,11 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "sf-adddynform": LocalJSX.SfAdddynform & JSXBase.HTMLAttributes<HTMLSfAdddynformElement>;
             "sf-addformbutton": LocalJSX.SfAddformbutton & JSXBase.HTMLAttributes<HTMLSfAddformbuttonElement>;
             "sf-checkbox": LocalJSX.SfCheckbox & JSXBase.HTMLAttributes<HTMLSfCheckboxElement>;
             "sf-dynamicform": LocalJSX.SfDynamicform & JSXBase.HTMLAttributes<HTMLSfDynamicformElement>;
+            "sf-editformarea": LocalJSX.SfEditformarea & JSXBase.HTMLAttributes<HTMLSfEditformareaElement>;
             "sf-emptycheckbox": LocalJSX.SfEmptycheckbox & JSXBase.HTMLAttributes<HTMLSfEmptycheckboxElement>;
             "sf-input-text": LocalJSX.SfInputText & JSXBase.HTMLAttributes<HTMLSfInputTextElement>;
             "sf-question": LocalJSX.SfQuestion & JSXBase.HTMLAttributes<HTMLSfQuestionElement>;
