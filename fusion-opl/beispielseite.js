@@ -21,12 +21,6 @@ function seitenSetup() {
 }
 
 //Setup-Funktionen der einzelnen Buttons
-function setupDeleteBtns() {
-    let loeschenBtns = document.getElementsByClassName("loeschen-button"); //Da es hier um eine NodeList handelt muss über alle Elemente iteriert werden https://stackoverflow.com/questions/32151704/addeventlistener-is-not-a-function
-    for (loeschenBtn of loeschenBtns) {
-        loeschenBtn.addEventListener("click", removeListItem);
-    }
-}
 
 function setupAddBtn() {
     let addBtns = document.getElementsByClassName("a-button");
