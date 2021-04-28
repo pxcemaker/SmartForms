@@ -14,13 +14,12 @@ export namespace Components {
     }
     interface SfAddformbutton {
     }
-    interface SfAnswertype {
-    }
     interface SfCheckbox {
+        "value": string;
     }
     interface SfDynamicform {
     }
-    interface SfImgselection {
+    interface SfEmptycheckbox {
     }
     interface SfInputText {
     }
@@ -54,12 +53,6 @@ declare global {
         prototype: HTMLSfAddformbuttonElement;
         new (): HTMLSfAddformbuttonElement;
     };
-    interface HTMLSfAnswertypeElement extends Components.SfAnswertype, HTMLStencilElement {
-    }
-    var HTMLSfAnswertypeElement: {
-        prototype: HTMLSfAnswertypeElement;
-        new (): HTMLSfAnswertypeElement;
-    };
     interface HTMLSfCheckboxElement extends Components.SfCheckbox, HTMLStencilElement {
     }
     var HTMLSfCheckboxElement: {
@@ -72,11 +65,11 @@ declare global {
         prototype: HTMLSfDynamicformElement;
         new (): HTMLSfDynamicformElement;
     };
-    interface HTMLSfImgselectionElement extends Components.SfImgselection, HTMLStencilElement {
+    interface HTMLSfEmptycheckboxElement extends Components.SfEmptycheckbox, HTMLStencilElement {
     }
-    var HTMLSfImgselectionElement: {
-        prototype: HTMLSfImgselectionElement;
-        new (): HTMLSfImgselectionElement;
+    var HTMLSfEmptycheckboxElement: {
+        prototype: HTMLSfEmptycheckboxElement;
+        new (): HTMLSfEmptycheckboxElement;
     };
     interface HTMLSfInputTextElement extends Components.SfInputText, HTMLStencilElement {
     }
@@ -118,10 +111,9 @@ declare global {
         "example-component": HTMLExampleComponentElement;
         "modal-box": HTMLModalBoxElement;
         "sf-addformbutton": HTMLSfAddformbuttonElement;
-        "sf-answertype": HTMLSfAnswertypeElement;
         "sf-checkbox": HTMLSfCheckboxElement;
         "sf-dynamicform": HTMLSfDynamicformElement;
-        "sf-imgselection": HTMLSfImgselectionElement;
+        "sf-emptycheckbox": HTMLSfEmptycheckboxElement;
         "sf-input-text": HTMLSfInputTextElement;
         "sf-multiplechoice": HTMLSfMultiplechoiceElement;
         "sf-question": HTMLSfQuestionElement;
@@ -139,13 +131,13 @@ declare namespace LocalJSX {
     }
     interface SfAddformbutton {
     }
-    interface SfAnswertype {
-    }
     interface SfCheckbox {
+        "value"?: string;
     }
     interface SfDynamicform {
     }
-    interface SfImgselection {
+    interface SfEmptycheckbox {
+        "onCheckboxAnswer"?: (event: CustomEvent<string>) => void;
     }
     interface SfInputText {
     }
@@ -163,10 +155,9 @@ declare namespace LocalJSX {
         "example-component": ExampleComponent;
         "modal-box": ModalBox;
         "sf-addformbutton": SfAddformbutton;
-        "sf-answertype": SfAnswertype;
         "sf-checkbox": SfCheckbox;
         "sf-dynamicform": SfDynamicform;
-        "sf-imgselection": SfImgselection;
+        "sf-emptycheckbox": SfEmptycheckbox;
         "sf-input-text": SfInputText;
         "sf-multiplechoice": SfMultiplechoice;
         "sf-question": SfQuestion;
@@ -182,10 +173,9 @@ declare module "@stencil/core" {
             "example-component": LocalJSX.ExampleComponent & JSXBase.HTMLAttributes<HTMLExampleComponentElement>;
             "modal-box": LocalJSX.ModalBox & JSXBase.HTMLAttributes<HTMLModalBoxElement>;
             "sf-addformbutton": LocalJSX.SfAddformbutton & JSXBase.HTMLAttributes<HTMLSfAddformbuttonElement>;
-            "sf-answertype": LocalJSX.SfAnswertype & JSXBase.HTMLAttributes<HTMLSfAnswertypeElement>;
             "sf-checkbox": LocalJSX.SfCheckbox & JSXBase.HTMLAttributes<HTMLSfCheckboxElement>;
             "sf-dynamicform": LocalJSX.SfDynamicform & JSXBase.HTMLAttributes<HTMLSfDynamicformElement>;
-            "sf-imgselection": LocalJSX.SfImgselection & JSXBase.HTMLAttributes<HTMLSfImgselectionElement>;
+            "sf-emptycheckbox": LocalJSX.SfEmptycheckbox & JSXBase.HTMLAttributes<HTMLSfEmptycheckboxElement>;
             "sf-input-text": LocalJSX.SfInputText & JSXBase.HTMLAttributes<HTMLSfInputTextElement>;
             "sf-multiplechoice": LocalJSX.SfMultiplechoice & JSXBase.HTMLAttributes<HTMLSfMultiplechoiceElement>;
             "sf-question": LocalJSX.SfQuestion & JSXBase.HTMLAttributes<HTMLSfQuestionElement>;

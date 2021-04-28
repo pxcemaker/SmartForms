@@ -1,4 +1,4 @@
-# sf-multiplechoice
+# sf-question
 
 
 
@@ -7,17 +7,17 @@
 
 ## Dependencies
 
-### Depends on
+### Used by
 
-- [sf-question](../sf-question)
-- [sf-checkbox](../sf-checkbox)
+ - [sf-dynamicform](../sf-dynamicform)
+ - [sf-multiplechoice](../sf-multiplechoice)
 
 ### Graph
 ```mermaid
 graph TD;
+  sf-dynamicform --> sf-question
   sf-multiplechoice --> sf-question
-  sf-multiplechoice --> sf-checkbox
-  style sf-multiplechoice fill:#f9f,stroke:#333,stroke-width:4px
+  style sf-question fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

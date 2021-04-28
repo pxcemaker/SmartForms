@@ -1,4 +1,4 @@
-# sf-checkbox
+# sf-dynamicform
 
 
 
@@ -9,22 +9,24 @@
 
 | Property | Attribute | Description | Type     | Default     |
 | -------- | --------- | ----------- | -------- | ----------- |
-| `value`  | `value`   |             | `string` | `undefined` |
+| `answer` | `answer`  |             | `string` | `undefined` |
 
 
 ## Dependencies
 
-### Used by
+### Depends on
 
- - [sf-dynamicform](../sf-dynamicform)
- - [sf-multiplechoice](../sf-multiplechoice)
+- [sf-emptycheckbox](../sf-emptycheckbox)
+- [sf-checkbox](../sf-checkbox)
+- [sf-question](../sf-question)
 
 ### Graph
 ```mermaid
 graph TD;
+  sf-dynamicform --> sf-emptycheckbox
   sf-dynamicform --> sf-checkbox
-  sf-multiplechoice --> sf-checkbox
-  style sf-checkbox fill:#f9f,stroke:#333,stroke-width:4px
+  sf-dynamicform --> sf-question
+  style sf-dynamicform fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------
