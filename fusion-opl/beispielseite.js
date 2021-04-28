@@ -129,6 +129,7 @@ function createItem(objItem) {
     newFrage.innerHTML = `
             <p>Frage ${objItem.fragenId}: ${objItem.itemFrage}</p>
             <p>Antwort: ${objItem.itemAntwort}
+            
     `
 
  
