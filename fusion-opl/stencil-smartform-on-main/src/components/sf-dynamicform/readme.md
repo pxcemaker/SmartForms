@@ -1,4 +1,4 @@
-# sf-multiplechoice
+# sf-dynamicform
 
 
 
@@ -9,15 +9,13 @@
 
 ### Depends on
 
-- [sf-question](../sf-question)
 - [sf-checkbox](../sf-checkbox)
 
 ### Graph
 ```mermaid
 graph TD;
-  sf-multiplechoice --> sf-question
-  sf-multiplechoice --> sf-checkbox
-  style sf-multiplechoice fill:#f9f,stroke:#333,stroke-width:4px
+  sf-dynamicform --> sf-checkbox
+  style sf-dynamicform fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------
