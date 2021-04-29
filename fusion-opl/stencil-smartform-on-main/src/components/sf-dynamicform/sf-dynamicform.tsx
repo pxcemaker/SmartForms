@@ -17,16 +17,16 @@ export class SfDynamicform {
   }
 
   @Watch('checkboxMap')
-  watchHandler(newValue, oldValue) {
+  watchHandler(newValue, /* oldValue */) {
     console.log('The new value of activated is: ', newValue);
   }
 
-  testLog(checkboxdef, ev) {
+  testLog(checkboxdef, /* ev */) {
     console.log(checkboxdef.key + ' ' + checkboxdef.value);
   }
 
   returnEmptyCheckbox() {
-    return this.checkboxMap.map((checkboxdef, index) => (
+    return this.checkboxMap.map((checkboxdef, /* index */) => (
       <sf-emptycheckbox
         onCheckboxAnswer={ev =>
           (this.checkboxMap = [...this.checkboxMap].map(checkboxdefnew => {
@@ -43,7 +43,7 @@ export class SfDynamicform {
   }
 
   returnEmptyRadio() {
-    return this.radioMap.map((radiodef, index) => (
+    return this.radioMap.map((radiodef, /* index */) => (
       <sf-radioempty
         onRadioAnswer={ev =>
           (this.radioMap = [...this.radioMap].map(radiodefnew => {
