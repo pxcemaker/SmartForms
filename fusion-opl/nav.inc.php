@@ -9,6 +9,11 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto w-100 justify-content-end clearfix">
                 <li class="nav-item">
+                    <a class="nav-link" href="index.php">
+                        Home
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="HowTo.php">
                         HowTo
                     </a>
