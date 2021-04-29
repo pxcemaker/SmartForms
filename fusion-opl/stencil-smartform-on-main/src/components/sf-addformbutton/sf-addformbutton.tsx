@@ -10,7 +10,7 @@ export class SfAddformbutton {
     return (
       <div class="survey-grid-container">
         <div class="survey-grid-item">
-          <a href="beispielseite-2.html">
+          <a href="umfrage.php">
             <div class="surveyplate empty-plate">
               <p class="empty-plus">+</p>
             </div>

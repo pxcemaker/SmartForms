@@ -15,9 +15,9 @@ export class SfAdddynform {
   render() {
     return (
       <div>
-        <input type="button" onClick={() => this.handleClick()}>
-          Add Form
-        </input>
+        <button class="btn"  onClick={() => this.handleClick()}>
+          +
+        </button>
       </div>
     );
   }

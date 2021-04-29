@@ -49,7 +49,7 @@
         <sf-addformbutton></sf-addformbutton>
 
         <div class="survey-grid-container">
-            <div class="survey-grid-item">
+       <div class="survey-grid-item">
                 <div class="surveyplate first-plate">
                     <div class="icons">
                         <i class="lni-pencil"></i>
