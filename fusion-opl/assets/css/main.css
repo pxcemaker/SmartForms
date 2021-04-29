@@ -509,7 +509,7 @@ hr {
   -o-transition: all 0.3s ease-in-out 0s;
 }
 
-#services .service-item {
+#services .services-item {
   height: 300px;
 }
 
@@ -790,7 +790,7 @@ hr {
   color: #333;
   border-bottom: 1px solid #f1f1f1;
   text-decoration: none;
-  display: inline-block;
+  /* display: inline-block; */
   float: left;
   clear: both;
   position: relative;
@@ -1440,7 +1440,7 @@ textarea {
   vertical-align: middle;
   height: 36px;
   text-align: center;
-  display: inline-block;
+  /* display: inline-block; */
   float: left;
   margin-right: 5px;
   line-height: 32px;
