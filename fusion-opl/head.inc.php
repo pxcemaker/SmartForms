@@ -23,10 +23,6 @@
     <!-- Responsive Style -->
     <link rel="stylesheet" href="assets/css/responsive.css">
 
-    <!-- Style von Übersicht-Seite -->
-    <link rel="stylesheet" href="uebersicht-style.css" />
-    <link rel="stylesheet" href="assets/css/umfrage.css">
-
     <!-- von Stencil Projekt -->
     <script src="stencil-smartform-on-main/dist/stencil-smartform-on/stencil-smartform-on.esm.js" type="module">
     </script>

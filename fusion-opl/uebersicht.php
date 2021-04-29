@@ -1,4 +1,4 @@
-<?php require("head.inc.php"); ?>
+<?php require("head.uebersicht.inc.php"); ?>
 
 <body>
     <!-- Header Area wrapper Starts -->
