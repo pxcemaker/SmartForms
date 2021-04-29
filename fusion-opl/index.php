@@ -51,8 +51,7 @@
                         </div>
                         <div class="services-content">
                             <h3><a href="#">kostenlos</a></h3>
-                            <p>Ut maximus enim dolor. Aenean auctor risus eget tincidunt lobortis. Donec tincidunt
-                                bibendum gravida. </p>
+                            <p>Sparen Sie Zeit und Geld. Ohne Verpflichtungen, kostenlose Umfragen erstellen.</p>
                         </div>
                     </div>
                 </div>
@@ -64,8 +63,7 @@
                         </div>
                         <div class="services-content">
                             <h3><a href="#">schöne Vorlagen</a></h3>
-                            <p>Ut maximus enim dolor. Aenean auctor risus eget tincidunt lobortis. Donec tincidunt
-                                bibendum gravida. </p>
+                            <p>Schneller und einfacher Start. Viele profesionelle Vorlagen und moderne Designs.</p>
                         </div>
                     </div>
                 </div>
@@ -77,8 +75,7 @@
                         </div>
                         <div class="services-content">
                             <h3><a href="#">intuitive Bedienung</a></h3>
-                            <p>Ut maximus enim dolor. Aenean auctor risus eget tincidunt lobortis. Donec tincidunt
-                                bibendum gravida. </p>
+                            <p>Einfache und benutzerfreundliche Bedienung. Für jeden Machbar.</p>
                         </div>
                     </div>
                 </div>
@@ -90,8 +87,7 @@
                         </div>
                         <div class="services-content">
                             <h3><a href="#">easy Teilen</a></h3>
-                            <p>Ut maximus enim dolor. Aenean auctor risus eget tincidunt lobortis. Donec tincidunt
-                                bibendum gravida. </p>
+                            <p>Teilen Sie Ihre Umfrage und erkennen Sie die Wünsche Ihrer Kunden. Erfahren Sie, was richtig oder falsch läuft.</p>
                         </div>
                     </div>
                 </div>
