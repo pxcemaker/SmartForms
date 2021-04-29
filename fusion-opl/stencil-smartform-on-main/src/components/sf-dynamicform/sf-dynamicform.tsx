@@ -12,8 +12,8 @@ export class SfDynamicform {
   @State() radioMap: RadioDef[];
 
   constructor() {
-    this.checkboxMap = [new CheckBoxDef('antwort1', 'Add Answer'), new CheckBoxDef('antwort1', 'Add Answer')];
-    this.radioMap = [new RadioDef('antwort1', 'a'), new RadioDef('antwort2', 'b'), new RadioDef('antwort3', 'c')];
+    this.checkboxMap = [new CheckBoxDef('antwort1', 'Add Answer'), new CheckBoxDef('antwort2', 'Add Answer')];
+    this.radioMap = [new RadioDef('antwort1', 'Add Answer'), new RadioDef('antwort2', 'Add Answer')];
   }
 
   @Watch('checkboxMap')
@@ -43,11 +43,11 @@ export class SfDynamicform {
   }
 
   returnEmptyRadio() {
-    return this.radioMap.map((radiodef /* index */) => (
+    return this.radioMap.map((radiodef, index) => (
       <sf-radioempty
         onRadioAnswer={ev =>
-          (this.radioMap = [...this.radioMap].map(radiodefnew => {
-            if (radiodef.key == radiodefnew.key) {
+          (this.radioMap = [...this.radioMap].map((radiodefnew, indexnew) => {
+            if (index == indexnew) {
               radiodefnew.value = ev.detail;
               return radiodefnew;
             } else {
@@ -69,7 +69,11 @@ export class SfDynamicform {
         </div>
       );
     } else if (this.radio == 'radio') {
-      return <div class="item-1-3 answers">{this.returnEmptyRadio()}</div>;
+      return (
+        <div class="item-1-3 answers">
+          {this.returnEmptyRadio()} <sf-adddynform onIsClicked={() => this.addAns()}></sf-adddynform>
+        </div>
+      );
     }
     return <div></div>;
   }
@@ -77,9 +81,7 @@ export class SfDynamicform {
     if (this.radio == 'checkbox') {
       return (this.checkboxMap = [...this.checkboxMap, new CheckBoxDef('Blubb', 'Add Answer')]);
     } else if (this.radio == 'radio') {
-      return this.radioMap.map(radiodef => <sf-radio value={radiodef.value} radio-Id={'1'} radio-Name={'radio'}></sf-radio>);
-    } else if (this.radio == 'rtx') {
-      return <sf-text-area></sf-text-area>;
+      return (this.radioMap = [...this.radioMap, new RadioDef('Blubb', 'Add Answer')]);
     }
   }
 
