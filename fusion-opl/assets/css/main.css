@@ -498,7 +498,7 @@ hr {
 /* Services Item  BEHALTEN*/
 .services-item {
   padding: 20px;
-  height: 300px;
+  
   border-radius: 4px;
   text-align: center;
   margin: 15px 0;
@@ -507,6 +507,10 @@ hr {
   -moz-transition: all 0.3s ease-in-out 0s;
   -webkit-transition: all 0.3s ease-in-out 0s;
   -o-transition: all 0.3s ease-in-out 0s;
+}
+
+#services .service-item {
+  height: 300px;
 }
 
 .services-item .icon {

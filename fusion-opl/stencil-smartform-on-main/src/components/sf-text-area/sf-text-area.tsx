@@ -7,7 +7,7 @@ import { Component, Host, h, Prop } from '@stencil/core';
 })
 export class SfTextArea {
   @Prop() fragenId: string;
-  @Prop() onOff: string;
+  /*@Prop() onOff: string;*/
   @Prop() frageText: string;
 
   render() {
@@ -16,7 +16,7 @@ export class SfTextArea {
         <div class="mehrzeilig-container">
           <div class="mehrzeilig-kasten">
             <div class="mehrzeilig-content">
-              <textarea placeholder="Gib hier deinen Text ein..." class={this.onOff}></textarea>
+              <textarea placeholder="Gib hier deinen Text ein..." /*class={this.onOff}*/></textarea>
             </div>
           </div>
         </div>

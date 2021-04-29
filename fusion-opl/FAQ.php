@@ -29,7 +29,7 @@
 
     </header>
     <!-- Header Area wrapper End -->
-    <section id="services" class="section-padding">
+    <section id="accordions" class="section-padding">
         <div class="container">
             <div class="section-header text-center">
                 <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">Hier ist unser FAQ Übersicht!</h2>
