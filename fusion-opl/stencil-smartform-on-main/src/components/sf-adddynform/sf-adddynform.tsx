@@ -13,6 +13,7 @@ export class SfAdddynform {
   @Listen('click', { capture: true })
   handleClick(ev) {
     this.addDynForm.emit(true);
+    console.log(ev) //um Fehlermeldung zu umgehen
   }
 
   render() {
