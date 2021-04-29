@@ -1,4 +1,4 @@
-import { Component, Listen, h, Event, EventEmitter } from '@stencil/core';
+import { Component, h, Event, EventEmitter } from '@stencil/core';
 
 @Component({
   tag: 'sf-adddynform',
@@ -6,22 +6,18 @@ import { Component, Listen, h, Event, EventEmitter } from '@stencil/core';
   shadow: true,
 })
 export class SfAdddynform {
-  addForm: boolean;
+  @Event() isClicked: EventEmitter<void>;
 
-  @Event() addDynForm: EventEmitter;
-
-  @Listen('click', { capture: true })
-  handleClick(ev) {
-    this.addDynForm.emit(true);
-    console.log(ev) //um Fehlermeldung zu umgehen
+  handleClick() {
+    this.isClicked.emit();
   }
 
   render() {
     return (
       <div>
-        <button class="btn" onSubmit={e => this.handleClick(e)}>
-          +
-        </button>
+        <input type="button" onClick={() => this.handleClick()}>
+          Add Form
+        </input>
       </div>
     );
   }

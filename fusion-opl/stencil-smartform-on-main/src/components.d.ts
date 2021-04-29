@@ -150,7 +150,7 @@ declare global {
 }
 declare namespace LocalJSX {
     interface SfAdddynform {
-        "onAddDynForm"?: (event: CustomEvent<any>) => void;
+        "onIsClicked"?: (event: CustomEvent<void>) => void;
     }
     interface SfAddformbutton {
     }

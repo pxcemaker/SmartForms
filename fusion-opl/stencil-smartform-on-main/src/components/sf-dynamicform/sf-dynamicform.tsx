@@ -13,27 +13,27 @@ export class SfDynamicform {
   @Prop({mutable: true}) radioIdNmbr: number = 0;
 
   constructor() {
-    this.checkboxMap = [new CheckBoxDef('antwort1', 'a'), new CheckBoxDef('antwort2', 'b'), new CheckBoxDef('antwort3', 'c')];
-    this.radioMap = [new RadioDef('antwort1', 'a'), new RadioDef('antwort2', 'b'), new RadioDef('antwort3', 'c')];
+    this.checkboxMap = [new CheckBoxDef('antwort1', 'Add Answer'), new CheckBoxDef('antwort2', 'Add Answer')];
+    this.radioMap = [new RadioDef('antwort1', 'Add Answer'), new RadioDef('antwort2', 'Add Answer')];
   }
 
   @Watch('radioIdNmbr')
 
   @Watch('checkboxMap')
-  watchHandler(newValue, /* oldValue */) {
+  watchHandler(newValue /* oldValue */) {
     console.log('The new value of activated is: ', newValue);
   }
 
-  testLog(checkboxdef, /* ev */) {
+  testLog(checkboxdef /* ev */) {
     console.log(checkboxdef.key + ' ' + checkboxdef.value);
   }
 
   returnEmptyCheckbox() {
-    return this.checkboxMap.map((checkboxdef, /* index */) => (
+    return this.checkboxMap.map((checkboxdef, index) => (
       <sf-emptycheckbox
         onCheckboxAnswer={ev =>
-          (this.checkboxMap = [...this.checkboxMap].map(checkboxdefnew => {
-            if (checkboxdef.key == checkboxdefnew.key) {
+          (this.checkboxMap = [...this.checkboxMap].map((checkboxdefnew, indexnew) => {
+            if (index == indexnew) {
               checkboxdefnew.value = ev.detail;
               return checkboxdefnew;
             } else {
@@ -46,11 +46,11 @@ export class SfDynamicform {
   }
 
   returnEmptyRadio() {
-    return this.radioMap.map((radiodef, /* index */) => (
+    return this.radioMap.map((radiodef, index) => (
       <sf-radioempty
         onRadioAnswer={ev =>
-          (this.radioMap = [...this.radioMap].map(radiodefnew => {
-            if (radiodef.key == radiodefnew.key) {
+          (this.radioMap = [...this.radioMap].map((radiodefnew, indexnew) => {
+            if (index == indexnew) {
               radiodefnew.value = ev.detail;
               return radiodefnew;
             } else {
@@ -66,11 +66,26 @@ export class SfDynamicform {
 
   renderInputBox() {
     if (this.radio == 'checkbox') {
-      return <div class="item-1-3 answers">{this.returnEmptyCheckbox()}</div>;
+      return (
+        <div class="item-1-3 answers">
+          {this.returnEmptyCheckbox()} <sf-adddynform onIsClicked={() => this.addAns()}></sf-adddynform>
+        </div>
+      );
     } else if (this.radio == 'radio') {
-      return <div class="item-1-3 answers">{this.returnEmptyRadio()}</div>;
+      return (
+        <div class="item-1-3 answers">
+          {this.returnEmptyRadio()} <sf-adddynform onIsClicked={() => this.addAns()}></sf-adddynform>
+        </div>
+      );
     }
     return <div></div>;
+  }
+  addAns() {
+    if (this.radio == 'checkbox') {
+      return (this.checkboxMap = [...this.checkboxMap, new CheckBoxDef('Blubb', 'Add Answer')]);
+    } else if (this.radio == 'radio') {
+      return (this.radioMap = [...this.radioMap, new RadioDef('Blubb', 'Add Answer')]);
+    }
   }
 
   returnAnswers() {
@@ -153,10 +168,6 @@ export class SfDynamicform {
             </div>
 
             {this.renderInputBox()}
-
-            <button class="item-2-3-btn" type="submit">
-              safe
-            </button>
           </form>
         </div>
       </div>
