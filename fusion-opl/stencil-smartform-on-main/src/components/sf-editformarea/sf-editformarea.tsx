@@ -1,4 +1,4 @@
-import { Component, Watch, h, State } from '@stencil/core';
+import { Component, h, State } from '@stencil/core';
 
 @Component({
   tag: 'sf-editformarea',
@@ -6,23 +6,25 @@ import { Component, Watch, h, State } from '@stencil/core';
   shadow: true,
 })
 export class SfEditformarea {
-  @State() addForm: boolean;
+  @State() dynFormMap: any[];
 
-  @Watch('addForm')
-  returnNewQuestion() {
-    if (this.addForm) {
-      this.addForm = false;
-      console.log(this.addForm);
-      return <sf-dynamicform></sf-dynamicform>;
-    }
+  constructor() {
+    this.dynFormMap = [<sf-dynamicform></sf-dynamicform>];
+  }
+
+  addDyn() {
+    console.log('jshgksdh');
+    this.dynFormMap = [...this.dynFormMap, 'blubb'];
   }
 
   render() {
     return (
       <div>
-        <sf-dynamicform></sf-dynamicform>
-        {this.returnNewQuestion()}
-        <sf-adddynform onAddDynForm={ev => (this.addForm = ev.detail)}></sf-adddynform>
+        {this.dynFormMap.map(() => {
+          return <sf-dynamicform></sf-dynamicform>;
+        })}
+
+        <sf-adddynform onIsClicked={() => this.addDyn()}></sf-adddynform>
       </div>
     );
   }

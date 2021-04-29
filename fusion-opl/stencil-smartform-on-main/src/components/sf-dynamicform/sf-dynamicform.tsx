@@ -1,4 +1,4 @@
-import { Component, State, h, Prop, Watch } from '@stencil/core';
+import { Component, State, h, Watch } from '@stencil/core';
 
 @Component({
   tag: 'sf-dynamicform',
