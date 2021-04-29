@@ -498,6 +498,7 @@ hr {
 /* Services Item  BEHALTEN*/
 .services-item {
   padding: 20px;
+  height: 300px;
   border-radius: 4px;
   text-align: center;
   margin: 15px 0;

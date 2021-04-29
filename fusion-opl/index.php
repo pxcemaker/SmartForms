@@ -75,7 +75,7 @@
                         </div>
                         <div class="services-content">
                             <h3><a href="#">intuitive Bedienung</a></h3>
-                            <p>Die intuitive Bedienung macht ein schnelles Erstellen von benutzerdefinierten Umfragen für jeden ohne Vorkenntnise machbar</p>
+                            <p>Die intuitive Bedienung für ein schnelles Erstellen von benutzerdefinierten Umfragen ohne Vorkenntnisse</p>
                         </div>
                     </div>
                 </div>
