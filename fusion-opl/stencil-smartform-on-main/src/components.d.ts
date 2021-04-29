@@ -14,6 +14,7 @@ export namespace Components {
         "value": string;
     }
     interface SfDynamicform {
+        "radioIdNmbr": number;
     }
     interface SfEditformarea {
     }
@@ -157,6 +158,7 @@ declare namespace LocalJSX {
         "value"?: string;
     }
     interface SfDynamicform {
+        "radioIdNmbr"?: number;
     }
     interface SfEditformarea {
     }

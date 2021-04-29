@@ -14,7 +14,7 @@ export class SfRadio {
     return (
       <div>
         <div class="checkbox-content">
-          <input type="radio" id={this.radioId} name={this.radioName} checked></input>
+          <input type="radio" id={this.radioId} name={this.radioName}></input>
           <label>{'' + this.value}</label>
         </div>
       </div>

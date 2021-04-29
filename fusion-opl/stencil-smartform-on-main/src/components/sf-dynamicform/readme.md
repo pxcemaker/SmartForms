@@ -3,6 +3,13 @@
 <!-- Auto Generated Below -->
 
 
+## Properties
+
+| Property      | Attribute       | Description | Type     | Default |
+| ------------- | --------------- | ----------- | -------- | ------- |
+| `radioIdNmbr` | `radio-id-nmbr` |             | `number` | `0`     |
+
+
 ## Dependencies
 
 ### Used by

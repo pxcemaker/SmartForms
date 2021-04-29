@@ -1,4 +1,4 @@
-import { Component, State, h, Watch } from '@stencil/core';
+import { Component, State, h, Watch, Prop } from '@stencil/core';
 
 @Component({
   tag: 'sf-dynamicform',
@@ -10,11 +10,14 @@ export class SfDynamicform {
   @State() radio: string;
   @State() checkboxMap: CheckBoxDef[];
   @State() radioMap: RadioDef[];
+  @Prop({mutable: true}) radioIdNmbr: number = 0;
 
   constructor() {
     this.checkboxMap = [new CheckBoxDef('antwort1', 'a'), new CheckBoxDef('antwort2', 'b'), new CheckBoxDef('antwort3', 'c')];
     this.radioMap = [new RadioDef('antwort1', 'a'), new RadioDef('antwort2', 'b'), new RadioDef('antwort3', 'c')];
   }
+
+  @Watch('radioIdNmbr')
 
   @Watch('checkboxMap')
   watchHandler(newValue, /* oldValue */) {
@@ -74,7 +77,8 @@ export class SfDynamicform {
     if (this.radio == 'checkbox') {
       return this.checkboxMap.map(checkboxdef => <sf-checkbox value={checkboxdef.value}></sf-checkbox>);
     } else if (this.radio == 'radio') {
-      return this.radioMap.map(radiodef => <sf-radio value={radiodef.value} radio-Id={'1'} radio-Name={'radio'}></sf-radio>);
+      this.radioIdNmbr+1;
+      return this.radioMap.map(radiodef => <sf-radio value={radiodef.value} radio-Id={this.radioIdNmbr} radio-Name={'radio'}></sf-radio>);
     } else if (this.radio == 'rtx') {
       return <sf-text-area></sf-text-area>;
     }
