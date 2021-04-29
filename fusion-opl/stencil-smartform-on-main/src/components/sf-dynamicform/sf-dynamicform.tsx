@@ -74,7 +74,7 @@ export class SfDynamicform {
     if (this.radio == 'checkbox') {
       return this.checkboxMap.map(checkboxdef => <sf-checkbox value={checkboxdef.value}></sf-checkbox>);
     } else if (this.radio == 'radio') {
-      return this.radioMap.map(radiodef => <sf-radio value={radiodef.value} radio-Id={} radio-Name={}></sf-radio>);
+      return this.radioMap.map(radiodef => <sf-radio value={radiodef.value} radio-Id={'1'} radio-Name={'radio'}></sf-radio>);
     } else if (this.radio == 'rtx') {
       return <sf-text-area></sf-text-area>;
     }
