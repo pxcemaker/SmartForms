@@ -25,7 +25,6 @@
 
     <!-- Style von Übersicht-Seite -->
     <link rel="stylesheet" href="uebersicht-style.css" />
-    <link rel="stylesheet" href="assets/css/umfrage.css">
     <link rel="stylesheet" href="test.css">
 
     <!-- von Stencil Projekt -->
