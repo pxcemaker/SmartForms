@@ -7,12 +7,14 @@ import { Component, h, Prop } from '@stencil/core';
 })
 export class SfRadio {
   @Prop({ reflect: true }) value: string;
+  @Prop() radioName: string;
+  @Prop() radioId: string;
 
   render() {
     return (
       <div>
         <div class="checkbox-content">
-          <input type="radio" id="radio-1" name="radio" checked></input>
+          <input type="radio" id={this.radioId} name={this.radioName} checked></input>
           <label>{'' + this.value}</label>
         </div>
       </div>

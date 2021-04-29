@@ -77,7 +77,7 @@ export class SfDynamicform {
       return (
         <div class="checkbox-kasten">
           {this.radioMap.map(radiodef => (
-            <sf-radio value={radiodef.value}></sf-radio>
+            <sf-radio value={radiodef.value} radio-Id={} radio-Name={}></sf-radio>
           ))}
         </div>
       );

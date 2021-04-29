@@ -25,6 +25,8 @@ export namespace Components {
         "onOff": string;
     }
     interface SfRadio {
+        "radioId": string;
+        "radioName": string;
         "value": string;
     }
     interface SfRadioempty {
@@ -139,6 +141,8 @@ declare namespace LocalJSX {
         "onOff"?: string;
     }
     interface SfRadio {
+        "radioId"?: string;
+        "radioName"?: string;
         "value"?: string;
     }
     interface SfRadioempty {
