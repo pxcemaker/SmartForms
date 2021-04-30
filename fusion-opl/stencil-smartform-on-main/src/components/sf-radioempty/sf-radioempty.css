@@ -31,7 +31,7 @@ input {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  border: none;
+  border: 1px #bbb solid;
   border-radius: 0;
   font-size: 1em;
   width: 100%;
