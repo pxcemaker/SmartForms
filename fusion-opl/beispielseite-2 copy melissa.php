@@ -12,7 +12,7 @@
           <form class="grid-container" novalidate>
             <div class="item-1-1">
               <h3>Frage erstellen</h3>
-              <p>Wählen Sie die Art der Frage aus und schreiben Sie Antworten und Fragen in die Felder.</p>
+              <p>Wählen Sie die Art der Fragejkljkl aus und schreiben Sie Antworten und Fragen in die Felder.</p>
             </div>
 
             <div class="item-1-2 grid-container">
