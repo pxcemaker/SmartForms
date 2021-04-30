@@ -29,7 +29,7 @@ export class SfDynamicform {
   }
 
   returnEmptyCheckbox() {
-    return this.checkboxMap.map((checkboxdef, index) => (
+    return this.checkboxMap.map((_checkboxdef, index) => (
       <sf-emptycheckbox
         onCheckboxAnswer={ev =>
           (this.checkboxMap = [...this.checkboxMap].map((checkboxdefnew, indexnew) => {
@@ -46,7 +46,7 @@ export class SfDynamicform {
   }
 
   returnEmptyRadio() {
-    return this.radioMap.map((radiodef, index) => (
+    return this.radioMap.map((_radiodef, index) => (
       <sf-radioempty
         onRadioAnswer={ev =>
           (this.radioMap = [...this.radioMap].map((radiodefnew, indexnew) => {

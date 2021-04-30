@@ -20,6 +20,7 @@
 
 - [sf-emptycheckbox](../sf-emptycheckbox)
 - [sf-radioempty](../sf-radioempty)
+- [sf-adddynform](../sf-adddynform)
 - [sf-checkbox](../sf-checkbox)
 - [sf-radio](../sf-radio)
 - [sf-text-area](../sf-text-area)
@@ -31,6 +32,7 @@
 graph TD;
   sf-dynamicform --> sf-emptycheckbox
   sf-dynamicform --> sf-radioempty
+  sf-dynamicform --> sf-adddynform
   sf-dynamicform --> sf-checkbox
   sf-dynamicform --> sf-radio
   sf-dynamicform --> sf-text-area

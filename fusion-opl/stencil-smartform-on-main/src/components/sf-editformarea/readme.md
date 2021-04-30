@@ -19,6 +19,7 @@ graph TD;
   sf-editformarea --> sf-adddynform
   sf-dynamicform --> sf-emptycheckbox
   sf-dynamicform --> sf-radioempty
+  sf-dynamicform --> sf-adddynform
   sf-dynamicform --> sf-checkbox
   sf-dynamicform --> sf-radio
   sf-dynamicform --> sf-text-area
