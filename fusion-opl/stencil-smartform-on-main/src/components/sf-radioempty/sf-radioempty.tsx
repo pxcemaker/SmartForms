@@ -23,6 +23,7 @@ export class SfRadioempty {
           <label>
             <input type="text" id="answerinput" value={this.answer} onInput={e => this.handleChange(e)}></input>
           </label>
+          <span class="checkmark"></span>
         </div>
       </div>
     );

@@ -10,7 +10,7 @@ export class SfDynamicform {
   @State() radio: string;
   @State() checkboxMap: CheckBoxDef[];
   @State() radioMap: RadioDef[];
-  @Prop({mutable: true}) radioIdNmbr: number = 0;
+  @Prop({ mutable: true }) radioIdNmbr: number = 0;
 
   constructor() {
     this.checkboxMap = [new CheckBoxDef('antwort1', 'Add Answer'), new CheckBoxDef('antwort2', 'Add Answer')];
@@ -18,7 +18,6 @@ export class SfDynamicform {
   }
 
   @Watch('radioIdNmbr')
-
   @Watch('checkboxMap')
   watchHandler(newValue /* oldValue */) {
     console.log('The new value of activated is: ', newValue);
@@ -92,7 +91,7 @@ export class SfDynamicform {
     if (this.radio == 'checkbox') {
       return this.checkboxMap.map(checkboxdef => <sf-checkbox value={checkboxdef.value}></sf-checkbox>);
     } else if (this.radio == 'radio') {
-      this.radioIdNmbr+1;
+      this.radioIdNmbr + 1;
       return this.radioMap.map(radiodef => <sf-radio value={radiodef.value} radio-Id={this.radioIdNmbr} radio-Name={'radio'}></sf-radio>);
     } else if (this.radio == 'rtx') {
       return <sf-text-area></sf-text-area>;
@@ -106,7 +105,7 @@ export class SfDynamicform {
   render() {
     return (
       <div class="grid-container">
-        <div class="kasten item-1-1">
+        <div class="item-1-1">
           {this.returnQuestion()}
 
           {this.returnAnswers()}
