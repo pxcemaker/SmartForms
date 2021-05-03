@@ -7,9 +7,9 @@
 
 ## Properties
 
-| Property   | Attribute     | Description | Type     | Default     |
-| ---------- | ------------- | ----------- | -------- | ----------- |
-| `imageURL` | `image-u-r-l` |             | `string` | `undefined` |
+| Property   | Attribute  | Description | Type     | Default     |
+| ---------- | ---------- | ----------- | -------- | ----------- |
+| `imageurl` | `imageurl` |             | `string` | `undefined` |
 
 
 ----------------------------------------------

@@ -3,7 +3,7 @@
   height: auto;
   flex-direction: row;
   box-sizing: border-box;
-  width: 80%;
+  /*width: 80%;*/
 }
 
 /*Pick-a-picture: Anfang*/
@@ -37,6 +37,10 @@
   -webkit-box-shadow: 0px 7px 20px 0px rgba(50, 50, 50, 0.41);
   -moz-box-shadow:    0px 7px 20px 0px rgba(50, 50, 50, 0.41);
   box-shadow:         0px 7px 20px 0px rgba(50, 50, 50, 0.41);
-  background-color: #e99d42;
+  border: #e99d42 solid 3px;
+}
+
+img {
+  height: 100%;
 }
 /*Pick-a-Picture: Ende*/

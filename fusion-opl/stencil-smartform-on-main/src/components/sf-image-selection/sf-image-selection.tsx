@@ -7,14 +7,14 @@ import { Component, Host, h, Prop } from '@stencil/core';
 })
 export class SfImageSelection {
 
-  @Prop() imageURL: string;
+  @Prop() imageurl: string;
 
   render() {
     return (
       <Host>
         <div class="bilder-kasten">
             <div class="bilder-content">
-                <img src={this.imageURL}></img>
+                <img src={this.imageurl}></img>
             </div>
         </div>
       </Host>
