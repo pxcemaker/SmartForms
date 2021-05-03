@@ -1,4 +1,4 @@
-import { Component, Host, h } from '@stencil/core';
+import { Component, Host, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'sf-image-selection',
@@ -7,10 +7,16 @@ import { Component, Host, h } from '@stencil/core';
 })
 export class SfImageSelection {
 
+  @Prop() imageURL: string;
+
   render() {
     return (
       <Host>
-        <slot></slot>
+        <div class="bilder-kasten">
+            <div class="bilder-content">
+                <img src={this.imageURL}></img>
+            </div>
+        </div>
       </Host>
     );
   }

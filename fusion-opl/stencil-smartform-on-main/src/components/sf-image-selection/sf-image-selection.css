@@ -1,3 +1,42 @@
 :host {
-  display: block;
+  display: flex;
+  height: auto;
+  flex-direction: row;
+  box-sizing: border-box;
+  width: 80%;
 }
+
+/*Pick-a-picture: Anfang*/
+
+.bilder-kasten {
+  background-color: #fff;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 7px 20px 0px rgba(50, 50, 50, 0.41);
+  -moz-box-shadow:    0px 7px 20px 0px rgba(50, 50, 50, 0.41);
+  box-shadow:         0px 7px 20px 0px rgba(50, 50, 50, 0.41);
+  width: 20%;
+  height: 140px;
+  margin: 5px;
+  display: flex;
+  overflow: visible;
+  align-content: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.bilder-content {
+  align-self: center;
+  
+}
+
+.bilder-content > img {
+  max-height: 3em;
+}
+
+.bilder-kasten:hover {
+  -webkit-box-shadow: 0px 7px 20px 0px rgba(50, 50, 50, 0.41);
+  -moz-box-shadow:    0px 7px 20px 0px rgba(50, 50, 50, 0.41);
+  box-shadow:         0px 7px 20px 0px rgba(50, 50, 50, 0.41);
+  background-color: #e99d42;
+}
+/*Pick-a-Picture: Ende*/
