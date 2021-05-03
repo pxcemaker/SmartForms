@@ -9,7 +9,7 @@
                     <br>gespeichert
                 </h2>
                 <div id="linkBereich"></div>
-                <img src="assets/img/ipadinhand.PNG" id="slider">
+                <img src="assets/img/ipadinhand.png" id="slider">
             </div>
         </div>
         </div>
