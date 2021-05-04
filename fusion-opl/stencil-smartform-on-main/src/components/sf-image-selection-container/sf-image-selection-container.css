@@ -6,7 +6,9 @@
   display: flex;
   height: auto;
   flex-direction: row;
+  flex-wrap: wrap;
   box-sizing: border-box;
+  flex-grow: 1;
   width: 50%;
-  background-color: lightgreen;
+  /*background-color: lightgreen;*/
 }

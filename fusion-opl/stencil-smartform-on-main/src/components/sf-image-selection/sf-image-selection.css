@@ -12,23 +12,12 @@
   box-shadow:         0px 7px 20px 0px rgba(50, 50, 50, 0.41);
   height: 200px;
   margin: 5px;
+  min-width: 50%;
   display: flex;
   overflow: visible;
   align-content: center;
   justify-content: center;
   /*flex-grow: 1;*/
-}
-
-.zwei-bilder {
-  width: 50%;
-}
-
-.drei-bilder {
-  width: 33%;
-}
-
-.vier-bilder {
-  width: 25%;
 }
 
 .bilder-content {
@@ -41,6 +30,7 @@
   display: inline-block;
   vertical-align: middle;
   max-width: 100%;
+  max-height: 190px;
   height: auto;
 }
 
