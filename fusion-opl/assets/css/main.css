@@ -65,6 +65,7 @@ h4 {
 
   margin-bottom: 20px;
 }
+
 a {
   -webkit-transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
@@ -1396,6 +1397,10 @@ textarea {
 /*cta
 */
 #cta{background: #e99d42;}
+
+/*ctb
+*/
+#ctb{background: #551868;;}
 
 .eigeneSec{
   background-color:#E4E4E4 ;
