@@ -1536,16 +1536,18 @@ textarea {
   border-bottom: grey solid 1px;
 }
 #slider{
-  padding-left: 250px;
+  padding-left: 350px;
   z-index: -10;
 
 }
 #sliderTitel
 {
-  padding-top: 10px;
+  padding-top: 100px;
   color: #EDDDCA;
   font-size: 80px;
   font-weight: 700;
+  margin-bottom: -70px;
+}
 }
 
 .icon-arrow{
