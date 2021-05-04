@@ -54,17 +54,26 @@
 
   </header>
 
-  <div class="checkbox-container">
-
-    <sf-editformarea></sf-editformarea>
-  </div>
-  <sf-image-selection-container>
-    <sf-image-selection imageurl="assets/img/ipadinhand.png"></sf-image-selection>
-    <sf-image-selection imageurl="assets/img/ipadinhand.png"></sf-image-selection>
-    <sf-image-selection imageurl="assets/img/ipadinhand.png"></sf-image-selection>
-    <sf-image-selection imageurl="assets/img/ipadinhand.png"></sf-image-selection>
-  </sf-image-selection-container>
-
+  
+  <section id="services" class="section-padding">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">HIGHLIGHTS</h2>
+                <div class="shape wow fadeInDown" data-wow-delay="0.3s"></div>
+            </div>
+            <div class="row">
+              <!-- <div class="checkbox-container"> -->
+                <sf-editformarea></sf-editformarea>
+              <!-- </div> -->
+              <sf-image-selection-container>
+                <sf-image-selection imageurl="assets/img/ipadinhand.png"></sf-image-selection>
+                <sf-image-selection imageurl="assets/img/ipadinhand.png"></sf-image-selection>
+                <sf-image-selection imageurl="assets/img/ipadinhand.png"></sf-image-selection>
+                <sf-image-selection imageurl="assets/img/ipadinhand.png"></sf-image-selection>
+              </sf-image-selection-container>
+            </div>
+        </div>
+    </section>
   <!-- Footer Section Start -->
   <footer id="footer" class="footer-area section-padding">
     <div class="container">
