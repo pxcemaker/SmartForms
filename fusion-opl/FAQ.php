@@ -14,7 +14,7 @@
                 <div class="row">
                     <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
                         <div class="contents">
-                            <h2 class="head-title">Fragen? <br>Hier sind Antworten!</h2>
+                            <h2 class="head-title"> <br>Fragen? <br>Hier sind Antworten!</h2>
                         </div>
                     </div>
                     <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
@@ -135,31 +135,36 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="services-item">
-                        <button class="accordion">Section 1</button>
+                        <button class="accordion">Wie kann ich die Umfrage durchführen lassen?</button>
                         <div class="panel">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <p>Lassen Sie Ihre Kunden, Mitarbeitende, Freunde, etc. an Ihrer Umfrage teilnehmen. 
+                                Verteilen Sie Ihren Umfragelink via Ihre Website, E-Mail, Facebook, Twitter oder was 
+                                für Sie sonst noch in Frage kommt. Alle unsere Online-Befragungen sind automatisch für 
+                                Mobile-Geräte optimiert. Ihre Teilnehmer können überall teilnehmen: Sei es auf dem Desktop-PC, 
+                                Laptop, Tablet oder Smartphone.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="services-item">
-                        <button class="accordion">Section 1</button>
+                        <button class="accordion">Wie werden Resultate ausgewertet?</button>
                         <div class="panel">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <p>Alle Antworten Ihrer Teilnehmer werden Ihnen in Echtzeit angezeigt. 
+                                Sie können sowohl die zusammengefassten Resultate analysieren oder auch die genauen 
+                                Antworten einzelner Umfrageteilnehmer einsehen. Alle Antworten werden Ihnen automatisch 
+                                in grafischer (Diagramme) und quantitativer Form angezeigt. Die Resultate lassen sich zudem 
+                                nach Datum, gegebenen Antworten, Vollständigkeit und vieles mehr filtern.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="services-item">
-                        <button class="accordion">Section 1</button>
+                        <button class="accordion">Wie exportiere ich die Ergebnisse?</button>
                         <div class="panel">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <p>Exportieren Sie alle Ihre gesammelten Umfrageresultate als Excel- oder CSV-Datei. 
+                                Diese Daten können Sie auch einfach ins SPSS importieren. Speichern Sie die automatisch 
+                                erstellten Diagramme als Bilddatei ab und fügen Sie diese ins Word, PowerPoint, usw. ein. 
+                                Oder speichern Sie einfach die gesamte Auswertung inkl. Grafiken als PDF-Bericht ab.</p>
                         </div>
                     </div>
                 </div>

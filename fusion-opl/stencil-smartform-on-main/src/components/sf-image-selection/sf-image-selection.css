@@ -1,0 +1,44 @@
+:host {
+  box-sizing: border-box;
+}
+
+/*Pick-a-picture: Anfang*/
+
+.bilder-kasten {
+  background-color: #fff;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 7px 20px 0px rgba(50, 50, 50, 0.41);
+  -moz-box-shadow:    0px 7px 20px 0px rgba(50, 50, 50, 0.41);
+  box-shadow:         0px 7px 20px 0px rgba(50, 50, 50, 0.41);
+  height: 200px;
+  margin: 5px;
+  min-width: 50%;
+  display: flex;
+  overflow: visible;
+  align-content: center;
+  justify-content: center;
+  /*flex-grow: 1;*/
+}
+
+.bilder-content {
+  align-self: center;
+  
+}
+
+.bilder-content > img {
+  border: none;
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+  max-height: 190px;
+  height: auto;
+}
+
+.bilder-kasten:hover {
+  -webkit-box-shadow: 0px 7px 20px 0px rgba(50, 50, 50, 0.41);
+  -moz-box-shadow:    0px 7px 20px 0px rgba(50, 50, 50, 0.41);
+  box-shadow:         0px 7px 20px 0px rgba(50, 50, 50, 0.41);
+  border: #e99d42 solid 3px;
+}
+
+/*Pick-a-Picture: Ende*/

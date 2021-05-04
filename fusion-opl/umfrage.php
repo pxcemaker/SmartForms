@@ -54,11 +54,22 @@
 
   </header>
 
-  <div class="checkbox-container">
-
-    <sf-editformarea></sf-editformarea>
-  </div>
-
+  
+  <section id="services" class="section-padding">
+        <div class="container">
+            <div class="row">
+              <!-- <div class="checkbox-container"> -->
+                <sf-editformarea></sf-editformarea>
+              <!-- </div> -->
+              <sf-image-selection-container>
+                <sf-image-selection imageurl="assets/img/ipadinhand.png"></sf-image-selection>
+                <sf-image-selection imageurl="assets/img/ipadinhand.png"></sf-image-selection>
+                <sf-image-selection imageurl="assets/img/ipadinhand.png"></sf-image-selection>
+                <sf-image-selection imageurl="assets/img/ipadinhand.png"></sf-image-selection>
+              </sf-image-selection-container>
+            </div>
+        </div>
+    </section>
   <!-- Footer Section Start -->
   <footer id="footer" class="footer-area section-padding">
     <div class="container">

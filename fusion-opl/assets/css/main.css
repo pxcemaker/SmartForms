@@ -34,13 +34,36 @@ body {
   border-radius: 30px;
   text-transform: uppercase;
 }
-
-h1, h2, h3, h4 {
+h1 {
+  font-size: 34px;
+  color: #222222;
+  font-weight: 1300;
+    font-stretch: semi-expanded;
+  font-family: 'Roboto', serif;
+  margin-bottom: 30px!important;
+}
+h2 {
   font-size: 38px;
   color: #222222;
   font-weight: 1300;
     font-stretch: semi-expanded;
   font-family: 'Roboto', serif;
+}
+h3 {
+  font-size: 18px;
+  color: #fff;
+  font-weight: 300;
+    font-stretch: semi-expanded;
+  font-family: 'Roboto', serif;
+}
+h4 {
+  font-size: 18px;
+  color: #fff;
+  font-weight: 400;
+    font-stretch: semi-expanded;
+  font-family: 'Roboto', serif;
+
+  margin-bottom: 20px;
 }
 
 a {
@@ -62,9 +85,10 @@ a a:focus {
 
 p {
   font-weight: 400;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto','Open Sans', sans-serif;
   margin: 0px;
   font-size: 14px;
+  margin-top: 30px;
 }
 
 ul, ol {
@@ -94,7 +118,7 @@ padding: 0;
 }
 .unterpunkt:hover a{
   font-size: 18px;
-  color: #3b2878;
+  color: #e99d42;
   list-style: outside none none;
   margin: 5px;
   margin-left: 5px;
@@ -869,7 +893,7 @@ line-height: 110px;
   width: 150px;
   height: 45px;
   margin: auto;
-    margin-top: 30px;
+    margin-top: 50px;
 }
 
 .sloder-img {
@@ -1536,18 +1560,25 @@ textarea {
   border-bottom: grey solid 1px;
 }
 #slider{
-  padding-left: 250px;
+  padding-left: 350px;
   z-index: -10;
 
 }
 #sliderTitel
 {
-  padding-top: 10px;
+  padding-top: 100px;
   color: #EDDDCA;
   font-size: 80px;
   font-weight: 700;
+  margin-bottom: -70px;
+}
 }
 
 .icon-arrow{
   font-size: 30px;
+}
+
+.textwidget{
+  float: left;
+  font-stretch: expanded;
 }

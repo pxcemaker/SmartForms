@@ -4,9 +4,9 @@
 <section>
         <div class="container">
             <div class="row">
-                <h2 id="sliderTitel"> Deine Umfrage <br>
-                    wurde erfolgreich
-                    <br>gespeichert
+                <h2 id="sliderTitel"> Du hast erfolgreich<br>
+                    an der Umfrage
+                    <br>teilgenommen
                 </h2>
                 <div id="linkBereich"></div>
                 <img src="assets/img/ipadinhand.png" id="slider">

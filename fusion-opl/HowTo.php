@@ -46,6 +46,9 @@
                                 Konto
                             </li>
                             <li class="unterpunkt">
+                                <a href="#"> </a>
+                            </li>
+                            <li class="unterpunkt">
                                 <a href="#"> Account anlegen</a>
                             </li>
                             <li class="unterpunkt">
@@ -65,6 +68,9 @@
                             </div>
                             <li class="oberpunkt">
                                 Umfragen
+                            </li>
+                            <li class="unterpunkt">
+                                <a href="#"> </a>
                             </li>
                             <li class="unterpunkt">
                                 <a href="#"> Umfrage erstellen</a>
@@ -91,6 +97,9 @@
                             </div>
                             <li class="oberpunkt">
                                 Konto
+                            </li>
+                            <li class="unterpunkt">
+                                <a href="#">  </a>
                             </li>
                             <li class="unterpunkt">
                                 <a href="#"> Account anlegen</a>
@@ -167,6 +176,22 @@
             </div>
         </div>
 </section>
+    <!-- Call To Action Section Start -->
+    
+   
+    <section class="section-padding eigeneSec">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-xs-12" data-wow-delay="0.3s">
+                    <div class="eigeneSec">
+                        <h1 class="eigeneSec">Steigern Sie Kundenzufriedenheit. Erfassen Sie schnell und einfach Kundenfeedback.</h1>
+                        <a href="umfrage.php" class="btn btn-common mt-3">loslegen</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+     <!--ende slider section-->
     <!-- Footer Section Start -->
     <?php include("footer.inc.php"); ?>
 

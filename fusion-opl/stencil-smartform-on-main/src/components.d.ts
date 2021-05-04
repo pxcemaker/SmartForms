@@ -18,7 +18,14 @@ export namespace Components {
     }
     interface SfEditformarea {
     }
+    interface SfEmptyImageSelection {
+    }
     interface SfEmptycheckbox {
+    }
+    interface SfImageSelection {
+        "imageurl": string;
+    }
+    interface SfImageSelectionContainer {
     }
     interface SfInputText {
     }
@@ -77,11 +84,29 @@ declare global {
         prototype: HTMLSfEditformareaElement;
         new (): HTMLSfEditformareaElement;
     };
+    interface HTMLSfEmptyImageSelectionElement extends Components.SfEmptyImageSelection, HTMLStencilElement {
+    }
+    var HTMLSfEmptyImageSelectionElement: {
+        prototype: HTMLSfEmptyImageSelectionElement;
+        new (): HTMLSfEmptyImageSelectionElement;
+    };
     interface HTMLSfEmptycheckboxElement extends Components.SfEmptycheckbox, HTMLStencilElement {
     }
     var HTMLSfEmptycheckboxElement: {
         prototype: HTMLSfEmptycheckboxElement;
         new (): HTMLSfEmptycheckboxElement;
+    };
+    interface HTMLSfImageSelectionElement extends Components.SfImageSelection, HTMLStencilElement {
+    }
+    var HTMLSfImageSelectionElement: {
+        prototype: HTMLSfImageSelectionElement;
+        new (): HTMLSfImageSelectionElement;
+    };
+    interface HTMLSfImageSelectionContainerElement extends Components.SfImageSelectionContainer, HTMLStencilElement {
+    }
+    var HTMLSfImageSelectionContainerElement: {
+        prototype: HTMLSfImageSelectionContainerElement;
+        new (): HTMLSfImageSelectionContainerElement;
     };
     interface HTMLSfInputTextElement extends Components.SfInputText, HTMLStencilElement {
     }
@@ -137,7 +162,10 @@ declare global {
         "sf-checkbox": HTMLSfCheckboxElement;
         "sf-dynamicform": HTMLSfDynamicformElement;
         "sf-editformarea": HTMLSfEditformareaElement;
+        "sf-empty-image-selection": HTMLSfEmptyImageSelectionElement;
         "sf-emptycheckbox": HTMLSfEmptycheckboxElement;
+        "sf-image-selection": HTMLSfImageSelectionElement;
+        "sf-image-selection-container": HTMLSfImageSelectionContainerElement;
         "sf-input-text": HTMLSfInputTextElement;
         "sf-question": HTMLSfQuestionElement;
         "sf-question-container": HTMLSfQuestionContainerElement;
@@ -162,8 +190,15 @@ declare namespace LocalJSX {
     }
     interface SfEditformarea {
     }
+    interface SfEmptyImageSelection {
+    }
     interface SfEmptycheckbox {
         "onCheckboxAnswer"?: (event: CustomEvent<string>) => void;
+    }
+    interface SfImageSelection {
+        "imageurl"?: string;
+    }
+    interface SfImageSelectionContainer {
     }
     interface SfInputText {
     }
@@ -198,7 +233,10 @@ declare namespace LocalJSX {
         "sf-checkbox": SfCheckbox;
         "sf-dynamicform": SfDynamicform;
         "sf-editformarea": SfEditformarea;
+        "sf-empty-image-selection": SfEmptyImageSelection;
         "sf-emptycheckbox": SfEmptycheckbox;
+        "sf-image-selection": SfImageSelection;
+        "sf-image-selection-container": SfImageSelectionContainer;
         "sf-input-text": SfInputText;
         "sf-question": SfQuestion;
         "sf-question-container": SfQuestionContainer;
@@ -218,7 +256,10 @@ declare module "@stencil/core" {
             "sf-checkbox": LocalJSX.SfCheckbox & JSXBase.HTMLAttributes<HTMLSfCheckboxElement>;
             "sf-dynamicform": LocalJSX.SfDynamicform & JSXBase.HTMLAttributes<HTMLSfDynamicformElement>;
             "sf-editformarea": LocalJSX.SfEditformarea & JSXBase.HTMLAttributes<HTMLSfEditformareaElement>;
+            "sf-empty-image-selection": LocalJSX.SfEmptyImageSelection & JSXBase.HTMLAttributes<HTMLSfEmptyImageSelectionElement>;
             "sf-emptycheckbox": LocalJSX.SfEmptycheckbox & JSXBase.HTMLAttributes<HTMLSfEmptycheckboxElement>;
+            "sf-image-selection": LocalJSX.SfImageSelection & JSXBase.HTMLAttributes<HTMLSfImageSelectionElement>;
+            "sf-image-selection-container": LocalJSX.SfImageSelectionContainer & JSXBase.HTMLAttributes<HTMLSfImageSelectionContainerElement>;
             "sf-input-text": LocalJSX.SfInputText & JSXBase.HTMLAttributes<HTMLSfInputTextElement>;
             "sf-question": LocalJSX.SfQuestion & JSXBase.HTMLAttributes<HTMLSfQuestionElement>;
             "sf-question-container": LocalJSX.SfQuestionContainer & JSXBase.HTMLAttributes<HTMLSfQuestionContainerElement>;
