@@ -1,0 +1,12 @@
+:host {
+  display: block;
+}
+
+.bilder-container {
+  display: flex;
+  height: auto;
+  flex-direction: row;
+  box-sizing: border-box;
+  width: 80%;
+  background-color: lightgreen;
+}
