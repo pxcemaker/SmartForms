@@ -9,6 +9,6 @@
   flex-wrap: wrap;
   box-sizing: border-box;
   flex-grow: 1;
-  width: 50%;
+  width: 100%;
   /*background-color: lightgreen;*/
 }
