@@ -9,6 +9,7 @@
 
 | Property   | Attribute  | Description | Type     | Default     |
 | ---------- | ---------- | ----------- | -------- | ----------- |
+| `anzahl`   | `anzahl`   |             | `string` | `undefined` |
 | `imageurl` | `imageurl` |             | `string` | `undefined` |
 
 

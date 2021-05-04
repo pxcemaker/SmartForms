@@ -1,9 +1,5 @@
 :host {
-  display: flex;
-  height: auto;
-  flex-direction: row;
   box-sizing: border-box;
-  /*width: 80%;*/
 }
 
 /*Pick-a-picture: Anfang*/
@@ -14,14 +10,25 @@
   -webkit-box-shadow: 0px 7px 20px 0px rgba(50, 50, 50, 0.41);
   -moz-box-shadow:    0px 7px 20px 0px rgba(50, 50, 50, 0.41);
   box-shadow:         0px 7px 20px 0px rgba(50, 50, 50, 0.41);
-  width: 20%;
-  height: 140px;
+  height: 200px;
   margin: 5px;
   display: flex;
   overflow: visible;
   align-content: center;
   justify-content: center;
-  flex-grow: 1;
+  /*flex-grow: 1;*/
+}
+
+.zwei-bilder {
+  width: 50%;
+}
+
+.drei-bilder {
+  width: 33%;
+}
+
+.vier-bilder {
+  width: 25%;
 }
 
 .bilder-content {
@@ -30,7 +37,11 @@
 }
 
 .bilder-content > img {
-  max-height: 100px;
+  border: none;
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
 }
 
 .bilder-kasten:hover {

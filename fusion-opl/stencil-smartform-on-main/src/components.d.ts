@@ -23,7 +23,10 @@ export namespace Components {
     interface SfEmptycheckbox {
     }
     interface SfImageSelection {
+        "anzahl": string;
         "imageurl": string;
+    }
+    interface SfImageSelectionContainer {
     }
     interface SfInputText {
     }
@@ -100,6 +103,12 @@ declare global {
         prototype: HTMLSfImageSelectionElement;
         new (): HTMLSfImageSelectionElement;
     };
+    interface HTMLSfImageSelectionContainerElement extends Components.SfImageSelectionContainer, HTMLStencilElement {
+    }
+    var HTMLSfImageSelectionContainerElement: {
+        prototype: HTMLSfImageSelectionContainerElement;
+        new (): HTMLSfImageSelectionContainerElement;
+    };
     interface HTMLSfInputTextElement extends Components.SfInputText, HTMLStencilElement {
     }
     var HTMLSfInputTextElement: {
@@ -157,6 +166,7 @@ declare global {
         "sf-empty-image-selection": HTMLSfEmptyImageSelectionElement;
         "sf-emptycheckbox": HTMLSfEmptycheckboxElement;
         "sf-image-selection": HTMLSfImageSelectionElement;
+        "sf-image-selection-container": HTMLSfImageSelectionContainerElement;
         "sf-input-text": HTMLSfInputTextElement;
         "sf-question": HTMLSfQuestionElement;
         "sf-question-container": HTMLSfQuestionContainerElement;
@@ -187,7 +197,10 @@ declare namespace LocalJSX {
         "onCheckboxAnswer"?: (event: CustomEvent<string>) => void;
     }
     interface SfImageSelection {
+        "anzahl"?: string;
         "imageurl"?: string;
+    }
+    interface SfImageSelectionContainer {
     }
     interface SfInputText {
     }
@@ -225,6 +238,7 @@ declare namespace LocalJSX {
         "sf-empty-image-selection": SfEmptyImageSelection;
         "sf-emptycheckbox": SfEmptycheckbox;
         "sf-image-selection": SfImageSelection;
+        "sf-image-selection-container": SfImageSelectionContainer;
         "sf-input-text": SfInputText;
         "sf-question": SfQuestion;
         "sf-question-container": SfQuestionContainer;
@@ -247,6 +261,7 @@ declare module "@stencil/core" {
             "sf-empty-image-selection": LocalJSX.SfEmptyImageSelection & JSXBase.HTMLAttributes<HTMLSfEmptyImageSelectionElement>;
             "sf-emptycheckbox": LocalJSX.SfEmptycheckbox & JSXBase.HTMLAttributes<HTMLSfEmptycheckboxElement>;
             "sf-image-selection": LocalJSX.SfImageSelection & JSXBase.HTMLAttributes<HTMLSfImageSelectionElement>;
+            "sf-image-selection-container": LocalJSX.SfImageSelectionContainer & JSXBase.HTMLAttributes<HTMLSfImageSelectionContainerElement>;
             "sf-input-text": LocalJSX.SfInputText & JSXBase.HTMLAttributes<HTMLSfInputTextElement>;
             "sf-question": LocalJSX.SfQuestion & JSXBase.HTMLAttributes<HTMLSfQuestionElement>;
             "sf-question-container": LocalJSX.SfQuestionContainer & JSXBase.HTMLAttributes<HTMLSfQuestionContainerElement>;
