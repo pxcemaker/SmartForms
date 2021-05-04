@@ -23,7 +23,6 @@ export namespace Components {
     interface SfEmptycheckbox {
     }
     interface SfImageSelection {
-        "anzahl": string;
         "imageurl": string;
     }
     interface SfImageSelectionContainer {
@@ -197,7 +196,6 @@ declare namespace LocalJSX {
         "onCheckboxAnswer"?: (event: CustomEvent<string>) => void;
     }
     interface SfImageSelection {
-        "anzahl"?: string;
         "imageurl"?: string;
     }
     interface SfImageSelectionContainer {
