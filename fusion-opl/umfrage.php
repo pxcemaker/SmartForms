@@ -58,7 +58,7 @@
 
     <sf-editformarea></sf-editformarea>
   </div>
-  <sf-image-selection imageurl="assets/img/ipadinhand.PNG"></sf-image-selection>
+  <sf-image-selection imageurl="assets/img/ipadinhand.png"></sf-image-selection>
 
   <!-- Footer Section Start -->
   <footer id="footer" class="footer-area section-padding">

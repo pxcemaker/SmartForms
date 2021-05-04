@@ -172,7 +172,7 @@
                     deine Umfrage
                     <br>aussehen
                 </h2>
-                <img src="assets/img/ipadinhand.png" id="slider">
+                <img src="assets/img/ipadinhand_.png" id="slider">
                 <div class="container">
                     <div class="row">
                         <div class="col-5">
