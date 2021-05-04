@@ -30,7 +30,7 @@
 }
 
 .bilder-content > img {
-  max-height: 3em;
+  max-height: 100px;
 }
 
 .bilder-kasten:hover {
@@ -40,7 +40,4 @@
   border: #e99d42 solid 3px;
 }
 
-img {
-  height: 100%;
-}
 /*Pick-a-Picture: Ende*/
