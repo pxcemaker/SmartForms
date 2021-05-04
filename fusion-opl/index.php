@@ -14,9 +14,9 @@
                 <div class="row">
                     <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
                         <!-- <div class="contents"> -->
-                        <h2 class="head-title">ONLINE <br>UMFRAGE <br>TOOL.</h2>
-                        <p>Umfrage-Tool zur Messung von Marktforschung, <br>Kundenzufriedenheit, Mitarbeiterbeurteilung
-                            und <br>vieles mehr.</p>
+                        <h1 class="head-title">ONLINE <br>UMFRAGE <br>TOOL.</h1>
+                        <h4 <p>Umfrage-Tool zur Messung von Marktforschung, <br>Kundenzufriedenheit, Mitarbeiterbeurteilung
+                            und <br>vieles mehr.</p> </h4>
                         <div class="header-button">
                             <a href="#" class="btn btn-border" id="start-btn">LOSLEGEN</i></a>
                         </div>
@@ -148,16 +148,12 @@
                 </div>
                 <div class="col-lg-6 col-md-6 col-xs-12 wow fadeInRight" data-wow-delay="0.3s">
                     </br>
-                    <h6 class="wowleft"> <b>Wie denkt dein Kunde?</b> </h6>
-                    <p class="wowleft">Praesent imperdiet, tellus et euismod euismod, risus lorem euismod erat, at
-                        finibus neque odio quis metus. Donec vulputate arcu quam.
-                        Praesent imperdiet, tellus et euismod euismod, risus lorem euismod erat, at finibus neque odio
-                        quis metus. Donec vulputate arcu quam.
-                        Praesent imperdiet, tellus et euismod euismod, risus lorem euismod erat, at finibus neque odio
-                        quis metus. Donec vulputate arcu quam.
-                        Praesent imperdiet, tellus et euismod euismod, risus lorem euismod erat, at finibus neque odio
-                        quis metus. Donec vulputate arcu quam. </p>
-                    <a href="HowTo.html" class="btn btn-common mt-3 wowleft">Read More</a>
+                    <h4 class="wowleft"> <b>Wie denkt dein Kunde?</b> </h4>
+                    <h3 <p class="wowleft">Finden Sie heraus, wie Ihre Kunden ticken, und verschaffen Sie sich dadurch einen 
+                        Wettbewerbsvorteil. Umfragen zur Kundenzufriedenheit helfen Ihnen dabei, sich an jedem Touchpoint 
+                        mit Ihren Kunden zu vernetzen. So wissen Sie stets genau, was Ihre Kunden wollen, brauchen und erwarten. 
+                        <br>Stellen Sie sich jetzt Umfragen mit unserem Tool zusammen.</p> </h3>
+                    <a href="HowTo.html" class="btn btn-common mt-3 wowleft">mehr erfahren</a>
                 </div>
 
             </div>
@@ -199,7 +195,7 @@
                     <div class="eigeneSec">
                         <h1 class="eigeneSec">Erstelle jetzt deine <br>individuelle Umfrage!
                         </h1>
-                        <a href="#" class="btn btn-common mt-3">Read More</a>
+                        <a href="umfrage.php" class="btn btn-common mt-3">loslegen</a>
 
                     </div>
                 </div>
