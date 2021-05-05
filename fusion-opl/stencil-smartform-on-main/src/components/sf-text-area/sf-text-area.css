@@ -36,6 +36,7 @@
 textarea {
   width: 450px;
   height: 150px;
+  margin-right: 20px;
   resize: none;
   padding: .75em 1em .5em 1em;
   font-family: 'Roboto', 'Open Sans', sans-serif;
