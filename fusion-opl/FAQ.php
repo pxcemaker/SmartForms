@@ -137,10 +137,11 @@
                     <div class="services-item">
                         <button class="accordion">Wie kann ich die Umfrage durchführen lassen?</button>
                         <div class="panel">
-                            <p>Lassen Sie Ihre Kunden, Mitarbeitende, Freunde, etc. an Ihrer Umfrage teilnehmen. 
-                                Verteilen Sie Ihren Umfragelink via Ihre Website, E-Mail, Facebook, Twitter oder was 
-                                für Sie sonst noch in Frage kommt. Alle unsere Online-Befragungen sind automatisch für 
-                                Mobile-Geräte optimiert. Ihre Teilnehmer können überall teilnehmen: Sei es auf dem Desktop-PC, 
+                            <p>Lassen Sie Ihre Kunden, Mitarbeitende, Freunde, etc. an Ihrer Umfrage teilnehmen.
+                                Verteilen Sie Ihren Umfragelink via Ihre Website, E-Mail, Facebook, Twitter oder was
+                                für Sie sonst noch in Frage kommt. Alle unsere Online-Befragungen sind automatisch für
+                                Mobile-Geräte optimiert. Ihre Teilnehmer können überall teilnehmen: Sei es auf dem
+                                Desktop-PC,
                                 Laptop, Tablet oder Smartphone.</p>
                         </div>
                     </div>
@@ -149,10 +150,11 @@
                     <div class="services-item">
                         <button class="accordion">Wie werden Resultate ausgewertet?</button>
                         <div class="panel">
-                            <p>Alle Antworten Ihrer Teilnehmer werden Ihnen in Echtzeit angezeigt. 
-                                Sie können sowohl die zusammengefassten Resultate analysieren oder auch die genauen 
-                                Antworten einzelner Umfrageteilnehmer einsehen. Alle Antworten werden Ihnen automatisch 
-                                in grafischer (Diagramme) und quantitativer Form angezeigt. Die Resultate lassen sich zudem 
+                            <p>Alle Antworten Ihrer Teilnehmer werden Ihnen in Echtzeit angezeigt.
+                                Sie können sowohl die zusammengefassten Resultate analysieren oder auch die genauen
+                                Antworten einzelner Umfrageteilnehmer einsehen. Alle Antworten werden Ihnen automatisch
+                                in grafischer (Diagramme) und quantitativer Form angezeigt. Die Resultate lassen sich
+                                zudem
                                 nach Datum, gegebenen Antworten, Vollständigkeit und vieles mehr filtern.</p>
                         </div>
                     </div>
@@ -161,9 +163,10 @@
                     <div class="services-item">
                         <button class="accordion">Wie exportiere ich die Ergebnisse?</button>
                         <div class="panel">
-                            <p>Exportieren Sie alle Ihre gesammelten Umfrageresultate als Excel- oder CSV-Datei. 
-                                Diese Daten können Sie auch einfach ins SPSS importieren. Speichern Sie die automatisch 
-                                erstellten Diagramme als Bilddatei ab und fügen Sie diese ins Word, PowerPoint, usw. ein. 
+                            <p>Exportieren Sie alle Ihre gesammelten Umfrageresultate als Excel- oder CSV-Datei.
+                                Diese Daten können Sie auch einfach ins SPSS importieren. Speichern Sie die automatisch
+                                erstellten Diagramme als Bilddatei ab und fügen Sie diese ins Word, PowerPoint, usw.
+                                ein.
                                 Oder speichern Sie einfach die gesamte Auswertung inkl. Grafiken als PDF-Bericht ab.</p>
                         </div>
                     </div>
@@ -178,20 +181,20 @@
 
 </body>
 <script>
-var acc = document.getElementsByClassName("accordion");
+var accs = document.getElementsByClassName("accordion");
 var i;
 
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    }
-  });
-}
+foreach(acc => {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+        } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+    });
+})
 </script>
 
 </html>
