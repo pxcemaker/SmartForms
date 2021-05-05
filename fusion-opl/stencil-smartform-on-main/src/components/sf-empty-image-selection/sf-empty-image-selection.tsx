@@ -1,4 +1,4 @@
-import { Component, Host, h } from '@stencil/core';
+import { Component, EventEmitter, h, State, Event } from '@stencil/core';
 
 @Component({
   tag: 'sf-empty-image-selection',
@@ -6,12 +6,23 @@ import { Component, Host, h } from '@stencil/core';
   shadow: true,
 })
 export class SfEmptyImageSelection {
+  
+  @State() answer: string;
+
+  @Event() checkboxAnswer: EventEmitter<string>;
+
+  handleChange(event) {
+    this.answer = event.target.value;
+    this.checkboxAnswer.emit(this.answer);
+  }
 
   render() {
     return (
-      <Host>
-        <slot></slot>
-      </Host>
+      <div class="grid-item checkbox-kasten">
+        <label class="container">
+          <input type="text" id="answerinput" value={this.answer} onInput={e => this.handleChange(e)}></input>
+        </label>
+      </div>
     );
   }
 
