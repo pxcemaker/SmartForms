@@ -16,7 +16,8 @@
         <div class="profilegridcontainer container">
             <div class="profile-grid-item">
                 <div class="profilepicture">
-                    <i class="bi bi-person" style="font-size: 12rem; color: #707070"></i>
+                <img src="assets/img/maxmustermann.png" width="208" height="auto"></img>
+                    <!-- <i class="bi bi-person" style="font-size: 12rem; color: #707070"></i> -->
                 </div>
             </div>
             <div class="profile-grid-item">
