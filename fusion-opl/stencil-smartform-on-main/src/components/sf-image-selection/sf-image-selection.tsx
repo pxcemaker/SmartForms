@@ -1,4 +1,4 @@
-import { Component, Host, h, Prop } from '@stencil/core';
+import { Component, Host, h, Prop, Watch } from '@stencil/core';
 
 @Component({
   tag: 'sf-image-selection',
@@ -7,7 +7,15 @@ import { Component, Host, h, Prop } from '@stencil/core';
 })
 export class SfImageSelection {
 
-  @Prop() imageurl: string;
+  @Prop({ reflect: true }) imageurl: string = "assets/img/ipadinhand.png";
+
+  @Watch('imageurl')
+  validateUrl(newValue: string) {
+    const isBlank = typeof newValue !== 'string' || newValue === '';
+    const hasContent = typeof newValue === 'string';
+    if (isBlank) { throw new Error('name: required') };
+    if (!hasContent) { throw new Error('name: hasContent') };
+  }
 
   render() {
     return (

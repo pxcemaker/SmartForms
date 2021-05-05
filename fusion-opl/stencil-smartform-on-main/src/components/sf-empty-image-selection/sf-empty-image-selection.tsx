@@ -9,11 +9,11 @@ export class SfEmptyImageSelection {
   
   @State() answer: string;
 
-  @Event() checkboxAnswer: EventEmitter<string>;
+  @Event() imageAnswer: EventEmitter<string>;
 
   handleChange(event) {
     this.answer = event.target.value;
-    this.checkboxAnswer.emit(this.answer);
+    this.imageAnswer.emit(this.answer);
   }
 
   render() {

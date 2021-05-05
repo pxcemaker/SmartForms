@@ -191,7 +191,7 @@ declare namespace LocalJSX {
     interface SfEditformarea {
     }
     interface SfEmptyImageSelection {
-        "onCheckboxAnswer"?: (event: CustomEvent<string>) => void;
+        "onImageAnswer"?: (event: CustomEvent<string>) => void;
     }
     interface SfEmptycheckbox {
         "onCheckboxAnswer"?: (event: CustomEvent<string>) => void;

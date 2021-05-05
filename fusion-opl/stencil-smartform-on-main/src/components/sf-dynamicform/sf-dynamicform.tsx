@@ -10,11 +10,13 @@ export class SfDynamicform {
   @State() radio: string;
   @State() checkboxMap: CheckBoxDef[];
   @State() radioMap: RadioDef[];
+  @State() imageMap: ImageDef[];
   @Prop({ mutable: true }) radioIdNmbr: number = 0;
 
   constructor() {
     this.checkboxMap = [new CheckBoxDef('antwort1', 'Add Answer'), new CheckBoxDef('antwort2', 'Add Answer')];
     this.radioMap = [new RadioDef('antwort1', 'Add Answer'), new RadioDef('antwort2', 'Add Answer')];
+    this.imageMap = [new ImageDef('antwort1', 'Add Answer'), new ImageDef('antwort2', 'Add Answer')];
   }
 
   @Watch('radioIdNmbr')
@@ -61,6 +63,23 @@ export class SfDynamicform {
     ));
   }
 
+  returnEmptyImage() {
+    return this.imageMap.map((_imagedef, index) => (
+      <sf-empty-image-selection
+        onImageAnswer={ev =>
+          (this.imageMap = [...this.imageMap].map((imagedefnew, indexnew) => {
+            if (index == indexnew) {
+              imagedefnew.value = ev.detail;
+              return imagedefnew;
+            } else {
+              return imagedefnew;
+            }
+          }))
+        }
+      ></sf-empty-image-selection>
+    ));
+  }
+
   ///{ev => (this.checkboxMap[index].value = ev.detail)}
 
   renderInputBox() {
@@ -76,7 +95,13 @@ export class SfDynamicform {
           {this.returnEmptyRadio()} <sf-adddynform onIsClicked={() => this.addAns()}></sf-adddynform>
         </div>
       );
-    }
+    } else if (this.radio == 'bilder') {
+    return (
+      <div class="item-1-3 answers">
+        {this.returnEmptyImage()} <sf-adddynform onIsClicked={() => this.addAns()}></sf-adddynform>
+      </div>
+    );
+  }
     return <div></div>;
   }
   addAns() {
@@ -84,6 +109,8 @@ export class SfDynamicform {
       return (this.checkboxMap = [...this.checkboxMap, new CheckBoxDef('Blubb', 'Add Answer')]);
     } else if (this.radio == 'radio') {
       return (this.radioMap = [...this.radioMap, new RadioDef('Blubb', 'Add Answer')]);
+    } else if (this.radio == 'bilder') {
+      return (this.imageMap = [...this.imageMap, new ImageDef('Blubb', 'Add Answer')]);
     }
   }
 
@@ -95,6 +122,8 @@ export class SfDynamicform {
       return this.radioMap.map(radiodef => <sf-radio value={radiodef.value} radio-Id={this.radioIdNmbr} radio-Name={'radio'}></sf-radio>);
     } else if (this.radio == 'rtx') {
       return <sf-text-area></sf-text-area>;
+    } else if (this.radio == 'bilder') {
+      return this.imageMap.map(imagedef => <sf-image-selection imageurl={imagedef.value}></sf-image-selection>);
     }
   }
 
@@ -163,6 +192,19 @@ export class SfDynamicform {
                   ></input>
                   <label class="choosetype">Radio-Buttons</label>
                 </div>
+
+                <div class="answertypeoptions">
+                  <input
+                    id="fanswertype bilder"
+                    name="answertype"
+                    type="radio"
+                    value="bilder"
+                    onInput={() => {
+                      this.radio = 'bilder';
+                    }}
+                  ></input>
+                  <label class="choosetype">Bilder</label>
+                </div>
               </div>
             </div>
 
@@ -185,6 +227,16 @@ class CheckBoxDef {
 }
 
 class RadioDef {
+  key: string;
+  value: string;
+
+  constructor(key, value) {
+    this.key = key;
+    this.value = value;
+  }
+}
+
+class ImageDef {
   key: string;
   value: string;
 

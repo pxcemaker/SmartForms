@@ -19,10 +19,12 @@ graph TD;
   sf-editformarea --> sf-adddynform
   sf-dynamicform --> sf-emptycheckbox
   sf-dynamicform --> sf-radioempty
+  sf-dynamicform --> sf-empty-image-selection
   sf-dynamicform --> sf-adddynform
   sf-dynamicform --> sf-checkbox
   sf-dynamicform --> sf-radio
   sf-dynamicform --> sf-text-area
+  sf-dynamicform --> sf-image-selection
   sf-dynamicform --> sf-question
   sf-dynamicform --> sf-questionempty
   style sf-editformarea fill:#f9f,stroke:#333,stroke-width:4px
