@@ -13,10 +13,10 @@
                         Home
                     </a>
                 </li>
-                
+
                 <li class="nav-item">
                     <a class="nav-link" href="FAQ.php">
-                        FAQ
+                        HowTo
                     </a>
                 </li>
                 <li class="nav-item">
