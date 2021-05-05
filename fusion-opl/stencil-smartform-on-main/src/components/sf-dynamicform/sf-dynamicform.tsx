@@ -6,7 +6,7 @@ import { Component, State, h, Watch, Prop } from '@stencil/core';
   shadow: true,
 })
 export class SfDynamicform {
-  @State() question: string;
+  @Prop({ mutable: true }) question: string;
   @State() radio: string;
   @State() checkboxMap: CheckBoxDef[];
   @State() radioMap: RadioDef[];
@@ -135,7 +135,8 @@ export class SfDynamicform {
     return (
       <div class="grid-container">
         <div class="item-1-1">
-          {this.returnQuestion()}
+          {/*Gitb Frage eingeben aus, wenn nichts drin steht */}
+          {this.returnQuestion().value ? this.returnQuestion() : 'Frage eingeben'}
 
           {this.returnAnswers()}
         </div>

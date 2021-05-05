@@ -16,9 +16,11 @@ export namespace Components {
         "value": string;
     }
     interface SfDynamicform {
+        "question": string;
         "radioIdNmbr": number;
     }
     interface SfEditformarea {
+        "getFormElement": () => Promise<any[]>;
     }
     interface SfEmptyImageSelection {
     }
@@ -33,11 +35,6 @@ export namespace Components {
     }
     interface SfQuestion {
         "value": string;
-    }
-    interface SfQuestionContainer {
-        "frageText": string;
-        "fragenId": string;
-        "onOff": string;
     }
     interface SfQuestionempty {
     }
@@ -122,12 +119,6 @@ declare global {
         prototype: HTMLSfQuestionElement;
         new (): HTMLSfQuestionElement;
     };
-    interface HTMLSfQuestionContainerElement extends Components.SfQuestionContainer, HTMLStencilElement {
-    }
-    var HTMLSfQuestionContainerElement: {
-        prototype: HTMLSfQuestionContainerElement;
-        new (): HTMLSfQuestionContainerElement;
-    };
     interface HTMLSfQuestionemptyElement extends Components.SfQuestionempty, HTMLStencilElement {
     }
     var HTMLSfQuestionemptyElement: {
@@ -170,7 +161,6 @@ declare global {
         "sf-image-selection-container": HTMLSfImageSelectionContainerElement;
         "sf-input-text": HTMLSfInputTextElement;
         "sf-question": HTMLSfQuestionElement;
-        "sf-question-container": HTMLSfQuestionContainerElement;
         "sf-questionempty": HTMLSfQuestionemptyElement;
         "sf-radio": HTMLSfRadioElement;
         "sf-radioempty": HTMLSfRadioemptyElement;
@@ -190,6 +180,7 @@ declare namespace LocalJSX {
         "value"?: string;
     }
     interface SfDynamicform {
+        "question"?: string;
         "radioIdNmbr"?: number;
     }
     interface SfEditformarea {
@@ -209,11 +200,6 @@ declare namespace LocalJSX {
     }
     interface SfQuestion {
         "value"?: string;
-    }
-    interface SfQuestionContainer {
-        "frageText"?: string;
-        "fragenId"?: string;
-        "onOff"?: string;
     }
     interface SfQuestionempty {
         "onQuestionInput"?: (event: CustomEvent<string>) => void;
@@ -244,7 +230,6 @@ declare namespace LocalJSX {
         "sf-image-selection-container": SfImageSelectionContainer;
         "sf-input-text": SfInputText;
         "sf-question": SfQuestion;
-        "sf-question-container": SfQuestionContainer;
         "sf-questionempty": SfQuestionempty;
         "sf-radio": SfRadio;
         "sf-radioempty": SfRadioempty;
@@ -267,7 +252,6 @@ declare module "@stencil/core" {
             "sf-image-selection-container": LocalJSX.SfImageSelectionContainer & JSXBase.HTMLAttributes<HTMLSfImageSelectionContainerElement>;
             "sf-input-text": LocalJSX.SfInputText & JSXBase.HTMLAttributes<HTMLSfInputTextElement>;
             "sf-question": LocalJSX.SfQuestion & JSXBase.HTMLAttributes<HTMLSfQuestionElement>;
-            "sf-question-container": LocalJSX.SfQuestionContainer & JSXBase.HTMLAttributes<HTMLSfQuestionContainerElement>;
             "sf-questionempty": LocalJSX.SfQuestionempty & JSXBase.HTMLAttributes<HTMLSfQuestionemptyElement>;
             "sf-radio": LocalJSX.SfRadio & JSXBase.HTMLAttributes<HTMLSfRadioElement>;
             "sf-radioempty": LocalJSX.SfRadioempty & JSXBase.HTMLAttributes<HTMLSfRadioemptyElement>;
