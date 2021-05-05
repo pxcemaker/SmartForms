@@ -86,22 +86,22 @@ export class SfDynamicform {
     if (this.radio == 'checkbox') {
       return (
         <div class="item-1-3 answers">
-          {this.returnEmptyCheckbox()} <sf-adddynform onIsClicked={() => this.addAns()}></sf-adddynform>
+          {this.returnEmptyCheckbox()} <sf-adddynform value="+" id="addBtn" onIsClicked={() => this.addAns()}></sf-adddynform>
         </div>
       );
     } else if (this.radio == 'radio') {
       return (
         <div class="item-1-3 answers">
-          {this.returnEmptyRadio()} <sf-adddynform onIsClicked={() => this.addAns()}></sf-adddynform>
+          {this.returnEmptyRadio()} <sf-adddynform value="+" id="addBtn" onIsClicked={() => this.addAns()}></sf-adddynform>
         </div>
       );
     } else if (this.radio == 'bilder') {
-    return (
-      <div class="item-1-3 answers">
-        {this.returnEmptyImage()} <sf-adddynform onIsClicked={() => this.addAns()}></sf-adddynform>
-      </div>
-    );
-  }
+      return (
+        <div class="item-1-3 answers">
+          {this.returnEmptyImage()} <sf-adddynform value="+" id="addBtn" onIsClicked={() => this.addAns()}></sf-adddynform>
+        </div>
+      );
+    }
     return <div></div>;
   }
   addAns() {

@@ -17,6 +17,8 @@ export class SfEditformarea {
     this.dynFormMap = [...this.dynFormMap, 'blubb'];
   }
 
+  safeSurvey() {}
+
   render() {
     return (
       <div>
@@ -24,7 +26,8 @@ export class SfEditformarea {
           return <sf-dynamicform></sf-dynamicform>;
         })}
 
-        <sf-adddynform onIsClicked={() => this.addDyn()}></sf-adddynform>
+        <sf-adddynform value="+" id="addBtn" onIsClicked={() => this.addDyn()}></sf-adddynform>
+        <sf-adddynform value="safe" id="safeBtn" onIsClicked={() => this.safeSurvey()}></sf-adddynform>
       </div>
     );
   }

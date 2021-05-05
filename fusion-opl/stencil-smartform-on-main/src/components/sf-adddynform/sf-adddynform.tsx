@@ -1,4 +1,4 @@
-import { Component, h, Event, EventEmitter } from '@stencil/core';
+import { Component, h, Event, EventEmitter, Prop } from '@stencil/core';
 
 @Component({
   tag: 'sf-adddynform',
@@ -6,6 +6,8 @@ import { Component, h, Event, EventEmitter } from '@stencil/core';
   shadow: true,
 })
 export class SfAdddynform {
+  @Prop({ reflect: true }) value: string;
+  @Prop({ reflect: true }) id: string;
   @Event() isClicked: EventEmitter<void>;
 
   handleClick() {
@@ -15,8 +17,8 @@ export class SfAdddynform {
   render() {
     return (
       <div>
-        <button class="btn"  onClick={() => this.handleClick()}>
-          +
+        <button class="btn" id={this.id} onClick={() => this.handleClick()}>
+          {'' + this.value}
         </button>
       </div>
     );

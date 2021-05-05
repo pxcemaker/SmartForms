@@ -7,6 +7,8 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface SfAdddynform {
+        "id": string;
+        "value": string;
     }
     interface SfAddformbutton {
     }
@@ -178,7 +180,9 @@ declare global {
 }
 declare namespace LocalJSX {
     interface SfAdddynform {
+        "id"?: string;
         "onIsClicked"?: (event: CustomEvent<void>) => void;
+        "value"?: string;
     }
     interface SfAddformbutton {
     }
