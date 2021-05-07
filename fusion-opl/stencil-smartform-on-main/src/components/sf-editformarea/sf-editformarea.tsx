@@ -12,7 +12,16 @@ export class SfEditformarea {
   async getFormElement() {
     const questions = [];
     this.el.shadowRoot.querySelectorAll('sf-dynamicform').forEach(el => questions.push({ key: el.question, answetype: el.radio, value: el.result }));
-    console.log(questions);
+
+    fetch('api.php', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json;charset=UTF-8',
+      },
+      body: JSON.stringify(questions),
+    }) /*.then(() => {
+      window.location.href = '/abschlussseite-speichern.php';
+    })*/;
   }
 
   constructor() {
@@ -44,7 +53,9 @@ export class SfEditformarea {
           onClick={() => {
             this.getFormElement();
           }}
-        ></button>
+        >
+          Safe Survey
+        </button>
       </div>
     );
   }
