@@ -1,4 +1,7 @@
-import { Component, State, h, Watch, Prop } from '@stencil/core';
+import { Component, State, h, Watch, Prop, Method, Event, EventEmitter } from '@stencil/core';
+import { CheckBoxDef } from './CheckBoxDef';
+import { ImageDef } from './ImageDef';
+import { RadioDef } from './RadioDef';
 
 @Component({
   tag: 'sf-dynamicform',
@@ -7,11 +10,12 @@ import { Component, State, h, Watch, Prop } from '@stencil/core';
 })
 export class SfDynamicform {
   @Prop({ mutable: true }) question: string;
-  @State() radio: string;
+  @Prop({ mutable: true }) radio: string;
   @State() checkboxMap: CheckBoxDef[];
   @State() radioMap: RadioDef[];
   @State() imageMap: ImageDef[];
   @Prop({ mutable: true }) radioIdNmbr: number = 0;
+  @Prop({ mutable: true }) result: CheckBoxDef[] | RadioDef[] | string | ImageDef[];
 
   constructor() {
     this.checkboxMap = [new CheckBoxDef('antwort1', 'Add Answer'), new CheckBoxDef('antwort2', 'Add Answer')];
@@ -116,13 +120,17 @@ export class SfDynamicform {
 
   returnAnswers() {
     if (this.radio == 'checkbox') {
+      this.result = this.checkboxMap;
       return this.checkboxMap.map(checkboxdef => <sf-checkbox value={checkboxdef.value}></sf-checkbox>);
     } else if (this.radio == 'radio') {
+      this.result = this.radioMap;
       this.radioIdNmbr + 1;
       return this.radioMap.map(radiodef => <sf-radio value={radiodef.value} radio-Id={this.radioIdNmbr} radio-Name={'radio'}></sf-radio>);
     } else if (this.radio == 'rtx') {
+      this.result = '';
       return <sf-text-area></sf-text-area>;
     } else if (this.radio == 'bilder') {
+      this.result = this.imageMap;
       return this.imageMap.map(imagedef => <sf-image-selection imageurl={imagedef.value}></sf-image-selection>);
     }
   }
@@ -214,35 +222,5 @@ export class SfDynamicform {
         </div>
       </div>
     );
-  }
-}
-
-class CheckBoxDef {
-  key: string;
-  value: string;
-
-  constructor(key, value) {
-    this.key = key;
-    this.value = value;
-  }
-}
-
-class RadioDef {
-  key: string;
-  value: string;
-
-  constructor(key, value) {
-    this.key = key;
-    this.value = value;
-  }
-}
-
-class ImageDef {
-  key: string;
-  value: string;
-
-  constructor(key, value) {
-    this.key = key;
-    this.value = value;
   }
 }

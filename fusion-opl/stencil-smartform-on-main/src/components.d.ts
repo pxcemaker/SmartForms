@@ -5,6 +5,9 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { CheckBoxDef } from "./components/sf-dynamicform/CheckBoxDef";
+import { RadioDef } from "./components/sf-dynamicform/RadioDef";
+import { ImageDef } from "./components/sf-dynamicform/ImageDef";
 export namespace Components {
     interface SfAdddynform {
         "id": string;
@@ -17,10 +20,12 @@ export namespace Components {
     }
     interface SfDynamicform {
         "question": string;
+        "radio": string;
         "radioIdNmbr": number;
+        "result": CheckBoxDef[] | RadioDef[] | string | ImageDef[];
     }
     interface SfEditformarea {
-        "getFormElement": () => Promise<any[]>;
+        "getFormElement": () => Promise<void>;
     }
     interface SfEmptyImageSelection {
     }
@@ -181,7 +186,9 @@ declare namespace LocalJSX {
     }
     interface SfDynamicform {
         "question"?: string;
+        "radio"?: string;
         "radioIdNmbr"?: number;
+        "result"?: CheckBoxDef[] | RadioDef[] | string | ImageDef[];
     }
     interface SfEditformarea {
     }
