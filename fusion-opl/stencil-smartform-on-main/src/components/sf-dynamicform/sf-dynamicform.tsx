@@ -141,8 +141,8 @@ export class SfDynamicform {
 
   render() {
     return (
-      <div class="grid-container">
-        <div class="item-1-1">
+      <div class="grid-container primary-container">
+        <div class="item-1-1 preview-container">
           {/*Gitb Frage eingeben aus, wenn nichts drin steht */}
           {this.returnQuestion().value ? this.returnQuestion() : 'Frage'}
 
