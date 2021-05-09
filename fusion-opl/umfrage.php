@@ -1,3 +1,7 @@
+<?php
+include_once 'includes/dbh.inc.php';
+?> 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,8 +25,9 @@
 </head>
 
 <body>
-
+ <!--  $conn ----Wenn man sich mit dem live mySQL verbinden möchte darf das $conn nicht auskommentiert bleiben -->
   <!-- Header Area wrapper Starts -->
+  
   <header id="header-wrap">
     <!-- Navbar Start -->
     <?php require("nav.inc.php"); ?>
