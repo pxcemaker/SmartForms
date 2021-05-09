@@ -18,6 +18,11 @@ export namespace Components {
     interface SfCheckbox {
         "value": string;
     }
+    interface SfDescription {
+        "valueDescription": string;
+    }
+    interface SfDescriptionempty {
+    }
     interface SfDynamicform {
         "question": string;
         "radio": string;
@@ -75,6 +80,18 @@ declare global {
     var HTMLSfCheckboxElement: {
         prototype: HTMLSfCheckboxElement;
         new (): HTMLSfCheckboxElement;
+    };
+    interface HTMLSfDescriptionElement extends Components.SfDescription, HTMLStencilElement {
+    }
+    var HTMLSfDescriptionElement: {
+        prototype: HTMLSfDescriptionElement;
+        new (): HTMLSfDescriptionElement;
+    };
+    interface HTMLSfDescriptionemptyElement extends Components.SfDescriptionempty, HTMLStencilElement {
+    }
+    var HTMLSfDescriptionemptyElement: {
+        prototype: HTMLSfDescriptionemptyElement;
+        new (): HTMLSfDescriptionemptyElement;
     };
     interface HTMLSfDynamicformElement extends Components.SfDynamicform, HTMLStencilElement {
     }
@@ -158,6 +175,8 @@ declare global {
         "sf-adddynform": HTMLSfAdddynformElement;
         "sf-addformbutton": HTMLSfAddformbuttonElement;
         "sf-checkbox": HTMLSfCheckboxElement;
+        "sf-description": HTMLSfDescriptionElement;
+        "sf-descriptionempty": HTMLSfDescriptionemptyElement;
         "sf-dynamicform": HTMLSfDynamicformElement;
         "sf-editformarea": HTMLSfEditformareaElement;
         "sf-empty-image-selection": HTMLSfEmptyImageSelectionElement;
@@ -183,6 +202,12 @@ declare namespace LocalJSX {
     }
     interface SfCheckbox {
         "value"?: string;
+    }
+    interface SfDescription {
+        "valueDescription"?: string;
+    }
+    interface SfDescriptionempty {
+        "onDescriptionInput"?: (event: CustomEvent<string>) => void;
     }
     interface SfDynamicform {
         "question"?: string;
@@ -229,6 +254,8 @@ declare namespace LocalJSX {
         "sf-adddynform": SfAdddynform;
         "sf-addformbutton": SfAddformbutton;
         "sf-checkbox": SfCheckbox;
+        "sf-description": SfDescription;
+        "sf-descriptionempty": SfDescriptionempty;
         "sf-dynamicform": SfDynamicform;
         "sf-editformarea": SfEditformarea;
         "sf-empty-image-selection": SfEmptyImageSelection;
@@ -251,6 +278,8 @@ declare module "@stencil/core" {
             "sf-adddynform": LocalJSX.SfAdddynform & JSXBase.HTMLAttributes<HTMLSfAdddynformElement>;
             "sf-addformbutton": LocalJSX.SfAddformbutton & JSXBase.HTMLAttributes<HTMLSfAddformbuttonElement>;
             "sf-checkbox": LocalJSX.SfCheckbox & JSXBase.HTMLAttributes<HTMLSfCheckboxElement>;
+            "sf-description": LocalJSX.SfDescription & JSXBase.HTMLAttributes<HTMLSfDescriptionElement>;
+            "sf-descriptionempty": LocalJSX.SfDescriptionempty & JSXBase.HTMLAttributes<HTMLSfDescriptionemptyElement>;
             "sf-dynamicform": LocalJSX.SfDynamicform & JSXBase.HTMLAttributes<HTMLSfDynamicformElement>;
             "sf-editformarea": LocalJSX.SfEditformarea & JSXBase.HTMLAttributes<HTMLSfEditformareaElement>;
             "sf-empty-image-selection": LocalJSX.SfEmptyImageSelection & JSXBase.HTMLAttributes<HTMLSfEmptyImageSelectionElement>;
