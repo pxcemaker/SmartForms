@@ -141,26 +141,26 @@ export class SfDynamicform {
 
   render() {
     return (
-      <div class="grid-container">
-        <div class="item-1-1">
+      <div class="grid-container primary-container">
+        <div class="item-1-1 preview-container">
           {/*Gitb Frage eingeben aus, wenn nichts drin steht */}
           {this.returnQuestion().value ? this.returnQuestion() : 'Frage eingeben'}
 
           {this.returnAnswers()}
         </div>
 
-        <div class="kasten item-2-1">
-          <form class="grid-container" novalidate>
-            <div class="item-1-1">
+        <div class="kasten item-2-1 right-container">
+          <form class="grid-container form-container" novalidate>
+            <div class="item-1-1 how-to-container">
               <h3>Frage erstellen</h3>
               <p>Wählen Sie die Art der Frage aus und schreiben Sie Antworten und Fragen in die Felder.</p>
             </div>
 
-            <div class="item-1-2 grid-container">
+            <div class="item-1-2 grid-container empty-question-container">
               <sf-questionempty onQuestionInput={ev => (this.question = ev.detail)}></sf-questionempty>
             </div>
 
-            <div class="item-2-2 grid-container">
+            <div class="item-2-2 grid-container answertype-container">
               <label class="item-1-1">Antworttyp:</label>
               <div class="item-1-2">
                 <div class="answertypeoptions">

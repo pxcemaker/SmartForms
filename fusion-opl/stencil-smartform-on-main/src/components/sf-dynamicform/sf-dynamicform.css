@@ -115,3 +115,44 @@ button {
   justify-self: center;
   align-self: end;
 }
+
+/*.primary-container {
+  display: flex;
+  width: 1400px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.preview-container {
+  display: flex;
+  width: 500px;
+  flex-direction: column;
+}
+
+.right-container {
+  
+}
+
+.form-container {
+  display: flex;
+  width: 900px;
+  flex-direction: row;
+}
+
+.how-to-container {
+  display: flex;
+  width: 600px;
+  flex-direction: column;
+}
+
+.empty-question-container {
+  display: flex;
+  width: 600px;
+  flex-direction: column;
+}
+
+.answertype-container {
+  display: flex;
+  width: 300px;
+  flex-direction: column;
+}*/
