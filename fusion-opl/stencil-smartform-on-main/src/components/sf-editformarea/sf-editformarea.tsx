@@ -13,7 +13,7 @@ export class SfEditformarea {
     const questions = [];
     this.el.shadowRoot.querySelectorAll('sf-dynamicform').forEach(el => questions.push({ key: el.question, answetype: el.radio, value: el.result }));
 
-    fetch('api.php/datei2.json', {
+    fetch('api.php', {
       method: 'POST',
       headers: {
         'content-type': 'application/json;charset=UTF-8',
