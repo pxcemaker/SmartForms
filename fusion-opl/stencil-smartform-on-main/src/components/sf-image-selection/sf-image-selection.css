@@ -12,7 +12,7 @@
   box-shadow:         0px 7px 20px 0px rgba(50, 50, 50, 0.41);
   height: 200px;
   margin: 5px;
-  min-width: 50%;
+  min-width: 170px;
   display: flex;
   overflow: visible;
   align-content: center;
@@ -22,15 +22,14 @@
 
 .bilder-content {
   align-self: center;
-  
 }
 
 .bilder-content > img {
   border: none;
   display: inline-block;
   vertical-align: middle;
-  max-width: 100%;
-  max-height: 190px;
+  max-width: 190px;
+  max-height: 100px;
   height: auto;
 }
 
