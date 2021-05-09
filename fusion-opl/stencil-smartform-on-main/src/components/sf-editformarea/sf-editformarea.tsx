@@ -49,13 +49,13 @@ export class SfEditformarea {
         })}
 
         <sf-adddynform value="+" id="addBtn" onIsClicked={() => this.addDyn()}></sf-adddynform>
-        <button
+        <a href="#" class="btn btn-common"
           onClick={() => {
             this.getFormElement();
           }}
         >
           Safe Survey
-        </button>
+        </a>
       </div>
     );
   }
