@@ -1,0 +1,34 @@
+[
+    {
+        "key": "Hallo Hallo",
+        "answetype": "checkbox",
+        "value": [
+            {
+                "key": "neu",
+                "value": "Tschüss"
+            },
+            {
+                "key": "neu",
+                "value": "Tshcüssifsjdhf"
+            }
+        ]
+    },
+    {
+        "key": "hsjfhskfndj",
+        "answetype": "radio",
+        "value": [
+            {
+                "key": "neu",
+                "value": "sknfksflsfkn"
+            },
+            {
+                "key": "antwort2",
+                "value": "ssgdgsgdg"
+            },
+            {
+                "key": "Blubb",
+                "value": "dsgdsgsg"
+            }
+        ]
+    }
+]
