@@ -1,4 +1,4 @@
-import { Component, State, h, Watch, Prop, Method, Event, EventEmitter } from '@stencil/core';
+import { Component, State, h, Watch, Prop } from '@stencil/core';
 import { CheckBoxDef } from './CheckBoxDef';
 import { ImageDef } from './ImageDef';
 import { RadioDef } from './RadioDef';

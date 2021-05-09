@@ -5,6 +5,19 @@
 <!-- Auto Generated Below -->
 
 
+## Methods
+
+### `getFormElement() => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
+
 ## Dependencies
 
 ### Depends on

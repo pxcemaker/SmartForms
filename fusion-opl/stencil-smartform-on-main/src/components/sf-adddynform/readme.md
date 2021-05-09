@@ -5,6 +5,14 @@
 <!-- Auto Generated Below -->
 
 
+## Properties
+
+| Property | Attribute | Description | Type     | Default     |
+| -------- | --------- | ----------- | -------- | ----------- |
+| `id`     | `id`      |             | `string` | `undefined` |
+| `value`  | `value`   |             | `string` | `undefined` |
+
+
 ## Events
 
 | Event       | Description | Type                |

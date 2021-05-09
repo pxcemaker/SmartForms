@@ -5,9 +5,12 @@
 
 ## Properties
 
-| Property      | Attribute       | Description | Type     | Default |
-| ------------- | --------------- | ----------- | -------- | ------- |
-| `radioIdNmbr` | `radio-id-nmbr` |             | `number` | `0`     |
+| Property      | Attribute       | Description | Type                                                  | Default     |
+| ------------- | --------------- | ----------- | ----------------------------------------------------- | ----------- |
+| `question`    | `question`      |             | `string`                                              | `undefined` |
+| `radio`       | `radio`         |             | `string`                                              | `undefined` |
+| `radioIdNmbr` | `radio-id-nmbr` |             | `number`                                              | `0`         |
+| `result`      | `result`        |             | `CheckBoxDef[] \| ImageDef[] \| RadioDef[] \| string` | `undefined` |
 
 
 ## Dependencies
