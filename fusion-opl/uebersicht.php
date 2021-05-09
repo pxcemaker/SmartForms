@@ -39,59 +39,92 @@
     </div>
 
     <!-- Header Area wrapper End -->
+
+    <!-- body 1 start -->
     <div class="container">
         <div>
             <h1>
-                Umfragen <br />
-                Übersicht
+                Umfragen Übersicht
             </h1>
         </div>
 
         <sf-addformbutton></sf-addformbutton>
-
+        <h2>
+          angefangene Umfragen
+            </h2>
         <div class="survey-grid-container">
+        
        <div class="survey-grid-item">
                 <div class="surveyplate first-plate">
                     <div class="icons">
-                        <i class="lni-pencil"></i>
-                        <i class="lni-upload"></i>
-                        <i class="lni-search"></i>
+                    <img src="assets/img/icons/bearbeiten.svg" width="30" height="auto"></img>
+                    <img src="assets/img/icons/teilen.svg" width="30" height="auto"></img>
+                    
                     </div>
                 </div>
                 <div class="survey-texts">
                     <p class="survey-title">Thema der Umfrage</p>
-                    <p class="number-questions">15 Fragen</p>
+                    <p class="number-questions">7 Fragen</p>
                 </div>
             </div>
             <div class="survey-grid-item">
                 <div class="surveyplate second-plate">
                     <div class="icons">
-                        <i class="lni-pencil"></i>
-                        <i class="lni-upload"></i>
+                    <img src="assets/img/icons/bearbeiten.svg" width="30" height="auto"></img>
+                    <img src="assets/img/icons/teilen.svg" width="30" height="auto"></img>
                     </div>
                 </div>
                 <div class="survey-texts">
                     <p class="survey-title">Thema der Umfrage</p>
-                    <p class="number-questions">15 Fragen</p>
+                    <p class="number-questions">4 Fragen</p>
                 </div>
             </div>
             <div class="survey-grid-item">
                 <div class="surveyplate third-plate">
                     <div class="icons">
-                        <i class="lni-pencil"></i>
-                        <i class="lni-upload"></i>
+                    <img src="assets/img/icons/bearbeiten.svg" width="30" height="auto"></img>
+                    <img src="assets/img/icons/teilen.svg" width="30" height="auto"></img>
                     </div>
                 </div>
                 <div class="survey-texts">
                     <p class="survey-title">Thema der Umfrage</p>
-                    <p class="number-questions">15 Fragen</p>
+                    <p class="number-questions">2 Fragen</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    </div>
+
+ <!-- body 2 start -->
+    <div class="container">
+    
+
+        
+        <h2>
+         laufende Umfragen
+            </h2>
+        <div class="survey-grid-container">
+        
+       <div class="survey-grid-item">
+                <div class="surveyplate first-plate">
+                    <div class="icons">
+                    <img src="assets/img/icons/bearbeiten.svg" width="30" height="auto"></img>
+                    <img src="assets/img/icons/teilen.svg" width="30" height="auto"></img>
+                    <img src="assets/img/icons/statistik.svg" width="20" height="auto"></img>
+                    </div>
+                </div>
+                <div class="survey-texts">
+                    <p class="survey-title">Thema der Umfrage</p>
+                    <p class="number-questions">12 Fragen</p>
                 </div>
             </div>
             <div class="survey-grid-item">
-                <div class="surveyplate fourth-plate">
+                <div class="surveyplate second-plate">
                     <div class="icons">
-                        <i class="lni-pencil"></i>
-                        <i class="lni-search"></i>
+                    <img src="assets/img/icons/bearbeiten.svg" width="30" height="auto"></img>
+                    <img src="assets/img/icons/teilen.svg" width="30" height="auto"></img>
+                    <img src="assets/img/icons/statistik.svg" width="20" height="auto"></img>
                     </div>
                 </div>
                 <div class="survey-texts">
@@ -99,7 +132,46 @@
                     <p class="number-questions">15 Fragen</p>
                 </div>
             </div>
+            
         </div>
+    </div>
+    </div>
+
+     <!-- body 3 start -->
+     <div class="container">
+    
+        <h2>
+         beendete Umfragen
+            </h2>
+        <div class="survey-grid-container">
+        
+       <div class="survey-grid-item">
+                <div class="surveyplate first-plate">
+                    <div class="icons">
+                        
+                    <img src="assets/img/icons/statistik.svg" width="20" height="auto"></img>
+                    </div>
+                </div>
+                <div class="survey-texts">
+                    <p class="survey-title">Thema der Umfrage</p>
+                    <p class="number-questions">10 Fragen</p>
+                </div>
+            </div>
+            <div class="survey-grid-item">
+                <div class="surveyplate second-plate">
+                    <div class="icons">
+                        
+                    <img src="assets/img/icons/statistik.svg" width="20" height="auto"></img>
+                    </div>
+                </div>
+                <div class="survey-texts">
+                    <p class="survey-title">Thema der Umfrage</p>
+                    <p class="number-questions">14 Fragen</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
     </div>
     <!-- Footer Section Start -->
     <?php include("footer.inc.php"); ?>
