@@ -6,10 +6,7 @@
         <!-- Navbar Start -->
         <?php require("nav.inc.php"); ?>
         <!-- Navbar End -->
-
-        <!-- Hero Area Start -->
-
-        <!-- Hero Area End -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     </header>
 
     <div class="profilearea">
@@ -57,8 +54,8 @@
        <div class="survey-grid-item">
                 <div class="surveyplate first-plate">
                     <div class="icons">
-                    <img src="assets/img/icons/bearbeiten.svg" width="30" height="auto"></img>
-                    <img src="assets/img/icons/teilen.svg" width="30" height="auto"></img>
+                    <i class="material-icons" style="font-size:40px;">mode</i>
+                    <i class="material-icons" style="font-size:35px;">share</i>
                     
                     </div>
                 </div>
@@ -70,8 +67,8 @@
             <div class="survey-grid-item">
                 <div class="surveyplate second-plate">
                     <div class="icons">
-                    <img src="assets/img/icons/bearbeiten.svg" width="30" height="auto"></img>
-                    <img src="assets/img/icons/teilen.svg" width="30" height="auto"></img>
+                    <i class="material-icons" style="font-size:40px;">mode</i>
+                    <i class="material-icons" style="font-size:35px;">share</i>
                     </div>
                 </div>
                 <div class="survey-texts">
@@ -82,8 +79,8 @@
             <div class="survey-grid-item">
                 <div class="surveyplate third-plate">
                     <div class="icons">
-                    <img src="assets/img/icons/bearbeiten.svg" width="30" height="auto"></img>
-                    <img src="assets/img/icons/teilen.svg" width="30" height="auto"></img>
+                    <i class="material-icons" style="font-size:40px;">mode</i>
+                    <i class="material-icons" style="font-size:35px;">share</i>
                     </div>
                 </div>
                 <div class="survey-texts">
@@ -109,9 +106,9 @@
        <div class="survey-grid-item">
                 <div class="surveyplate first-plate">
                     <div class="icons">
-                    <img src="assets/img/icons/bearbeiten.svg" width="30" height="auto"></img>
-                    <img src="assets/img/icons/teilen.svg" width="30" height="auto"></img>
-                    <img src="assets/img/icons/statistik.svg" width="20" height="auto"></img>
+                    <i class="material-icons" style="font-size:40px;">mode</i>
+                    <i class="material-icons" style="font-size:35px;">share</i>
+                    <i class="material-icons" style="font-size:45px;">bar_chart</i>
                     </div>
                 </div>
                 <div class="survey-texts">
@@ -122,9 +119,9 @@
             <div class="survey-grid-item">
                 <div class="surveyplate second-plate">
                     <div class="icons">
-                    <img src="assets/img/icons/bearbeiten.svg" width="30" height="auto"></img>
-                    <img src="assets/img/icons/teilen.svg" width="30" height="auto"></img>
-                    <img src="assets/img/icons/statistik.svg" width="20" height="auto"></img>
+                    <i class="material-icons" style="font-size:40px;">mode</i>
+                    <i class="material-icons" style="font-size:35px;">share</i>
+                    <i class="material-icons" style="font-size:45px;">bar_chart</i>
                     </div>
                 </div>
                 <div class="survey-texts">
@@ -148,8 +145,7 @@
        <div class="survey-grid-item">
                 <div class="surveyplate first-plate">
                     <div class="icons">
-                        
-                    <img src="assets/img/icons/statistik.svg" width="20" height="auto"></img>
+                    <i class="material-icons" style="font-size:45px;">bar_chart</i>
                     </div>
                 </div>
                 <div class="survey-texts">
@@ -160,8 +156,7 @@
             <div class="survey-grid-item">
                 <div class="surveyplate second-plate">
                     <div class="icons">
-                        
-                    <img src="assets/img/icons/statistik.svg" width="20" height="auto"></img>
+                    <i class="material-icons" style="font-size:45px;">bar_chart</i>
                     </div>
                 </div>
                 <div class="survey-texts">
