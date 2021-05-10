@@ -8,8 +8,11 @@
 
 /*Text einzeilig: Anfang*/
 input[type='text']{
-    width: 200%;
-    padding: .75em 1em .5em 1em;
-    font-family: 'Roboto', 'Open Sans', sans-serif;
+  width: 96.8%;
+  padding: .75em 1em .5em 1em;
+  font-family: 'Roboto', 'Open Sans', sans-serif;
+  background-color: #EDDDCA;
+  border-radius: 5px;
+  padding: 10px;
 }
 /*Text einzeilig: Ende*/

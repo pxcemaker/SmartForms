@@ -18,7 +18,7 @@ export class SfDescriptionempty {
   render() {
     return (
       <div>
-        <label class="item-1-1">Frage:</label>
+        <label class="item-1-1">Beschreibung (optional):</label>
         <input type="text" id="fdescription" class="item-1-2" name="description" value={this.description} onInput={e => this.handleChange(e)}></input>
       </div>
     );
