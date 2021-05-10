@@ -5,13 +5,13 @@
 
 ## Properties
 
-| Property      | Attribute       | Description | Type                                                  | Default     |
-| ------------- | --------------- | ----------- | ----------------------------------------------------- | ----------- |
-| `description` | `description`   |             | `string`                                              | `undefined` |
-| `question`    | `question`      |             | `string`                                              | `undefined` |
-| `radio`       | `radio`         |             | `string`                                              | `undefined` |
-| `radioIdNmbr` | `radio-id-nmbr` |             | `number`                                              | `0`         |
-| `result`      | `result`        |             | `CheckBoxDef[] \| ImageDef[] \| RadioDef[] \| string` | `undefined` |
+| Property      | Attribute       | Description | Type                                                  | Default                    |
+| ------------- | --------------- | ----------- | ----------------------------------------------------- | -------------------------- |
+| `description` | `description`   |             | `string`                                              | `'optionale Beschreibung'` |
+| `question`    | `question`      |             | `string`                                              | `'Deine Frage'`            |
+| `radio`       | `radio`         |             | `string`                                              | `undefined`                |
+| `radioIdNmbr` | `radio-id-nmbr` |             | `number`                                              | `0`                        |
+| `result`      | `result`        |             | `CheckBoxDef[] \| ImageDef[] \| RadioDef[] \| string` | `undefined`                |
 
 
 ## Dependencies
