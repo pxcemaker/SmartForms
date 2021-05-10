@@ -27,16 +27,49 @@ export class SfSurvey {
       this.umfrage = value;
     });*/
     //this.umfrage = this.surveyData[0].value;
-    console.log('surveyData value[0]: ');
+    console.log('surveyData[0] / Umfrage: ');
+    console.log(this.surveyData[0]);
+
+    let umfrage: [any] = this.surveyData[0];
+    console.log('Umfrage in Variable: ');
+    console.log(umfrage);
+
+    console.log('Länge Umfrage: ');
+    console.log(umfrage.length);
+
+    console.log('surveyData value[0] / Antwort-Frage-Kombi: ');
     console.log(this.surveyData[0].value[0]);
-    console.log('surveyData value[0].answertype: ');
+
+    let antwortFrageKomb = this.surveyData[0].value[0];
+    console.log('Antwort-Frage Kombi in Variable: ');
+    console.log(antwortFrageKomb);
+
+    console.log('surveyData value[0].answertype / Antworttyp: ');
     console.log(this.surveyData[0].value[0].answertype);
-    console.log('surveyData value[0].key: ');
+
+    console.log('surveyData value[0].key / Frage: ');
     console.log(this.surveyData[0].value[0].key);
-    console.log('surveyData value[0].value: ');
+
+    console.log('surveyData value[0].value / antworten: ');
     console.log(this.surveyData[0].value[0].value);
-    console.log('surveyData value[0].value[0]: ');
+
+    console.log('antworten in Variable: ');
+    let antworten: [any] = this.surveyData[0].value[0].value;
+    console.log(antworten);
+
+    console.log('surveyData value[0].value[0] / Key-Antwort-Paar: ');
     console.log(this.surveyData[0].value[0].value[0]);
+
+    console.log('surveyData value[0].value[0].value / Antwort: ');
+    console.log(this.surveyData[0].value[0].value[0].value);
+
+    let antwort = this.surveyData[0].value[0].value[0].value;
+    console.log('Variable antwort: ');
+    console.log(antwort);
+
+    let antworttest = antworten[0].value;
+    console.log('antworttest: ');
+    console.log(antworttest);
     /*for (let i = 0; i < 20; i++) {
       this.frageblaetterMap[i] = this.surveyData[0].value[i].answertype;
     }*/
