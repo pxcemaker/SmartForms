@@ -16,8 +16,12 @@
   margin: 5px;
   padding: 0.8rem 1.5rem 0.8rem 1.5rem;
 }
+
 input {
-  border: 1px #bbb solid;
+  border: 0px #bbb dotted;
+}
+input:hover{
+  border-bottom: 1px #bbb dotted;
 }
 
 .container {

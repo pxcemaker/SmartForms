@@ -20,7 +20,7 @@ export class SfEmptyImageSelection {
     return (
       <div class="grid-item checkbox-kasten">
         <label class="container">
-          <input type="text" id="answerinput" value={this.answer} onInput={e => this.handleChange(e)}></input>
+          <input type="text" id="answerinput" placeholder="Gib hier die URL zu deinem Bild ein." value={this.answer} onInput={e => this.handleChange(e)}></input>
         </label>
       </div>
     );
