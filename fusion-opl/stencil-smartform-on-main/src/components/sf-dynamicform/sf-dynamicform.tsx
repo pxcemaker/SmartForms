@@ -10,7 +10,7 @@ import { RadioDef } from './RadioDef';
 })
 export class SfDynamicform {
   @Prop({ mutable: true }) question: string = 'Deine Frage';
-  @Prop({ mutable: true }) description: string;
+  @Prop({ mutable: true }) description: string = '...';
   @Prop({ mutable: true }) radio: string;
   @State() checkboxMap: CheckBoxDef[];
   @State() radioMap: RadioDef[];
@@ -142,7 +142,7 @@ export class SfDynamicform {
   }
 
   returnDescription() {
-    return <sf-description valueDescription={this.description}></sf-description>;
+    return <sf-description dvalue={this.description}></sf-description>;
   }
 
   verschwinde(ev:MouseEvent){
@@ -158,7 +158,7 @@ export class SfDynamicform {
           {/*Gitb Frage eingeben aus, wenn nichts drin steht */}
           {this.returnQuestion()}
           <br></br>
-          {this.returnDescription().valueDescription ? this.returnDescription() : ''}
+          {this.returnDescription()}
 
           {this.returnAnswers()}
         </div>

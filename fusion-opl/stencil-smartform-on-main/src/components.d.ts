@@ -19,7 +19,7 @@ export namespace Components {
         "value": string;
     }
     interface SfDescription {
-        "valueDescription": string;
+        "dvalue": string;
     }
     interface SfDescriptionempty {
     }
@@ -207,7 +207,7 @@ declare namespace LocalJSX {
         "value"?: string;
     }
     interface SfDescription {
-        "valueDescription"?: string;
+        "dvalue"?: string;
     }
     interface SfDescriptionempty {
         "onDescriptionInput"?: (event: CustomEvent<string>) => void;
