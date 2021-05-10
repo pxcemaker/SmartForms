@@ -7,6 +7,7 @@
 
 | Property      | Attribute       | Description | Type                                                  | Default     |
 | ------------- | --------------- | ----------- | ----------------------------------------------------- | ----------- |
+| `description` | `description`   |             | `string`                                              | `undefined` |
 | `question`    | `question`      |             | `string`                                              | `undefined` |
 | `radio`       | `radio`         |             | `string`                                              | `undefined` |
 | `radioIdNmbr` | `radio-id-nmbr` |             | `number`                                              | `0`         |
@@ -30,7 +31,9 @@
 - [sf-text-area](../sf-text-area)
 - [sf-image-selection](../sf-image-selection)
 - [sf-question](../sf-question)
+- [sf-description](../sf-description)
 - [sf-questionempty](../sf-questionempty)
+- [sf-descriptionempty](../sf-descriptionempty)
 
 ### Graph
 ```mermaid
@@ -44,7 +47,9 @@ graph TD;
   sf-dynamicform --> sf-text-area
   sf-dynamicform --> sf-image-selection
   sf-dynamicform --> sf-question
+  sf-dynamicform --> sf-description
   sf-dynamicform --> sf-questionempty
+  sf-dynamicform --> sf-descriptionempty
   sf-editformarea --> sf-dynamicform
   style sf-dynamicform fill:#f9f,stroke:#333,stroke-width:4px
 ```
