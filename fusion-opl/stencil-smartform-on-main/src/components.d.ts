@@ -8,8 +8,6 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { CheckBoxDef } from "./components/sf-dynamicform/CheckBoxDef";
 import { RadioDef } from "./components/sf-dynamicform/RadioDef";
 import { ImageDef } from "./components/sf-dynamicform/ImageDef";
-import { Umfrage } from "./components/sf-survey/Umfrage";
-import { Frageblatt } from "./components/sf-survey/Frageblatt";
 export namespace Components {
     interface SfAdddynform {
         "id": string;
@@ -59,8 +57,7 @@ export namespace Components {
     interface SfRadioempty {
     }
     interface SfSurvey {
-        "frageblaetterMap": Frageblatt[];
-        "surveyData": Umfrage;
+        "surveyData": any;
     }
     interface SfTextArea {
         "frageText": string;
@@ -260,8 +257,7 @@ declare namespace LocalJSX {
         "onRadioAnswer"?: (event: CustomEvent<string>) => void;
     }
     interface SfSurvey {
-        "frageblaetterMap"?: Frageblatt[];
-        "surveyData"?: Umfrage;
+        "surveyData"?: any;
     }
     interface SfTextArea {
         "frageText"?: string;

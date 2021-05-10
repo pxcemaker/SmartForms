@@ -1,5 +1,4 @@
-import { Component, h, Prop, State } from '@stencil/core';
-import { Frageblatt } from './Frageblatt';
+import { Component, h, Prop } from '@stencil/core';
 import { Umfrage } from './Umfrage';
 
 @Component({
@@ -9,12 +8,11 @@ import { Umfrage } from './Umfrage';
 })
 export class SfSurvey {
   //umfrageInhalt: Umfrage;
-  @Prop({ mutable: true }) surveyData: Umfrage;
+  @Prop({ mutable: true }) surveyData;
   //surveyData: Umfrage;
   //question: [string];
 
-  @Prop() frageblaetterMap: Frageblatt[];
-  umfrage: Frageblatt[];
+  answertype: string;
 
   /*componentWillRender() {
     this.fillMaps();
@@ -25,15 +23,33 @@ export class SfSurvey {
   }
 
   fillMaps() {
+    /*this.surveyData.forEach(value => {
+      this.umfrage = value;
+    });*/
+    //this.umfrage = this.surveyData[0].value;
+    console.log('surveyData value[0]: ');
+    console.log(this.surveyData[0].value[0]);
+    console.log('surveyData value[0].answertype: ');
+    console.log(this.surveyData[0].value[0].answertype);
+    console.log('surveyData value[0].key: ');
+    console.log(this.surveyData[0].value[0].key);
+    console.log('surveyData value[0].value: ');
+    console.log(this.surveyData[0].value[0].value);
+    console.log('surveyData value[0].value[0]: ');
+    console.log(this.surveyData[0].value[0].value[0]);
+    /*for (let i = 0; i < 20; i++) {
+      this.frageblaetterMap[i] = this.surveyData[0].value[i].answertype;
+    }*/
+
     //this.getSurvey();
-    this.surveyData?.umfrage?.map((frageblatt, i) => this.frageblaetterMap.push(new Frageblatt(i, frageblatt.frage, frageblatt.antwort, frageblatt.answertype)));
+    //this.surveyData?.umfrage?.map((frageblatt, i) => this.frageblaetterMap.push(new Frageblatt(i, frageblatt.frage, frageblatt.antwort, frageblatt.answertype)));
     this.showMySurvey();
   }
 
   showMySurvey() {
+    //console.log('Frageblätter: ' + this.frageblaetterMap);
     //this.fillMaps();
-
-    this.frageblaetterMap?.forEach((frageblatt, i) => {
+    /*this.frageblaetterMap?.forEach((frageblatt, i) => {
       console.log(frageblatt.answertype);
       if (frageblatt.answertype == 'rtx') {
         return (
@@ -69,8 +85,8 @@ export class SfSurvey {
           </div>
         );
       }
-    });
-    console.log(this.frageblaetterMap);
+    });*/
+    //console.log(this.frageblaetterMap);
   }
 
   showSomething() {
@@ -82,16 +98,16 @@ export class SfSurvey {
   }
 
   componentWillLoad() {
-    this.getSurvey();
+    return this.getSurvey();
   }
 
   getSurvey() {
-    fetch('/files/datei2.json')
+    return fetch('/api.php')
       .then(response => response.json())
-      .then((data: Umfrage) => (this.surveyData = data));
-    console.log(this.surveyData);
-
-    this.fillMaps();
+      .then((data: Umfrage) => (this.surveyData = data))
+      .then(() => console.log(this.surveyData))
+      .then(() => this.fillMaps());
+    //console.log(this.surveyData);
   }
 
   render() {

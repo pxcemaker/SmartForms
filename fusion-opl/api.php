@@ -43,19 +43,22 @@ switch ($methode) {
             $backslash = '\\';
             $rawsurveydata = $row['survey'];
             $surveydatareplaced = str_replace("\\", "", $row['survey']);
-            $surveydata = stripcslashes($row['survey']);
-            $versuchtausend = preg_replace('/\\\\\"/', "\"", $row['survey']);
-            $fuenf = json_encode($row['survey'], JSON_UNESCAPED_SLASHES);
-            $sechs = preg_replace('/\\\"/', "\"", $row['survey']);
-            $sieben = json_decode($row['survey'], JSON_UNESCAPED_SLASHES);
-            $acht = json_decode($row['survey'], true, JSON_UNESCAPED_SLASHES);
+
             $jsontophp = json_decode($row['survey'], true, 3);
-            array_push($array, "{'key':" . $row['id'] . ", 'value':" . $rawsurveydata . "}");
+            $array[0]['key'] = $row['id'];
+            $array[0]['value'] = $row['survey'];
+            //array_push($array, "{'key':" . $row['id'] . ", 'value':" . $rawsurveydata . "}");
         }
         //echo "json_encode(array)";
 
+        echo '[{"key": ';
+        echo $array[0]['key'];
+        echo ', "value": ';
+
+        echo $rawsurveydata;
+        echo '}]';
         //echo $array;
-        echo json_encode($array);
+        //echo json_encode($array);
         //echo json_encode($array, JSON_UNESCAPED_SLASHES);
         //echo "rawsurveydata:";
         //echo $rawsurveydata;

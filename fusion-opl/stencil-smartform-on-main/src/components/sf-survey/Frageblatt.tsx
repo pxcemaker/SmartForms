@@ -1,15 +1,11 @@
 import { Antworten } from './Antworten';
 
 export class Frageblatt {
-  key: number;
-  frage: string;
-  antwort: Antworten[];
-  answertype: string;
+  key: string;
+  value: Antworten[];
 
-  constructor(key, frage, antwort, answertype) {
+  constructor(key, value) {
     this.key = key;
-    this.frage = frage;
-    this.antwort = antwort;
-    this.answertype = answertype;
+    this.value = value;
   }
 }
