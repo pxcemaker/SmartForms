@@ -10,7 +10,7 @@ import { RadioDef } from './RadioDef';
 })
 export class SfDynamicform {
   @Prop({ mutable: true }) question: string = 'Deine Frage';
-  @Prop({ mutable: true }) description: string;
+  @Prop({ mutable: true }) description: string = 'optionale Beschreibung';
   @Prop({ mutable: true }) radio: string;
   @State() checkboxMap: CheckBoxDef[];
   @State() radioMap: RadioDef[];
@@ -151,7 +151,7 @@ export class SfDynamicform {
           {/*Gitb Frage eingeben aus, wenn nichts drin steht */}
           {this.returnQuestion()}
           <br></br>
-          {this.returnDescription().valueDescription ? this.returnDescription() : 'optionale Beschreibung'}
+          {this.returnDescription()}
 
           {this.returnAnswers()}
         </div>
@@ -172,7 +172,7 @@ export class SfDynamicform {
               <sf-questionempty onQuestionInput={ev => (this.question = ev.detail)}></sf-questionempty>
             </div>
             <div class="item-1-2 grid-container marg-top">
-              <sf-descriptionempty onDescriptionInput={ev => (this.question = ev.detail)}></sf-descriptionempty>
+              <sf-descriptionempty onDescriptionInput={ev => (this.description = ev.detail)}></sf-descriptionempty>
             </div>
 
             <div class="item-2-2 grid-container" id="grid">
