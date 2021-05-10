@@ -1,7 +1,3 @@
-<?php
-include_once 'includes/dbh.inc.php';
-?> 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -66,17 +62,10 @@ include_once 'includes/dbh.inc.php';
               <!-- <div class="checkbox-container"> -->
                 <sf-editformarea></sf-editformarea>
               <!-- </div> -->
-              <sf-image-selection-container>
-                <sf-image-selection imageurl="assets/img/ipadinhand.png"></sf-image-selection>
-                <sf-image-selection imageurl="assets/img/ipadinhand.png"></sf-image-selection>
-                <sf-image-selection imageurl="assets/img/ipadinhand.png"></sf-image-selection>
-                <sf-image-selection imageurl="assets/img/ipadinhand.png"></sf-image-selection>
-              </sf-image-selection-container>
-              <sf-empty-image-selection></sf-empty-image-selection>
+              
             </div>
         </div>
     </section>
-    
   <!-- Footer Section Start -->
   <footer id="footer" class="footer-area section-padding">
     <div class="container">
@@ -115,10 +104,5 @@ include_once 'includes/dbh.inc.php';
   </footer>
   <!-- Footer Section End -->
 </body>
-<script>
-
-  let safe = document.querySelector('#safe')
-
-  </script>
 
 </html>
