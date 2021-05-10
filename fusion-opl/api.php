@@ -21,15 +21,51 @@ $db_link = mysqli_connect( //mysqli_connect - Opens a connection to the MySQL Se
     MYSQL_DATABASE
 );
 
+$array = [];
+
 switch ($methode) {
     case 'GET':
-        if ($dateiname == NULL) { // Verzeichnis auflisten
+        /*if ($dateiname == NULL) { // Verzeichnis auflisten
             foreach (scandir('files/') as $datei) {
                 if (substr($datei, -strlen(".txt")) == ".txt")
                     echo ("<a href='$datei'> $datei</a><br>");
             }
-        } else
-            echo (file_get_contents('files/' . $dateiname));
+        } else*/
+        $sql = "
+        SELECT
+        *
+        FROM surveys
+        WHERE id = 1
+    ";
+        $db_erg = mysqli_query($db_link, $sql); //ist ein array
+
+        while ($row = $db_erg->fetch_assoc()) {
+            $backslash = '\\';
+            $rawsurveydata = $row['survey'];
+            $surveydatareplaced = str_replace("\\", "", $row['survey']);
+            $surveydata = stripcslashes($row['survey']);
+            $versuchtausend = preg_replace('/\\\\\"/', "\"", $row['survey']);
+            $fuenf = json_encode($row['survey'], JSON_UNESCAPED_SLASHES);
+            $sechs = preg_replace('/\\\"/', "\"", $row['survey']);
+            $sieben = json_decode($row['survey'], JSON_UNESCAPED_SLASHES);
+            $acht = json_decode($row['survey'], true, JSON_UNESCAPED_SLASHES);
+            $jsontophp = json_decode($row['survey'], true, 3);
+            array_push($array, "{'key':" . $row['id'] . ", 'value':" . $rawsurveydata . "}");
+        }
+        //echo "json_encode(array)";
+
+        //echo $array;
+        echo json_encode($array);
+        //echo json_encode($array, JSON_UNESCAPED_SLASHES);
+        //echo "rawsurveydata:";
+        //echo $rawsurveydata;
+        //echo "surveydata: / stripclashes";
+        //echo $surveydata;
+
+
+
+
+
         break;
     case 'POST':
         $sql = " INSERT INTO surveys ";

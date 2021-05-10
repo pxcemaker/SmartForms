@@ -11,7 +11,7 @@ export class SfEditformarea {
   @Method()
   async getFormElement() {
     const questions = [];
-    this.el.shadowRoot.querySelectorAll('sf-dynamicform').forEach(el => questions.push({ key: el.question, answetype: el.radio, value: el.result }));
+    this.el.shadowRoot.querySelectorAll('sf-dynamicform').forEach(el => questions.push({ key: el.question, answertype: el.radio, value: el.result }));
 
     fetch('api.php', {
       method: 'POST',

@@ -8,6 +8,8 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { CheckBoxDef } from "./components/sf-dynamicform/CheckBoxDef";
 import { RadioDef } from "./components/sf-dynamicform/RadioDef";
 import { ImageDef } from "./components/sf-dynamicform/ImageDef";
+import { Umfrage } from "./components/sf-survey/Umfrage";
+import { Frageblatt } from "./components/sf-survey/Frageblatt";
 export namespace Components {
     interface SfAdddynform {
         "id": string;
@@ -55,6 +57,10 @@ export namespace Components {
         "value": string;
     }
     interface SfRadioempty {
+    }
+    interface SfSurvey {
+        "frageblaetterMap": Frageblatt[];
+        "surveyData": Umfrage;
     }
     interface SfTextArea {
         "frageText": string;
@@ -160,6 +166,12 @@ declare global {
         prototype: HTMLSfRadioemptyElement;
         new (): HTMLSfRadioemptyElement;
     };
+    interface HTMLSfSurveyElement extends Components.SfSurvey, HTMLStencilElement {
+    }
+    var HTMLSfSurveyElement: {
+        prototype: HTMLSfSurveyElement;
+        new (): HTMLSfSurveyElement;
+    };
     interface HTMLSfTextAreaElement extends Components.SfTextArea, HTMLStencilElement {
     }
     var HTMLSfTextAreaElement: {
@@ -189,6 +201,7 @@ declare global {
         "sf-questionempty": HTMLSfQuestionemptyElement;
         "sf-radio": HTMLSfRadioElement;
         "sf-radioempty": HTMLSfRadioemptyElement;
+        "sf-survey": HTMLSfSurveyElement;
         "sf-text-area": HTMLSfTextAreaElement;
         "sf-uploadbutton": HTMLSfUploadbuttonElement;
     }
@@ -246,6 +259,10 @@ declare namespace LocalJSX {
     interface SfRadioempty {
         "onRadioAnswer"?: (event: CustomEvent<string>) => void;
     }
+    interface SfSurvey {
+        "frageblaetterMap"?: Frageblatt[];
+        "surveyData"?: Umfrage;
+    }
     interface SfTextArea {
         "frageText"?: string;
         "fragenId"?: string;
@@ -269,6 +286,7 @@ declare namespace LocalJSX {
         "sf-questionempty": SfQuestionempty;
         "sf-radio": SfRadio;
         "sf-radioempty": SfRadioempty;
+        "sf-survey": SfSurvey;
         "sf-text-area": SfTextArea;
         "sf-uploadbutton": SfUploadbutton;
     }
@@ -293,6 +311,7 @@ declare module "@stencil/core" {
             "sf-questionempty": LocalJSX.SfQuestionempty & JSXBase.HTMLAttributes<HTMLSfQuestionemptyElement>;
             "sf-radio": LocalJSX.SfRadio & JSXBase.HTMLAttributes<HTMLSfRadioElement>;
             "sf-radioempty": LocalJSX.SfRadioempty & JSXBase.HTMLAttributes<HTMLSfRadioemptyElement>;
+            "sf-survey": LocalJSX.SfSurvey & JSXBase.HTMLAttributes<HTMLSfSurveyElement>;
             "sf-text-area": LocalJSX.SfTextArea & JSXBase.HTMLAttributes<HTMLSfTextAreaElement>;
             "sf-uploadbutton": LocalJSX.SfUploadbutton & JSXBase.HTMLAttributes<HTMLSfUploadbuttonElement>;
         }
