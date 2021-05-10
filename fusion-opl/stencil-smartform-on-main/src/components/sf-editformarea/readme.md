@@ -39,7 +39,9 @@ graph TD;
   sf-dynamicform --> sf-text-area
   sf-dynamicform --> sf-image-selection
   sf-dynamicform --> sf-question
+  sf-dynamicform --> sf-description
   sf-dynamicform --> sf-questionempty
+  sf-dynamicform --> sf-descriptionempty
   style sf-editformarea fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
