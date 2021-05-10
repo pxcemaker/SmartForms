@@ -21,7 +21,7 @@ export class SfDynamicform {
   constructor() {
     this.checkboxMap = [new CheckBoxDef('antwort1', 'Add Answer'), new CheckBoxDef('antwort2', 'Add Answer')];
     this.radioMap = [new RadioDef('antwort1', 'Add Answer'), new RadioDef('antwort2', 'Add Answer')];
-    this.imageMap = [new ImageDef('antwort1', 'Add Answer'), new ImageDef('antwort2', 'Add Answer')];
+    this.imageMap = [new ImageDef('antwort1', 'assets/img/ipadinhand.png'), new ImageDef('antwort2', 'assets/img/ipadinhand.png')];
   }
 
   @Watch('radioIdNmbr')
@@ -115,7 +115,7 @@ export class SfDynamicform {
     } else if (this.radio == 'radio') {
       return (this.radioMap = [...this.radioMap, new RadioDef('Blubb', 'Add Answer')]);
     } else if (this.radio == 'bilder') {
-      return (this.imageMap = [...this.imageMap, new ImageDef('Blubb', 'Add Answer')]);
+      return (this.imageMap = [...this.imageMap, new ImageDef('Blubb', 'assets/img/ipadinhand.png')]);
     }
   }
 
