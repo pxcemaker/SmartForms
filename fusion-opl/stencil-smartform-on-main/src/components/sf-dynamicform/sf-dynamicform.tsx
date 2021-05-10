@@ -9,7 +9,7 @@ import { RadioDef } from './RadioDef';
   shadow: true,
 })
 export class SfDynamicform {
-  @Prop({ mutable: true }) question: string;
+  @Prop({ mutable: true }) question: string = 'Deine Frage';
   @Prop({ mutable: true }) description: string;
   @Prop({ mutable: true }) radio: string;
   @State() checkboxMap: CheckBoxDef[];
@@ -141,7 +141,7 @@ export class SfDynamicform {
   }
 
   returnDescription() {
-    return <sf-description valueDescription={this.description}></sf-description>
+    return <sf-description valueDescription={this.description}></sf-description>;
   }
 
   render() {
@@ -149,7 +149,7 @@ export class SfDynamicform {
       <div class="grid-container primary-container">
         <div class="item-1-1 preview-container">
           {/*Gitb Frage eingeben aus, wenn nichts drin steht */}
-          {this.returnQuestion().value ? this.returnQuestion() : 'Frage'}
+          {this.returnQuestion()}
 
           {this.returnAnswers()}
         </div>
@@ -157,12 +157,15 @@ export class SfDynamicform {
         <div class="kasten item-2-1">
           <form class="grid-container" novalidate>
             <div class="item-1-1">
-              <div class="tooltip">Frage erstellen
-                <span class="tooltiptext">Wählen Sie die Art der Frage aus und schreiben Sie Antworten und Fragen in die Felder. 
-                <br></br>Sie können optional auch einen kurzen Beschreibungstext hinzufügen.</span>
-              </div> 
+              <div class="tooltip">
+                Frage erstellen
+                <span class="tooltiptext">
+                  Wählen Sie die Art der Frage aus und schreiben Sie Antworten und Fragen in die Felder.
+                  <br></br>Sie können optional auch einen kurzen Beschreibungstext hinzufügen.
+                </span>
+              </div>
             </div>
-            
+
             <div class="item-1-2 grid-container">
               <sf-questionempty onQuestionInput={ev => (this.question = ev.detail)}></sf-questionempty>
             </div>
