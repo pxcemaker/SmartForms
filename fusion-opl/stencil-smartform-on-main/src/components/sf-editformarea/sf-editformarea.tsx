@@ -1,4 +1,4 @@
-import { Component, h, Method, State, Element } from '@stencil/core';
+import { Component, h, Method, State, Element,Prop } from '@stencil/core';
 
 @Component({
   tag: 'sf-editformarea',
@@ -6,6 +6,7 @@ import { Component, h, Method, State, Element } from '@stencil/core';
   shadow: true,
 })
 export class SfEditformarea {
+  @Prop({mutable:true, reflect:true}) isOpen:boolean = false; //visible or not
   @State() dynFormMap: any[];
   @Element() el: HTMLElement;
   @Method()
@@ -25,7 +26,7 @@ export class SfEditformarea {
   }
 
   constructor() {
-    this.dynFormMap = [<sf-dynamicform></sf-dynamicform>];
+    this.dynFormMap = [<sf-dynamicform ></sf-dynamicform>];
   }
 
   addDyn() {
@@ -40,22 +41,21 @@ export class SfEditformarea {
     console.log('umfrage Json: ' + umfrage);
     /*return fetch(phpFile).then(response => response.json).then()*/
   /*}*/
-
+  verschwinde(ev:MouseEvent){
+    console.log(ev)
+    this.isOpen = true;
+    console.log("aasdad")
+  }
   render() {
     return (
       <div>
         {this.dynFormMap.map(() => {
-          return <sf-dynamicform></sf-dynamicform>;
+          return <sf-dynamicform ></sf-dynamicform>;
         })}
 
         <sf-adddynform value="+" id="addBtn" onIsClicked={() => this.addDyn()}></sf-adddynform>
-        <a href="#" class="btn btn-common"
-          onClick={() => {
-            this.getFormElement();
-          }}
-        >
-          Safe Survey
-        </a>
+        
+       
       </div>
     );
   }

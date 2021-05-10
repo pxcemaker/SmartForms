@@ -1,4 +1,4 @@
-import { Component, State, h, Watch, Prop } from '@stencil/core';
+import { Component, State, h, Watch, Prop,  } from '@stencil/core';
 import { CheckBoxDef } from './CheckBoxDef';
 import { ImageDef } from './ImageDef';
 import { RadioDef } from './RadioDef';
@@ -10,13 +10,14 @@ import { RadioDef } from './RadioDef';
 })
 export class SfDynamicform {
   @Prop({ mutable: true }) question: string = 'Deine Frage';
-  @Prop({ mutable: true }) description: string = 'optionale Beschreibung';
+  @Prop({ mutable: true }) description: string;
   @Prop({ mutable: true }) radio: string;
   @State() checkboxMap: CheckBoxDef[];
   @State() radioMap: RadioDef[];
   @State() imageMap: ImageDef[];
   @Prop({ mutable: true }) radioIdNmbr: number = 0;
   @Prop({ mutable: true }) result: CheckBoxDef[] | RadioDef[] | string | ImageDef[];
+  @Prop({mutable:true, reflect:true}) isOpen:boolean; //visible or not
 
   constructor() {
     this.checkboxMap = [new CheckBoxDef('antwort1', 'Add Answer'), new CheckBoxDef('antwort2', 'Add Answer')];
@@ -143,19 +144,24 @@ export class SfDynamicform {
   returnDescription() {
     return <sf-description valueDescription={this.description}></sf-description>;
   }
+  verschwinde(ev:MouseEvent){
+    console.log(ev)
+    this.isOpen = true;
+  }
 
   render() {
     return (
+      
       <div class="grid-container primary-container">
         <div class="item-1-1 preview-container">
           {/*Gitb Frage eingeben aus, wenn nichts drin steht */}
           {this.returnQuestion()}
           <br></br>
-          {this.returnDescription()}
+          {this.returnDescription().valueDescription ? this.returnDescription() : 'optionale Beschreibung'}
 
           {this.returnAnswers()}
         </div>
-
+          <div class={this.isOpen ? "hidden": "visible"}> 
         <div class="kasten item-2-1">
           <form class="grid-container" novalidate>
             <div class="item-1-1">
@@ -172,7 +178,7 @@ export class SfDynamicform {
               <sf-questionempty onQuestionInput={ev => (this.question = ev.detail)}></sf-questionempty>
             </div>
             <div class="item-1-2 grid-container marg-top">
-              <sf-descriptionempty onDescriptionInput={ev => (this.description = ev.detail)}></sf-descriptionempty>
+              <sf-descriptionempty onDescriptionInput={ev => (this.question = ev.detail)}></sf-descriptionempty>
             </div>
 
             <div class="item-2-2 grid-container" id="grid">
@@ -233,9 +239,21 @@ export class SfDynamicform {
             </div>
 
             {this.renderInputBox()}
+            <div>
+        <a href="#" class= "btn btn-common"
+      onClick={(ev)=>this.verschwinde(ev)}
+     >
+       Speichern
+     </a>
+     </div> 
           </form>
         </div>
+        </div>
+        
+      
       </div>
+     
+    
     );
   }
 }

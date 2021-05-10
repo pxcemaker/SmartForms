@@ -25,6 +25,7 @@ export namespace Components {
     }
     interface SfDynamicform {
         "description": string;
+        "isOpen": boolean;
         "question": string;
         "radio": string;
         "radioIdNmbr": number;
@@ -32,6 +33,7 @@ export namespace Components {
     }
     interface SfEditformarea {
         "getFormElement": () => Promise<void>;
+        "isOpen": boolean;
     }
     interface SfEmptyImageSelection {
     }
@@ -212,12 +214,14 @@ declare namespace LocalJSX {
     }
     interface SfDynamicform {
         "description"?: string;
+        "isOpen"?: boolean;
         "question"?: string;
         "radio"?: string;
         "radioIdNmbr"?: number;
         "result"?: CheckBoxDef[] | RadioDef[] | string | ImageDef[];
     }
     interface SfEditformarea {
+        "isOpen"?: boolean;
     }
     interface SfEmptyImageSelection {
         "onImageAnswer"?: (event: CustomEvent<string>) => void;

@@ -38,3 +38,9 @@
   outline: none;
   color: #fff;
 }
+.visible{
+  visibility: show;
+}
+.hidden{
+  display:none;
+}
