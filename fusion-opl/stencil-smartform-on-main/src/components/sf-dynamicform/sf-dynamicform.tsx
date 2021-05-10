@@ -144,6 +144,7 @@ export class SfDynamicform {
   returnDescription() {
     return <sf-description valueDescription={this.description}></sf-description>;
   }
+
   verschwinde(ev:MouseEvent){
     console.log(ev)
     this.isOpen = true;
@@ -157,7 +158,7 @@ export class SfDynamicform {
           {/*Gitb Frage eingeben aus, wenn nichts drin steht */}
           {this.returnQuestion()}
           <br></br>
-          {this.returnDescription().valueDescription ? this.returnDescription() : 'optionale Beschreibung'}
+          {this.returnDescription().valueDescription ? this.returnDescription() : ''}
 
           {this.returnAnswers()}
         </div>
