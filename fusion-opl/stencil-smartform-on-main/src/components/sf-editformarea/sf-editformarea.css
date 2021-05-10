@@ -1,6 +1,14 @@
 :host {
   display: block;
 }
+@media print {
+  
+   #send{
+    display: none;
+    
+  }
+  
+}
 .btn-common {
   background-color: #e99d42;
   border: 1px dotted #ffffff;

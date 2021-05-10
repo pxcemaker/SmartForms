@@ -33,6 +33,7 @@ export class SfEditformarea {
     console.log('jshgksdh');
     this.dynFormMap = [...this.dynFormMap, 'blubb'];
     console.log(JSON.stringify(this.dynFormMap));
+   
   }
 
   /*safeSurvey() {
@@ -45,6 +46,12 @@ export class SfEditformarea {
     console.log(ev)
     this.isOpen = true;
     console.log("aasdad")
+
+  }
+  runterladen(ev:MouseEvent){
+    console.log(ev)
+    window.print()
+
   }
   render() {
     return (
@@ -52,9 +59,17 @@ export class SfEditformarea {
         {this.dynFormMap.map(() => {
           return <sf-dynamicform ></sf-dynamicform>;
         })}
-
-        <sf-adddynform value="+" id="addBtn" onIsClicked={() => this.addDyn()}></sf-adddynform>
-        
+        <div class={this.isOpen ? "hidden" : "visible"}>
+        <sf-adddynform  value="+" id="addBtn" onIsClicked={() => this.addDyn()}></sf-adddynform>
+        <a class="btn btn-common"  onClick={(ev)=>this.verschwinde(ev)}>
+          Umfrage speichern
+        </a>
+        </div>
+        <div class={this.isOpen ? "visible" : "hidden"}>
+        <a id="send"class="btn btn-common"  onClick={(ev)=>this.runterladen(ev)}>
+          Senden 
+        </a>
+        </div>
        
       </div>
     );
