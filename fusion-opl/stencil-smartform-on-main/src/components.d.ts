@@ -24,6 +24,7 @@ export namespace Components {
     interface SfDescriptionempty {
     }
     interface SfDynamicform {
+        "description": string;
         "question": string;
         "radio": string;
         "radioIdNmbr": number;
@@ -210,6 +211,7 @@ declare namespace LocalJSX {
         "onDescriptionInput"?: (event: CustomEvent<string>) => void;
     }
     interface SfDynamicform {
+        "description"?: string;
         "question"?: string;
         "radio"?: string;
         "radioIdNmbr"?: number;
