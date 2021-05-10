@@ -208,3 +208,10 @@ input[type=radio] {
   width: 200px;
   /* flex-direction: column; */
 }
+
+.hidden{
+  display: none;
+}
+.visible{
+  visibility: show;
+}

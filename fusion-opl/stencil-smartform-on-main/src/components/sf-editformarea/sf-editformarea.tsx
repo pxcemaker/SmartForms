@@ -40,7 +40,10 @@ export class SfEditformarea {
     console.log('umfrage Json: ' + umfrage);
     /*return fetch(phpFile).then(response => response.json).then()*/
   /*}*/
-
+  verschwinde(ev:MouseEvent){
+    console.log(ev)
+    //this.isOpen = true;
+  }
   render() {
     return (
       <div>
@@ -49,13 +52,7 @@ export class SfEditformarea {
         })}
 
         <sf-adddynform value="+" id="addBtn" onIsClicked={() => this.addDyn()}></sf-adddynform>
-        <a href="#" class="btn btn-common"
-          onClick={() => {
-            this.getFormElement();
-          }}
-        >
-          Safe Survey
-        </a>
+       
       </div>
     );
   }

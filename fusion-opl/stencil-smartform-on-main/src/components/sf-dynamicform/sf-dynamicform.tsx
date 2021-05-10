@@ -1,4 +1,4 @@
-import { Component, State, h, Watch, Prop } from '@stencil/core';
+import { Component, State, h, Watch, Prop,  } from '@stencil/core';
 import { CheckBoxDef } from './CheckBoxDef';
 import { ImageDef } from './ImageDef';
 import { RadioDef } from './RadioDef';
@@ -17,6 +17,7 @@ export class SfDynamicform {
   @State() imageMap: ImageDef[];
   @Prop({ mutable: true }) radioIdNmbr: number = 0;
   @Prop({ mutable: true }) result: CheckBoxDef[] | RadioDef[] | string | ImageDef[];
+  @Prop({mutable: true, reflect: true}) isOpen:string = "visible"; //visible or not
 
   constructor() {
     this.checkboxMap = [new CheckBoxDef('antwort1', 'Add Answer'), new CheckBoxDef('antwort2', 'Add Answer')];
@@ -144,8 +145,10 @@ export class SfDynamicform {
     return <sf-description valueDescription={this.description}></sf-description>;
   }
 
+
   render() {
     return (
+      
       <div class="grid-container primary-container">
         <div class="item-1-1 preview-container">
           {/*Gitb Frage eingeben aus, wenn nichts drin steht */}
@@ -155,7 +158,7 @@ export class SfDynamicform {
 
           {this.returnAnswers()}
         </div>
-
+          <div class={this.isOpen ? "hidden": "visible"}>
         <div class="kasten item-2-1">
           <form class="grid-container" novalidate>
             <div class="item-1-1">
@@ -235,7 +238,13 @@ export class SfDynamicform {
             {this.renderInputBox()}
           </form>
         </div>
+        </div>
+        <div>
+     </div> 
+      
       </div>
+     
+    
     );
   }
 }

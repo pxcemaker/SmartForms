@@ -2002,7 +2002,7 @@ const initializeComponent = async (elm, hostRef, cmpMeta, hmrVersionId, Cstr) =>
             if (!styles.has(scopeId)) {
                 const endRegisterStyles = createTime('registerStyles', cmpMeta.$tagName$);
                 if (!BUILD.hydrateServerSide && BUILD.shadowDom && BUILD.shadowDomShim && cmpMeta.$flags$ & 8 /* needsShadowDomShim */) {
-                    style = await import('./shadow-css-10669ec3.js').then(m => m.scopeCss(style, scopeId, false));
+                    style = await import('./shadow-css-f1256531.js').then(m => m.scopeCss(style, scopeId, false));
                 }
                 registerStyle(scopeId, style, !!(cmpMeta.$flags$ & 1 /* shadowDomEncapsulation */));
                 endRegisterStyles();

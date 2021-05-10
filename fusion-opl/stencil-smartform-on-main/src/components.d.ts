@@ -25,6 +25,7 @@ export namespace Components {
     }
     interface SfDynamicform {
         "description": string;
+        "isOpen": boolean;
         "question": string;
         "radio": string;
         "radioIdNmbr": number;
@@ -212,6 +213,7 @@ declare namespace LocalJSX {
     }
     interface SfDynamicform {
         "description"?: string;
+        "isOpen"?: boolean;
         "question"?: string;
         "radio"?: string;
         "radioIdNmbr"?: number;
