@@ -150,8 +150,10 @@ export class SfDynamicform {
         <div class="item-1-1 preview-container">
           {/*Gitb Frage eingeben aus, wenn nichts drin steht */}
           {this.returnQuestion().value ? this.returnQuestion() : 'Frage'}
+          <br></br>
+          {this.returnDescription().valueDescription ? this.returnDescription() : 'optionale Beschreibung'}
 
-          {this.returnAnswers()}
+          {this.returnAnswers()} 
         </div>
 
         <div class="kasten item-2-1">
