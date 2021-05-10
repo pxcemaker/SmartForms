@@ -33,6 +33,7 @@ export namespace Components {
     }
     interface SfEditformarea {
         "getFormElement": () => Promise<void>;
+        "isOpen": boolean;
     }
     interface SfEmptyImageSelection {
     }
@@ -220,6 +221,7 @@ declare namespace LocalJSX {
         "result"?: CheckBoxDef[] | RadioDef[] | string | ImageDef[];
     }
     interface SfEditformarea {
+        "isOpen"?: boolean;
     }
     interface SfEmptyImageSelection {
         "onImageAnswer"?: (event: CustomEvent<string>) => void;

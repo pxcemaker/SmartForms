@@ -65,9 +65,6 @@ include_once 'includes/dbh.inc.php';
             <div class="row">
               <!-- <div class="checkbox-container"> -->
                 <sf-editformarea></sf-editformarea>
-                <a href="#" class="btn btn-common">
-                Safe Survey
-              </a>
               <!-- </div> -->
               <sf-image-selection-container>
                 <sf-image-selection imageurl="assets/img/ipadinhand.png"></sf-image-selection>
@@ -118,5 +115,10 @@ include_once 'includes/dbh.inc.php';
   </footer>
   <!-- Footer Section End -->
 </body>
+<script>
+
+  let safe = document.querySelector('#safe')
+
+  </script>
 
 </html>
