@@ -9,7 +9,7 @@ import { RadioDef } from './RadioDef';
   shadow: true,
 })
 export class SfDynamicform {
-  @Prop({ mutable: true }) question: string = 'Deine Frage';
+  @Prop({ mutable: true }) question: string;
   @Prop({ mutable: true }) description: string;
   @Prop({ mutable: true }) radio: string;
   @State() checkboxMap: CheckBoxDef[];
@@ -149,7 +149,7 @@ export class SfDynamicform {
       <div class="grid-container primary-container">
         <div class="item-1-1 preview-container">
           {/*Gitb Frage eingeben aus, wenn nichts drin steht */}
-          {this.returnQuestion()}
+          {this.returnQuestion().value ? this.returnQuestion() : 'Frage'}
 
           {this.returnAnswers()}
         </div>
