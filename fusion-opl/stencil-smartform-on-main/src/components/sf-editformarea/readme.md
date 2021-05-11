@@ -5,6 +5,13 @@
 <!-- Auto Generated Below -->
 
 
+## Properties
+
+| Property | Attribute | Description | Type      | Default |
+| -------- | --------- | ----------- | --------- | ------- |
+| `isOpen` | `is-open` |             | `boolean` | `false` |
+
+
 ## Methods
 
 ### `getFormElement() => Promise<void>`

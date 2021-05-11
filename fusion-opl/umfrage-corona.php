@@ -82,6 +82,7 @@ include_once 'includes/dbh.inc.php';
               </sf-image-selection-container>
               <sf-empty-image-selection></sf-empty-image-selection>
             </div>
+            <a href="abschlussseite-teilnahme.php" class="btn btn-common">Antwort speichern</a>
         </div>
     </section>
     

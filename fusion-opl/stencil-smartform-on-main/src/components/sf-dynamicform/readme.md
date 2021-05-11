@@ -7,7 +7,8 @@
 
 | Property      | Attribute       | Description | Type                                                  | Default         |
 | ------------- | --------------- | ----------- | ----------------------------------------------------- | --------------- |
-| `description` | `description`   |             | `string`                                              | `undefined`     |
+| `description` | `description`   |             | `string`                                              | `'...'`         |
+| `isOpen`      | `is-open`       |             | `boolean`                                             | `undefined`     |
 | `question`    | `question`      |             | `string`                                              | `'Deine Frage'` |
 | `radio`       | `radio`         |             | `string`                                              | `undefined`     |
 | `radioIdNmbr` | `radio-id-nmbr` |             | `number`                                              | `0`             |

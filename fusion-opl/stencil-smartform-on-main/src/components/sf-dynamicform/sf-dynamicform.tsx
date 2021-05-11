@@ -1,4 +1,4 @@
-import { Component, State, h, Watch, Prop,  } from '@stencil/core';
+import { Component, State, h, Watch, Prop } from '@stencil/core';
 import { CheckBoxDef } from './CheckBoxDef';
 import { ImageDef } from './ImageDef';
 import { RadioDef } from './RadioDef';
@@ -10,14 +10,14 @@ import { RadioDef } from './RadioDef';
 })
 export class SfDynamicform {
   @Prop({ mutable: true }) question: string = 'Deine Frage';
-  @Prop({ mutable: true }) description: string = 'optionale Beschreibung';
+  @Prop({ mutable: true }) description: string = '...';
   @Prop({ mutable: true }) radio: string;
   @State() checkboxMap: CheckBoxDef[];
   @State() radioMap: RadioDef[];
   @State() imageMap: ImageDef[];
   @Prop({ mutable: true }) radioIdNmbr: number = 0;
   @Prop({ mutable: true }) result: CheckBoxDef[] | RadioDef[] | string | ImageDef[];
-  @Prop({mutable: true, reflect: true}) isOpen:string = "visible"; //visible or not
+  @Prop({ mutable: true, reflect: true }) isOpen: boolean; //visible or not
 
   constructor() {
     this.checkboxMap = [new CheckBoxDef('antwort1', 'Add Answer'), new CheckBoxDef('antwort2', 'Add Answer')];
@@ -127,7 +127,13 @@ export class SfDynamicform {
     } else if (this.radio == 'radio') {
       this.result = this.radioMap;
       this.radioIdNmbr + 1;
-      return this.radioMap.map(radiodef => <sf-radio value={radiodef.value} radio-Id={this.radioIdNmbr} radio-Name={'radio'}></sf-radio>);
+      return (
+        <form>
+          {this.radioMap.map(radiodef => (
+            <sf-radio radio-Id={this.radioIdNmbr} value={radiodef.value} radio-Name={'radio'} radioGroup="group"></sf-radio>
+          ))}
+        </form>
+      );
     } else if (this.radio == 'rtx') {
       this.result = '';
       return <sf-text-area></sf-text-area>;
@@ -142,13 +148,16 @@ export class SfDynamicform {
   }
 
   returnDescription() {
-    return <sf-description valueDescription={this.description}></sf-description>;
+    return <sf-description dvalue={this.description}></sf-description>;
   }
 
+  verschwinde(ev: MouseEvent) {
+    console.log(ev);
+    this.isOpen = true;
+  }
 
   render() {
     return (
-      
       <div class="grid-container primary-container">
         <div class="item-1-1 preview-container">
           {/*Gitb Frage eingeben aus, wenn nichts drin steht */}
@@ -158,93 +167,93 @@ export class SfDynamicform {
 
           {this.returnAnswers()}
         </div>
-          <div class={this.isOpen ? "hidden": "visible"}>
-        <div class="kasten item-2-1">
-          <form class="grid-container" novalidate>
-            <div class="item-1-1">
-              <div class="tooltip">
-                Frage erstellen
-                <span class="tooltiptext">
-                  Wählen Sie die Art der Frage aus und schreiben Sie Antworten und Fragen in die Felder.
-                  <br></br>Sie können optional auch einen kurzen Beschreibungstext hinzufügen.
-                </span>
-              </div>
-            </div>
-
-            <div class="item-1-2 grid-container">
-              <sf-questionempty onQuestionInput={ev => (this.question = ev.detail)}></sf-questionempty>
-            </div>
-            <div class="item-1-2 grid-container marg-top">
-              <sf-descriptionempty onDescriptionInput={ev => (this.description = ev.detail)}></sf-descriptionempty>
-            </div>
-
-            <div class="item-2-2 grid-container" id="grid">
-              <label class="item-1-1">Antworttyp:</label>
-              <div class="item-1-2">
-                <div class="answertypeoptions">
-                  <input
-                    id="fanswertype rtx"
-                    name="answertype"
-                    type="radio"
-                    onInput={() => {
-                      this.radio = 'rtx';
-                    }}
-                    value="rtx"
-                  ></input>
-                  <label class="choosetype">Text-Antwort</label>
-                </div>
-
-                <div class="answertypeoptions">
-                  <input
-                    id="fanswertype checkbox"
-                    name="answertype"
-                    type="radio"
-                    value="checkbox"
-                    onInput={() => {
-                      this.radio = 'checkbox';
-                    }}
-                  ></input>
-                  <label class="choosetype">Multiple-Choice</label>
-                </div>
-
-                <div class="answertypeoptions">
-                  <input
-                    id="fanswertype radio"
-                    name="answertype"
-                    onInput={() => {
-                      this.radio = 'radio';
-                    }}
-                    type="radio"
-                    value="radio"
-                  ></input>
-                  <label class="choosetype">Radio-Buttons</label>
-                </div>
-
-                <div class="answertypeoptions">
-                  <input
-                    id="fanswertype bilder"
-                    name="answertype"
-                    type="radio"
-                    value="bilder"
-                    onInput={() => {
-                      this.radio = 'bilder';
-                    }}
-                  ></input>
-                  <label class="choosetype">Bilder</label>
+        <div class={this.isOpen ? 'hidden' : 'visible'}>
+          <div class="kasten item-2-1">
+            <form class="grid-container" novalidate>
+              <div class="item-1-1">
+                <div class="tooltip">
+                  Frage erstellen
+                  <span class="tooltiptext">
+                    Wählen Sie die Art der Frage aus und schreiben Sie Antworten und Fragen in die Felder.
+                    <br></br>Sie können optional auch einen kurzen Beschreibungstext hinzufügen.
+                  </span>
                 </div>
               </div>
-            </div>
 
-            {this.renderInputBox()}
-          </form>
+              <div class="item-1-2 grid-container">
+                <sf-questionempty onQuestionInput={ev => (this.question = ev.detail)}></sf-questionempty>
+              </div>
+              <div class="item-1-2 grid-container marg-top">
+                <sf-descriptionempty onDescriptionInput={ev => (this.description = ev.detail)}></sf-descriptionempty>
+              </div>
+
+              <div class="item-2-2 grid-container" id="grid">
+                <label class="item-1-1">Antworttyp:</label>
+                <div class="item-1-2">
+                  <div class="answertypeoptions">
+                    <input
+                      id="fanswertype rtx"
+                      name="answertype"
+                      type="radio"
+                      onInput={() => {
+                        this.radio = 'rtx';
+                      }}
+                      value="rtx"
+                    ></input>
+                    <label class="choosetype">Text-Antwort</label>
+                  </div>
+
+                  <div class="answertypeoptions">
+                    <input
+                      id="fanswertype checkbox"
+                      name="answertype"
+                      type="radio"
+                      value="checkbox"
+                      onInput={() => {
+                        this.radio = 'checkbox';
+                      }}
+                    ></input>
+                    <label class="choosetype">Multiple-Choice</label>
+                  </div>
+
+                  <div class="answertypeoptions">
+                    <input
+                      id="fanswertype radio"
+                      name="answertype"
+                      onInput={() => {
+                        this.radio = 'radio';
+                      }}
+                      type="radio"
+                      value="radio"
+                    ></input>
+                    <label class="choosetype">Radio-Buttons</label>
+                  </div>
+
+                  <div class="answertypeoptions">
+                    <input
+                      id="fanswertype bilder"
+                      name="answertype"
+                      type="radio"
+                      value="bilder"
+                      onInput={() => {
+                        this.radio = 'bilder';
+                      }}
+                    ></input>
+                    <label class="choosetype">Bilder</label>
+                  </div>
+                </div>
+              </div>
+
+              {this.renderInputBox()}
+              <div class="item-1-4">
+                <a href="#" class="btn btn-common" onClick={ev => this.verschwinde(ev)}>
+                  Speichern
+                </a>
+              </div>
+            </form>
+          </div>
         </div>
-        </div>
-        <div>
-     </div> 
-      
       </div>
-     
-    
     );
   }
 }

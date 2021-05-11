@@ -19,7 +19,7 @@ export namespace Components {
         "value": string;
     }
     interface SfDescription {
-        "valueDescription": string;
+        "dvalue": string;
     }
     interface SfDescriptionempty {
     }
@@ -33,6 +33,7 @@ export namespace Components {
     }
     interface SfEditformarea {
         "getFormElement": () => Promise<void>;
+        "isOpen": boolean;
     }
     interface SfEmptyImageSelection {
     }
@@ -206,7 +207,7 @@ declare namespace LocalJSX {
         "value"?: string;
     }
     interface SfDescription {
-        "valueDescription"?: string;
+        "dvalue"?: string;
     }
     interface SfDescriptionempty {
         "onDescriptionInput"?: (event: CustomEvent<string>) => void;
@@ -220,6 +221,7 @@ declare namespace LocalJSX {
         "result"?: CheckBoxDef[] | RadioDef[] | string | ImageDef[];
     }
     interface SfEditformarea {
+        "isOpen"?: boolean;
     }
     interface SfEmptyImageSelection {
         "onImageAnswer"?: (event: CustomEvent<string>) => void;

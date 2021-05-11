@@ -7,12 +7,12 @@ import { Component, h, Prop } from '@stencil/core';
 })
 export class SfDescription {
 
-  @Prop({ reflect: true }) valueDescription: string;
+  @Prop({ reflect: true }) dvalue: string;
 
   render() {
     return (
       <div class="description">
-        <p>{'' + this.valueDescription}</p>
+        <p>{'' + this.dvalue}</p>
       </div>
     );
   }

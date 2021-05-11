@@ -2,8 +2,7 @@ import { Component, Host, h, Prop, Watch } from '@stencil/core';
 
 @Component({
   tag: 'sf-image-selection',
-  styleUrl: 'sf-image-selection.css',
-  shadow: true,
+  styleUrl: 'sf-image-selection.css'
 })
 export class SfImageSelection {
 

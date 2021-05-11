@@ -3,7 +3,6 @@ import { Component, h, State, Event, EventEmitter } from '@stencil/core';
 @Component({
   tag: 'sf-radioempty',
   styleUrl: 'sf-radioempty.css',
-  shadow: true,
 })
 export class SfRadioempty {
   @State() answer: string;
@@ -23,7 +22,6 @@ export class SfRadioempty {
           <label>
             <input type="text" id="answerinput" value={this.answer} onInput={e => this.handleChange(e)}></input>
           </label>
-          <span class="checkmark"></span>
         </div>
       </div>
     );
