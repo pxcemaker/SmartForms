@@ -16,6 +16,8 @@ form {
 
 label {
   font-size: 1.2rem;
+  margin-left: 20px;
+  font-family: 'Roboto', 'Open Sans', sans-serif;
 }
 
 button {
@@ -31,9 +33,34 @@ button {
 #fquestion {
   width: 30rem;
 }
-input[type='radio'] {
-  margin: 10px;
-  color: #e99d42;
+input[type='radio']:after {
+  width: 12px;
+  height: 12px;
+  border-radius: 30px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #ddd;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid #e99d42;
+  box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+input[type='radio']:checked:after {
+  width: 12px;
+  height: 12px;
+  border-radius: 30px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #e99d42;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid #e99d42;
+  box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.1);
 }
 #fanswertype {
   display: inline-block;
