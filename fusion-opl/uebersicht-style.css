@@ -143,6 +143,10 @@ h2 {
   color: #656565;
 }
 
+.survey-title:hover{
+  color: #e99d42;
+}
+
 .number-questions {
   font-size: 0.8rem;
   font-weight: lighter;

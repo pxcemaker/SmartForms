@@ -112,7 +112,7 @@
                     </div>
                 </div>
                 <div class="survey-texts">
-                    <p class="survey-title">Thema der Umfrage</p>
+                   <a href="umfrage-corona.php"> <p class="survey-title">Corona Umfrage</p> </a>
                     <p class="number-questions">12 Fragen</p>
                 </div>
             </div>
