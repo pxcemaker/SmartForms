@@ -9,7 +9,7 @@
                     <br>teilgenommen
                 </h2>
                 <div id="linkBereich"></div>
-                <img src="assets/img/ipadinhand.png" id="slider">
+                <img src="assets/img/ipadinhand.png" id="sliderabschluss">
             </div>
         </div>
         </div>
