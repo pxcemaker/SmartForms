@@ -34,7 +34,7 @@
                 <h1 class="section-title wow fadeInDown" data-wow-delay="0.3s">Übersicht</h1>
                 <div class="shape wow fadeInDown" data-wow-delay="0.3s"></div>
             </div>
-            <h2> <a href="#accordions"> Direkt zu häufig gestellten Fragen </a> </h2>
+            <h2> <a href="#accordions"> -> gehe direkt zu den häufig gestellten Fragen </a> </h2>
             <div class="row">
                 <div class="col-lg-12">
                     <ul>
