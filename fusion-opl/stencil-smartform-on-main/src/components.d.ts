@@ -32,6 +32,7 @@ export namespace Components {
         "result": CheckBoxDef[] | RadioDef[] | string | ImageDef[];
     }
     interface SfEditformarea {
+        "ftitle": string;
         "getFormElement": () => Promise<void>;
         "isOpen": boolean;
     }
@@ -61,6 +62,11 @@ export namespace Components {
     interface SfTextArea {
         "frageText": string;
         "fragenId": string;
+    }
+    interface SfTitle {
+        "tvalue": string;
+    }
+    interface SfTitleEmpty {
     }
     interface SfUploadbutton {
     }
@@ -168,6 +174,18 @@ declare global {
         prototype: HTMLSfTextAreaElement;
         new (): HTMLSfTextAreaElement;
     };
+    interface HTMLSfTitleElement extends Components.SfTitle, HTMLStencilElement {
+    }
+    var HTMLSfTitleElement: {
+        prototype: HTMLSfTitleElement;
+        new (): HTMLSfTitleElement;
+    };
+    interface HTMLSfTitleEmptyElement extends Components.SfTitleEmpty, HTMLStencilElement {
+    }
+    var HTMLSfTitleEmptyElement: {
+        prototype: HTMLSfTitleEmptyElement;
+        new (): HTMLSfTitleEmptyElement;
+    };
     interface HTMLSfUploadbuttonElement extends Components.SfUploadbutton, HTMLStencilElement {
     }
     var HTMLSfUploadbuttonElement: {
@@ -192,6 +210,8 @@ declare global {
         "sf-radio": HTMLSfRadioElement;
         "sf-radioempty": HTMLSfRadioemptyElement;
         "sf-text-area": HTMLSfTextAreaElement;
+        "sf-title": HTMLSfTitleElement;
+        "sf-title-empty": HTMLSfTitleEmptyElement;
         "sf-uploadbutton": HTMLSfUploadbuttonElement;
     }
 }
@@ -221,6 +241,7 @@ declare namespace LocalJSX {
         "result"?: CheckBoxDef[] | RadioDef[] | string | ImageDef[];
     }
     interface SfEditformarea {
+        "ftitle"?: string;
         "isOpen"?: boolean;
     }
     interface SfEmptyImageSelection {
@@ -254,6 +275,12 @@ declare namespace LocalJSX {
         "frageText"?: string;
         "fragenId"?: string;
     }
+    interface SfTitle {
+        "tvalue"?: string;
+    }
+    interface SfTitleEmpty {
+        "onTitleInput"?: (event: CustomEvent<string>) => void;
+    }
     interface SfUploadbutton {
     }
     interface IntrinsicElements {
@@ -274,6 +301,8 @@ declare namespace LocalJSX {
         "sf-radio": SfRadio;
         "sf-radioempty": SfRadioempty;
         "sf-text-area": SfTextArea;
+        "sf-title": SfTitle;
+        "sf-title-empty": SfTitleEmpty;
         "sf-uploadbutton": SfUploadbutton;
     }
 }
@@ -298,6 +327,8 @@ declare module "@stencil/core" {
             "sf-radio": LocalJSX.SfRadio & JSXBase.HTMLAttributes<HTMLSfRadioElement>;
             "sf-radioempty": LocalJSX.SfRadioempty & JSXBase.HTMLAttributes<HTMLSfRadioemptyElement>;
             "sf-text-area": LocalJSX.SfTextArea & JSXBase.HTMLAttributes<HTMLSfTextAreaElement>;
+            "sf-title": LocalJSX.SfTitle & JSXBase.HTMLAttributes<HTMLSfTitleElement>;
+            "sf-title-empty": LocalJSX.SfTitleEmpty & JSXBase.HTMLAttributes<HTMLSfTitleEmptyElement>;
             "sf-uploadbutton": LocalJSX.SfUploadbutton & JSXBase.HTMLAttributes<HTMLSfUploadbuttonElement>;
         }
     }

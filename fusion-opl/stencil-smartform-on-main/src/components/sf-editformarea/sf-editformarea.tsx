@@ -7,6 +7,7 @@ import { Component, h, Method, State, Element,Prop } from '@stencil/core';
 })
 export class SfEditformarea {
   @Prop({mutable:true, reflect:true}) isOpen:boolean = false; //visible or not
+  @Prop({ mutable: true }) ftitle: string = 'Deine Umfrage';
   @State() dynFormMap: any[];
   @Element() el: HTMLElement;
   @Method()
@@ -36,6 +37,10 @@ export class SfEditformarea {
    
   }
 
+  returnTitle() {
+    return <sf-title tvalue={this.ftitle}></sf-title>;
+  }
+
   /*safeSurvey() {
     console.log('DynFormMap: ' + this.dynFormMap);
     const umfrage = JSON.stringify(this.dynFormMap.map);
@@ -56,6 +61,37 @@ export class SfEditformarea {
   render() {
     return (
       <div>
+        <div class="title-container">
+          <div class="title-output">
+            {this.returnTitle()}
+          </div>
+          <div class={this.isOpen ? 'hidden' : 'visible'}>
+            <div class="title-input">
+              <h2>Umfragetitel ändern</h2>
+                    <div class="tooltip">
+                      <div class="infocircle">
+                        <p>i</p>
+                      </div>
+                      <span class="tooltiptext">
+                        Geben Sie hier den Titel Ihrer Umfrage ein.
+                      </span>
+                    </div>
+              <sf-title-empty onTitleInput={ev => (this.ftitle = ev.detail)}></sf-title-empty>
+              
+              <div class="button-container">
+                <a href="#" class="btn btn-save" onClick={ev => this.verschwinde(ev)}>
+                      Speichern
+                </a>
+                <div class="tooltip">
+                  <div class="infocircle">
+                    <p>i</p>
+                  </div>
+                  <span class="tooltiptext">Speichern Sie Ihren Titel hier, damit er später in der Umfrage gespeichert werden kann.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         {this.dynFormMap.map(() => {
           return <sf-dynamicform ></sf-dynamicform>;
         })}

@@ -1,0 +1,20 @@
+:host {
+  display: block;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+
+/*Text einzeilig: Anfang*/
+input[type='text']{
+    width: 690px;
+    padding: .75em 1em .5em 1em;
+    font-family: 'Roboto', 'Open Sans', sans-serif;
+    background-color: #EDDDCA;
+    border-radius: 5px;
+    padding: 10px;
+    border-color: #e99d42;
+}
+
+/*Text einzeilig: Ende*/

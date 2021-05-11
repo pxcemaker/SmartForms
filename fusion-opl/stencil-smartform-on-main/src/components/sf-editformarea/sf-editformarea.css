@@ -7,8 +7,103 @@
     display: none;
     
   }
+
+  .title-output{
+    width: 700px;
+  }
+
+  .title-input{
+    display: none;
+  }
   
 }
+
+.title-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 1400px;
+
+}
+
+.title-output {
+  font-size: 30px;
+  width: 400px;
+}
+
+.title-input {
+
+  background-color: #fff;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 7px 20px 0px rgba(50, 50, 50, 0.41);
+  -moz-box-shadow: 0px 7px 20px 0px rgba(50, 50, 50, 0.41);
+  box-shadow: 0px 7px 20px 0px rgba(50, 50, 50, 0.41);
+
+  /*width: 90%;*/
+  /*width: 750px; /*damit es nicht zu schmal wird*/
+  margin: 1rem;
+  padding: 40px;
+  align-self: flex-end;
+}
+
+h2 {
+  display: inline-block;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  /* border-bottom: 1px dotted black; */ /* If you want dots under the hoverable text */
+  margin-bottom: 10px;
+  font-size: 20px;
+  vertical-align: top;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 180px;
+  background-color: #fff;
+  border: #e99d42 2px solid;
+  color: #3b2878;
+  /* text-align: center; */
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.infocircle {
+  height: 25px;
+  width: 25px;
+  background-color: #3b2878;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 0.5rem;
+}
+
+.infocircle p {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  vertical-align: middle;
+}
+
+.button-container > .tooltip {
+  margin-top: 20px;
+}
+
 .btn-common {
   background-color: #e99d42;
   border: 1px dotted #ffffff;
@@ -51,4 +146,25 @@
 }
 .hidden{
   display:none;
+}
+
+
+.btn-save {
+  margin-top: 20px;
+  color: #3b2878;
+  background-color: #fafafa;
+  border: 1px dotted #bbb;
+  position: relative;
+  z-index: 1;
+  text-transform: uppercase;
+}
+
+.btn-save:hover {
+  color: #3b2878;
+  background: transparent;
+  border: 1px dotted #3b2878;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
 }
