@@ -132,7 +132,7 @@ export class SfDynamicform {
       return (
         <form>
           {this.radioMap.map(radiodef => (
-            <sf-radio radio-Id={this.radioIdNmbr} radio-Name={'radio'} radioGroup="group"></sf-radio>
+            <sf-radio radio-Id={this.radioIdNmbr} value={radiodef.value} radio-Name={'radio'} radioGroup="group"></sf-radio>
           ))}
         </form>
       );
