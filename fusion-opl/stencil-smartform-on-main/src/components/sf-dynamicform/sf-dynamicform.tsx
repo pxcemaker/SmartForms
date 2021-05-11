@@ -171,8 +171,11 @@ export class SfDynamicform {
           <div class="kasten item-2-1">
             <form class="grid-container" novalidate>
               <div class="item-1-1">
+                <h2>Frage erstellen</h2>
                 <div class="tooltip">
-                  Frage erstellen
+                  <div class="infocircle">
+                    <p>i</p>
+                  </div>
                   <span class="tooltiptext">
                     Wählen Sie die Art der Frage aus und schreiben Sie Antworten und Fragen in die Felder.
                     <br></br>Sie können optional auch einen kurzen Beschreibungstext hinzufügen.
