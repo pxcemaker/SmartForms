@@ -65,22 +65,26 @@ include_once 'includes/dbh.inc.php';
             <div class="row">
               <!-- <div class="checkbox-container"> -->
                 <sf-editformarea></sf-editformarea>
-                <a href="#" class="btn btn-common">
-                Antworten speichern
-              </a>
               <!-- </div> -->
-              <sf-question value="Das ist meine Frage"></sf-question>
-              <sf-text-area></sf-text-area>
-              <sf-checkbox value="was auch immmer da stehen soll"></sf-checkbox>
+              <sf-question value="Erhebung zum Thema Corona - Die Gefühlslage in Coronazeiten"></sf-question>
 
+              <sf-question value="Geschlecht?"></sf-question>
+              <sf-checkbox value="Männlich"></sf-checkbox>
+              <sf-checkbox value="Weiblich"></sf-checkbox>
+              <sf-checkbox value="Divers"></sf-checkbox>
 
-              <sf-image-selection-container>
-                <sf-image-selection imageurl="assets/img/ipadinhand.png"></sf-image-selection>
-                <sf-image-selection imageurl="assets/img/ipadinhand.png"></sf-image-selection>
-                <sf-image-selection imageurl="assets/img/ipadinhand.png"></sf-image-selection>
-                <sf-image-selection imageurl="assets/img/ipadinhand.png"></sf-image-selection>
-              </sf-image-selection-container>
-              <sf-empty-image-selection></sf-empty-image-selection>
+              <sf-question value="Dein Alter in Jahren"></sf-question>
+              <sf-input-text></sf-input-text>
+
+              <sf-question value="Mir geht es..."></sf-question>
+              <sf-checkbox value="gut"></sf-checkbox>
+              <sf-checkbox value="mittel"></sf-checkbox>
+              <sf-checkbox value="schlecht"></sf-checkbox>
+
+              <sf-question value="Durch Corona fühle ich mich..."></sf-question>
+              <sf-input-text></sf-input-text>
+
+            
             </div>
             <a href="abschlussseite-teilnahme.php" class="btn btn-common">Antwort speichern</a>
         </div>
