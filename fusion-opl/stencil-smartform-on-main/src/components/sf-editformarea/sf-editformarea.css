@@ -100,6 +100,10 @@ h2 {
   vertical-align: middle;
 }
 
+.button-container > .tooltip {
+  margin-top: 20px;
+}
+
 .btn-common {
   background-color: #e99d42;
   border: 1px dotted #ffffff;

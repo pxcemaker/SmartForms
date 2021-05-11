@@ -77,15 +77,18 @@ export class SfEditformarea {
                       </span>
                     </div>
               <sf-title-empty onTitleInput={ev => (this.ftitle = ev.detail)}></sf-title-empty>
-              <a href="#" class="btn btn-save" onClick={ev => this.verschwinde(ev)}>
-                    Speichern
-                  </a>
-                  <div class="tooltip">
-                    <div class="infocircle">
-                      <p>i</p>
-                    </div>
-                    <span class="tooltiptext">Speichern Sie Ihren Titel hier, damit er später in der Umfrage gespeichert werden kann.</span>
+              
+              <div class="button-container">
+                <a href="#" class="btn btn-save" onClick={ev => this.verschwinde(ev)}>
+                      Speichern
+                </a>
+                <div class="tooltip">
+                  <div class="infocircle">
+                    <p>i</p>
                   </div>
+                  <span class="tooltiptext">Speichern Sie Ihren Titel hier, damit er später in der Umfrage gespeichert werden kann.</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
