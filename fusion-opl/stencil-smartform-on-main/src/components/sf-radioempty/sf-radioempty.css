@@ -49,6 +49,10 @@ input {
   display: inline;
 }
 
+input[type='radio'] {
+  visibility: hidden;
+}
+
 #answerinput {
   width: 85%;
   height: 1.2rem;
