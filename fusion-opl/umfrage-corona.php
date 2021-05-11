@@ -72,17 +72,19 @@
                 <sf-title tvalue="Erhebung zum Thema Corona - Die Gefühlslage in Coronazeiten"></sf-title>
 
                 <sf-question value="Geschlecht?"></sf-question>
-                <sf-radio class="platzhalter" value="Männlich"></sf-radio>
-                <sf-radio class="platzhalter" value="Weiblich"></sf-radio>
-                <sf-radio class="platzhalter" value="Divers"></sf-radio>
+                <div class="radio-kasten platzhalter">
+                    <sf-radio class="platzhalter" value="Männlich"></sf-radio>
+                    <sf-radio class="platzhalter" value="Weiblich"></sf-radio>
+                    <sf-radio class="platzhalter" value="Divers"></sf-radio>
+                </div>
 
                 <sf-question value="Dein Alter in Jahren"></sf-question>
                 <sf-text-area class="platzhalter"></sf-text-area>
 
                 <sf-question value="Mir geht es..."></sf-question>
-                <sf-checkbox value="gut"></sf-checkbox>
-                <sf-checkbox value="mittel"></sf-checkbox>
-                <sf-checkbox value="schlecht"></sf-checkbox>
+                <sf-checkbox class="platzhalter" value="gut"></sf-checkbox>
+                <sf-checkbox class="platzhalter" value="mittel"></sf-checkbox>
+                <sf-checkbox class="platzhalter" value="schlecht"></sf-checkbox>
 
                 <<<<<<< HEAD <sf-question value="Durch Corona fühle ich mich...">
                     </sf-question>
@@ -101,10 +103,10 @@
                     <sf-question value="Welche Strategien nutzt Du, um dich im Alltag gut zu fühlen?"></sf-question>
                     <sf-text-area class="platzhalter"></sf-text-area>
 
-                    <sf-question value="Wegen Corona bin ich…"></sf-question>
-                    <sf-checkbox value="entspannt"></sf-checkbox>
-                    <sf-checkbox value="neutral"></sf-checkbox>
-                    <sf-checkbox value="gestresst"></sf-checkbox>
+                    <sf-question class="platzhalter" value="Wegen Corona bin ich…"></sf-question>
+                    <sf-checkbox class="platzhalter" value="entspannt"></sf-checkbox>
+                    <sf-checkbox class="platzhalter" value="neutral"></sf-checkbox>
+                    <sf-checkbox class="platzhalter" value="gestresst"></sf-checkbox>
 
             </div>
             <a href="abschlussseite-teilnahme.php" class="btn btn-common">Antwort speichern</a>
