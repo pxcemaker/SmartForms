@@ -69,7 +69,7 @@
               <!-- <div class="checkbox-container"> -->
                 <!--<sf-editformarea></sf-editformarea> -->
               <!-- </div> -->
-              <sf-question value="Erhebung zum Thema Corona - Die Gefühlslage in Coronazeiten"></sf-question>
+              <sf-title value="Erhebung zum Thema Corona - Die Gefühlslage in Coronazeiten"></sf-title>
 
               <sf-question value="Geschlecht?"></sf-question>
               <sf-radio class="platzhalter"value="Männlich"></sf-radio>
@@ -101,7 +101,7 @@
               <sf-question value="Wegen Corona bin ich…"></sf-question>
               <sf-checkbox value="entspannt"></sf-checkbox>
               <sf-checkbox value="neutral"></sf-checkbox>
-              <sf-checkbox value="gestresst"></sf-checkbox>
+              <sf-checkbox value="schlecht"></sf-checkbox>
 
             </div>
             <a href="abschlussseite-teilnahme.php" class="btn btn-common">Antwort speichern</a>
