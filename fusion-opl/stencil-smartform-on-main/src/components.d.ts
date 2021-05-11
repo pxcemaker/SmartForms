@@ -35,6 +35,7 @@ export namespace Components {
         "ftitle": string;
         "getFormElement": () => Promise<void>;
         "isOpen": boolean;
+        "isTitleOpen": boolean;
     }
     interface SfEmptyImageSelection {
     }
@@ -234,6 +235,7 @@ declare namespace LocalJSX {
     interface SfEditformarea {
         "ftitle"?: string;
         "isOpen"?: boolean;
+        "isTitleOpen"?: boolean;
     }
     interface SfEmptyImageSelection {
         "onImageAnswer"?: (event: CustomEvent<string>) => void;

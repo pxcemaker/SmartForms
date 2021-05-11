@@ -1,4 +1,4 @@
-import { Component, h, Method, State, Element,Prop } from '@stencil/core';
+import { Component, h, Method, State, Element, Prop } from '@stencil/core';
 
 @Component({
   tag: 'sf-editformarea',
@@ -6,7 +6,8 @@ import { Component, h, Method, State, Element,Prop } from '@stencil/core';
   shadow: true,
 })
 export class SfEditformarea {
-  @Prop({mutable:true, reflect:true}) isOpen:boolean = false; //visible or not
+  @Prop({ mutable: true, reflect: true }) isOpen: boolean = false; //visible or not
+  @Prop({ mutable: true, reflect: true }) isTitleOpen: boolean = false; //visible or not
   @Prop({ mutable: true }) ftitle: string = 'Deine Umfrage';
   @State() dynFormMap: any[];
   @Element() el: HTMLElement;
@@ -27,14 +28,13 @@ export class SfEditformarea {
   }
 
   constructor() {
-    this.dynFormMap = [<sf-dynamicform ></sf-dynamicform>];
+    this.dynFormMap = [<sf-dynamicform></sf-dynamicform>];
   }
 
   addDyn() {
     console.log('jshgksdh');
     this.dynFormMap = [...this.dynFormMap, 'blubb'];
     console.log(JSON.stringify(this.dynFormMap));
-   
   }
 
   returnTitle() {
@@ -47,40 +47,39 @@ export class SfEditformarea {
     console.log('umfrage Json: ' + umfrage);
     /*return fetch(phpFile).then(response => response.json).then()*/
   /*}*/
-  verschwinde(ev:MouseEvent){
-    console.log(ev)
+  verschwinde(ev: MouseEvent) {
+    console.log(ev);
     this.isOpen = true;
-    console.log("aasdad")
-
+    console.log('aasdad');
   }
-  runterladen(ev:MouseEvent){
-    console.log(ev)
-    window.print()
-
+  verschwindeTitle(ev: MouseEvent) {
+    console.log(ev);
+    this.isTitleOpen = true;
+    console.log('aasdad');
+  }
+  runterladen(ev: MouseEvent) {
+    console.log(ev);
+    window.print();
   }
   render() {
     return (
       <div>
         <div class="title-container">
-          <div class="title-output">
-            {this.returnTitle()}
-          </div>
-          <div class={this.isOpen ? 'hidden' : 'visible'}>
+          <div class="title-output">{this.returnTitle()}</div>
+          <div class={this.isTitleOpen ? 'hidden' : 'visible'}>
             <div class="title-input">
               <h2>Umfragetitel ändern</h2>
-                    <div class="tooltip">
-                      <div class="infocircle">
-                        <p>i</p>
-                      </div>
-                      <span class="tooltiptext">
-                        Geben Sie hier den Titel Ihrer Umfrage ein.
-                      </span>
-                    </div>
+              <div class="tooltip">
+                <div class="infocircle">
+                  <p>i</p>
+                </div>
+                <span class="tooltiptext">Geben Sie hier den Titel Ihrer Umfrage ein.</span>
+              </div>
               <sf-title-empty onTitleInput={ev => (this.ftitle = ev.detail)}></sf-title-empty>
-              
+
               <div class="button-container">
-                <a href="#" class="btn btn-save" onClick={ev => this.verschwinde(ev)}>
-                      Speichern
+                <a class="btn btn-save" onClick={ev => this.verschwindeTitle(ev)}>
+                  Speichern
                 </a>
                 <div class="tooltip">
                   <div class="infocircle">
@@ -93,20 +92,19 @@ export class SfEditformarea {
           </div>
         </div>
         {this.dynFormMap.map(() => {
-          return <sf-dynamicform ></sf-dynamicform>;
+          return <sf-dynamicform></sf-dynamicform>;
         })}
-        <div class={this.isOpen ? "hidden" : "visible"}>
-        <sf-adddynform  value="+" id="addBtn" onIsClicked={() => this.addDyn()}></sf-adddynform>
-        <a class="btn btn-common"  onClick={(ev)=>this.verschwinde(ev)}>
-          Umfrage speichern
-        </a>
+        <div class={this.isOpen ? 'hidden' : 'visible'}>
+          <sf-adddynform value="+" id="addBtn" onIsClicked={() => this.addDyn()}></sf-adddynform>
+          <a class="btn btn-common" onClick={ev => this.verschwinde(ev)}>
+            Umfrage speichern
+          </a>
         </div>
-        <div class={this.isOpen ? "visible" : "hidden"}>
-        <a id="send"class="btn btn-common"  onClick={(ev)=>this.runterladen(ev)}>
-          Senden 
-        </a>
+        <div class={this.isOpen ? 'visible' : 'hidden'}>
+          <a id="send" class="btn btn-common" onClick={ev => this.runterladen(ev)}>
+            Senden
+          </a>
         </div>
-       
       </div>
     );
   }
