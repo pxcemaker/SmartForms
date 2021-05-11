@@ -249,6 +249,12 @@ export class SfDynamicform {
                 <a href="#" class="btn btn-common" onClick={ev => this.verschwinde(ev)}>
                   Speichern
                 </a>
+                <div class="tooltip">
+                  <div class="infocircle">
+                    <p>i</p>
+                  </div>
+                  <span class="tooltiptext">Speichere deine fertige Frage hier, damit sie später in der Umfrage gespeichert werden kann.</span>
+                </div>
               </div>
             </form>
           </div>
