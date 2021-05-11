@@ -69,7 +69,7 @@
               <!-- <div class="checkbox-container"> -->
                 <!--<sf-editformarea></sf-editformarea> -->
               <!-- </div> -->
-              <sf-title value="Erhebung zum Thema Corona - Die Gefühlslage in Coronazeiten"></sf-title>
+              <sf-title tvalue="Erhebung zum Thema Corona - Die Gefühlslage in Coronazeiten"></sf-title>
 
               <sf-question value="Geschlecht?"></sf-question>
               <sf-radio class="platzhalter"value="Männlich"></sf-radio>
