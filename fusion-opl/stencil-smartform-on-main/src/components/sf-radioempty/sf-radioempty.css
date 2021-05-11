@@ -46,7 +46,15 @@ input[type='radio']:checked:after {
 
 input {
   border: 0px;
+  display: inline;
 }
+
+#answerinput {
+  width: 85%;
+  height: 1.2rem;
+  margin-left: 20px;
+}
+
 input:hover {
   border: 1px #bbb solid;
 }
