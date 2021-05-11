@@ -106,6 +106,21 @@
                 </div>
 
                 <div class="spaceToPrior">
+                    <sf-question value="Welche Faktoren belasten dich in der momentanen Situation mit Corona?">
+                    </sf-question>
+
+                    <sf-checkbox class="platzhalter" value="reduzierte soziale Kontakte"></sf-checkbox>
+                    <sf-checkbox class="platzhalter" value="Angst um die Gesundheit anderer"></sf-checkbox>
+                    <sf-checkbox class="platzhalter" value="Angst um die eigene Gesundheit"></sf-checkbox>
+                    <sf-checkbox class="platzhalter" value="keine Möglichkeit Cafes, Bars oder Restaurants zu besuchen">
+                    </sf-checkbox>
+                    <sf-checkbox class="platzhalter" value="Erschwertes lokales Einkaufen"></sf-checkbox>
+                    <sf-checkbox class="platzhalter" value="Das Einhalten einer höheren Anzahl an Hygieneregeln">
+                    </sf-checkbox>
+                    <sf-checkbox class="platzhalter" value="Ungewissheit über eigene Impfsituation"></sf-checkbox>
+                </div>
+
+                <div class="spaceToPrior">
                     <sf-question value="Welche Strategien nutzt Du, um dich im Alltag trotz Corona gut zu fühlen?">
                     </sf-question>
                     <sf-text-area class="platzhalter"></sf-text-area>
@@ -134,17 +149,6 @@
                 </div>
 
 
-
-                <sf-question value="Welche Faktoren belasten dich in der momentanen Situation mit Corona?"></sf-question>
-                <div class="radio-kasten platzhalter">
-                    <sf-radio class="platzhalter" value="reduzierte soziale Kontakte"></sf-radio>
-                    <sf-radio class="platzhalter" value="Angst um die Gesundheit anderer"></sf-radio>
-                    <sf-radio class="platzhalter" value="Angst um die eigene Gesundheit"></sf-radio>
-                    <sf-radio class="platzhalter" value="keine Möglichkeit Cafes, Bars oder Restaurants zu besuchen"></sf-radio>
-                    <sf-radio class="platzhalter" value="Erschwertes lokales Einkaufen"></sf-radio>
-                    <sf-radio class="platzhalter" value="Das Einhalten einer höheren Anzahl an Hygieneregeln"></sf-radio>
-                    <sf-radio class="platzhalter" value="Ungewissheit über eigene Impfsituation"></sf-radio>
-                </div>
 
             </div>
             <div class="spaceToPrior spaceToNext">
