@@ -19,9 +19,8 @@ export class SfRadioempty {
       <div class="grid-item checkbox-kasten">
         <div class="checkbox-content">
           <input type="radio" id="radio-1" name="radio"></input>
-          <label>
-            <input type="text" id="answerinput" value={this.answer} onInput={e => this.handleChange(e)}></input>
-          </label>
+
+          <input type="text" id="answerinput" value={this.answer} onInput={e => this.handleChange(e)}></input>
         </div>
       </div>
     );

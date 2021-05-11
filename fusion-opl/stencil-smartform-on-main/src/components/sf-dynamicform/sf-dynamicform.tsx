@@ -91,19 +91,19 @@ export class SfDynamicform {
   renderInputBox() {
     if (this.radio == 'checkbox') {
       return (
-        <div class="item-1-3 answers">
+        <div class="item-1-4 answers">
           {this.returnEmptyCheckbox()} <sf-adddynform value="+" id="addBtn" onIsClicked={() => this.addAns()}></sf-adddynform>
         </div>
       );
     } else if (this.radio == 'radio') {
       return (
-        <div class="item-1-3 answers">
+        <div class="item-1-4 answers">
           {this.returnEmptyRadio()} <sf-adddynform value="+" id="addBtn" onIsClicked={() => this.addAns()}></sf-adddynform>
         </div>
       );
     } else if (this.radio == 'bilder') {
       return (
-        <div class="item-1-3 answers">
+        <div class="item-1-4 answers">
           {this.returnEmptyImage()} <sf-adddynform value="+" id="addBtn" onIsClicked={() => this.addAns()}></sf-adddynform>
         </div>
       );
@@ -183,14 +183,14 @@ export class SfDynamicform {
                 </div>
               </div>
 
-              <div class="item-1-2 grid-container">
+              <div class="item-1-2">
                 <sf-questionempty onQuestionInput={ev => (this.question = ev.detail)}></sf-questionempty>
               </div>
-              <div class="item-1-2 grid-container marg-top">
+              <div class="item-1-3">
                 <sf-descriptionempty onDescriptionInput={ev => (this.description = ev.detail)}></sf-descriptionempty>
               </div>
 
-              <div class="item-2-2 grid-container" id="grid">
+              <div class="item-2-2to3 grid-container" id="grid">
                 <label class="item-1-1">Antworttyp:</label>
                 <div class="item-1-2">
                   <div class="answertypeoptions">
@@ -248,7 +248,7 @@ export class SfDynamicform {
               </div>
 
               {this.renderInputBox()}
-              <div class="item-1-4">
+              <div class="item-1-5 saveBtnDiv">
                 <a href="#" class="btn btn-common" onClick={ev => this.verschwinde(ev)}>
                   Speichern
                 </a>

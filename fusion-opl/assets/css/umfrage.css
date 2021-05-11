@@ -11,9 +11,10 @@ html {
     display: none;
   }
   body{
-    background-color: #fff;
+    background-color: none;
     color: #fff;
   }
+  
   
 }
 
@@ -751,3 +752,7 @@ input[type="checkbox"] {
     background: #CE332A;
   }
   
+  .platzhalter{
+    margin: 5px;
+    display: block;
+  }
