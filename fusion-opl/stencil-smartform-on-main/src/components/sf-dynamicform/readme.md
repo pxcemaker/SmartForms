@@ -5,14 +5,15 @@
 
 ## Properties
 
-| Property      | Attribute       | Description | Type                                                  | Default         |
-| ------------- | --------------- | ----------- | ----------------------------------------------------- | --------------- |
-| `description` | `description`   |             | `string`                                              | `'...'`         |
-| `isOpen`      | `is-open`       |             | `boolean`                                             | `undefined`     |
-| `question`    | `question`      |             | `string`                                              | `'Deine Frage'` |
-| `radio`       | `radio`         |             | `string`                                              | `undefined`     |
-| `radioIdNmbr` | `radio-id-nmbr` |             | `number`                                              | `0`             |
-| `result`      | `result`        |             | `CheckBoxDef[] \| ImageDef[] \| RadioDef[] \| string` | `undefined`     |
+| Property      | Attribute       | Description | Type                                                  | Default           |
+| ------------- | --------------- | ----------- | ----------------------------------------------------- | ----------------- |
+| `description` | `description`   |             | `string`                                              | `'...'`           |
+| `ftitle`      | `ftitle`        |             | `string`                                              | `'Deine Umfrage'` |
+| `isOpen`      | `is-open`       |             | `boolean`                                             | `undefined`       |
+| `question`    | `question`      |             | `string`                                              | `'Deine Frage'`   |
+| `radio`       | `radio`         |             | `string`                                              | `undefined`       |
+| `radioIdNmbr` | `radio-id-nmbr` |             | `number`                                              | `0`               |
+| `result`      | `result`        |             | `CheckBoxDef[] \| ImageDef[] \| RadioDef[] \| string` | `undefined`       |
 
 
 ## Dependencies
@@ -33,6 +34,8 @@
 - [sf-image-selection](../sf-image-selection)
 - [sf-question](../sf-question)
 - [sf-description](../sf-description)
+- [sf-title](../sf-title)
+- [sf-title-empty](../sf-title-empty)
 - [sf-questionempty](../sf-questionempty)
 - [sf-descriptionempty](../sf-descriptionempty)
 
@@ -49,6 +52,8 @@ graph TD;
   sf-dynamicform --> sf-image-selection
   sf-dynamicform --> sf-question
   sf-dynamicform --> sf-description
+  sf-dynamicform --> sf-title
+  sf-dynamicform --> sf-title-empty
   sf-dynamicform --> sf-questionempty
   sf-dynamicform --> sf-descriptionempty
   sf-editformarea --> sf-dynamicform

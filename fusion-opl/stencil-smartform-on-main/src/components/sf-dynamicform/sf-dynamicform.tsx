@@ -249,7 +249,7 @@ export class SfDynamicform {
 
               {this.renderInputBox()}
               <div class="item-1-5 saveBtnDiv">
-                <a href="#" class="btn btn-common" onClick={ev => this.verschwinde(ev)}>
+                <a class="btn btn-common" onClick={ev => this.verschwinde(ev)}>
                   Speichern
                 </a>
                 <div class="tooltip">

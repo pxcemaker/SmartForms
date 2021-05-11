@@ -52,6 +52,8 @@ graph TD;
   sf-dynamicform --> sf-image-selection
   sf-dynamicform --> sf-question
   sf-dynamicform --> sf-description
+  sf-dynamicform --> sf-title
+  sf-dynamicform --> sf-title-empty
   sf-dynamicform --> sf-questionempty
   sf-dynamicform --> sf-descriptionempty
   style sf-editformarea fill:#f9f,stroke:#333,stroke-width:4px
