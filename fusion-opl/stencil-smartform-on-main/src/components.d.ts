@@ -45,8 +45,6 @@ export namespace Components {
     }
     interface SfImageSelectionContainer {
     }
-    interface SfInputText {
-    }
     interface SfQuestion {
         "value": string;
     }
@@ -138,12 +136,6 @@ declare global {
         prototype: HTMLSfImageSelectionContainerElement;
         new (): HTMLSfImageSelectionContainerElement;
     };
-    interface HTMLSfInputTextElement extends Components.SfInputText, HTMLStencilElement {
-    }
-    var HTMLSfInputTextElement: {
-        prototype: HTMLSfInputTextElement;
-        new (): HTMLSfInputTextElement;
-    };
     interface HTMLSfQuestionElement extends Components.SfQuestion, HTMLStencilElement {
     }
     var HTMLSfQuestionElement: {
@@ -204,7 +196,6 @@ declare global {
         "sf-emptycheckbox": HTMLSfEmptycheckboxElement;
         "sf-image-selection": HTMLSfImageSelectionElement;
         "sf-image-selection-container": HTMLSfImageSelectionContainerElement;
-        "sf-input-text": HTMLSfInputTextElement;
         "sf-question": HTMLSfQuestionElement;
         "sf-questionempty": HTMLSfQuestionemptyElement;
         "sf-radio": HTMLSfRadioElement;
@@ -255,8 +246,6 @@ declare namespace LocalJSX {
     }
     interface SfImageSelectionContainer {
     }
-    interface SfInputText {
-    }
     interface SfQuestion {
         "value"?: string;
     }
@@ -295,7 +284,6 @@ declare namespace LocalJSX {
         "sf-emptycheckbox": SfEmptycheckbox;
         "sf-image-selection": SfImageSelection;
         "sf-image-selection-container": SfImageSelectionContainer;
-        "sf-input-text": SfInputText;
         "sf-question": SfQuestion;
         "sf-questionempty": SfQuestionempty;
         "sf-radio": SfRadio;
@@ -321,7 +309,6 @@ declare module "@stencil/core" {
             "sf-emptycheckbox": LocalJSX.SfEmptycheckbox & JSXBase.HTMLAttributes<HTMLSfEmptycheckboxElement>;
             "sf-image-selection": LocalJSX.SfImageSelection & JSXBase.HTMLAttributes<HTMLSfImageSelectionElement>;
             "sf-image-selection-container": LocalJSX.SfImageSelectionContainer & JSXBase.HTMLAttributes<HTMLSfImageSelectionContainerElement>;
-            "sf-input-text": LocalJSX.SfInputText & JSXBase.HTMLAttributes<HTMLSfInputTextElement>;
             "sf-question": LocalJSX.SfQuestion & JSXBase.HTMLAttributes<HTMLSfQuestionElement>;
             "sf-questionempty": LocalJSX.SfQuestionempty & JSXBase.HTMLAttributes<HTMLSfQuestionemptyElement>;
             "sf-radio": LocalJSX.SfRadio & JSXBase.HTMLAttributes<HTMLSfRadioElement>;
