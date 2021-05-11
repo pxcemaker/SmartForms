@@ -7,6 +7,7 @@
         <?php require("nav.inc.php"); ?>
         <!-- Navbar End -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+       
     </header>
 
     <div class="profilearea">
@@ -54,8 +55,8 @@
        <div class="survey-grid-item">
                 <div class="surveyplate first-plate">
                     <div class="icons">
-                    <i class="material-icons" style="font-size:40px;">mode</i>
-                    <i class="material-icons" style="font-size:35px;">share</i>
+                    <i class="material-icons"  id="write1" style="font-size:40px;">mode</i>
+                    <i class="material-icons"  id="share" style="font-size:35px;">share</i>
                     
                     </div>
                 </div>
@@ -67,8 +68,8 @@
             <div class="survey-grid-item">
                 <div class="surveyplate second-plate">
                     <div class="icons">
-                    <i class="material-icons" style="font-size:40px;">mode</i>
-                    <i class="material-icons" style="font-size:35px;">share</i>
+                    <i class="material-icons" id="write" style="font-size:40px;">mode</i>
+                    <i class="material-icons"  id="share"style="font-size:35px;">share</i>
                     </div>
                 </div>
                 <div class="survey-texts">
@@ -79,8 +80,8 @@
             <div class="survey-grid-item">
                 <div class="surveyplate third-plate">
                     <div class="icons">
-                    <i class="material-icons" style="font-size:40px;">mode</i>
-                    <i class="material-icons" style="font-size:35px;">share</i>
+                    <i class="material-icons"  id="write" style="font-size:40px;">mode</i>
+                    <i class="material-icons"  id="share"style="font-size:35px;">share</i>
                     </div>
                 </div>
                 <div class="survey-texts">
@@ -106,9 +107,9 @@
        <div class="survey-grid-item">
                 <div class="surveyplate first-plate">
                     <div class="icons">
-                    <i class="material-icons" style="font-size:40px;">mode</i>
-                    <i class="material-icons" style="font-size:35px;">share</i>
-                    <i class="material-icons" style="font-size:45px;">bar_chart</i>
+                    <i class="material-icons" id="write" style="font-size:40px;">mode</i>
+                    <i class="material-icons"  id="share"style="font-size:35px;">share</i>
+                    <i class="material-icons"  id="bar" style="font-size:45px;">bar_chart</i>
                     </div>
                 </div>
                 <div class="survey-texts">
@@ -119,9 +120,9 @@
             <div class="survey-grid-item">
                 <div class="surveyplate second-plate">
                     <div class="icons">
-                    <i class="material-icons" style="font-size:40px;">mode</i>
-                    <i class="material-icons" style="font-size:35px;">share</i>
-                    <i class="material-icons" style="font-size:45px;">bar_chart</i>
+                    <i class="material-icons" id="write" style="font-size:40px;">mode</i>
+                    <i class="material-icons"  id="share"style="font-size:35px;">share</i>
+                    <i class="material-icons"  id="bar"style="font-size:45px;">bar_chart</i>
                     </div>
                 </div>
                 <div class="survey-texts">
@@ -145,7 +146,7 @@
        <div class="survey-grid-item">
                 <div class="surveyplate first-plate">
                     <div class="icons">
-                    <i class="material-icons" style="font-size:45px;">bar_chart</i>
+                    <i class="material-icons"  id="bar" style="font-size:45px;">bar_chart</i>
                     </div>
                 </div>
                 <div class="survey-texts">
@@ -156,7 +157,7 @@
             <div class="survey-grid-item">
                 <div class="surveyplate second-plate">
                     <div class="icons">
-                    <i class="material-icons" style="font-size:45px;">bar_chart</i>
+                    <i class="material-icons" id="bar" style="font-size:45px;">bar_chart</i>
                     </div>
                 </div>
                 <div class="survey-texts">
@@ -171,5 +172,11 @@
     <!-- Footer Section Start -->
     <?php include("footer.inc.php"); ?>
 </body>
+<script src="uebersicht.ts" defer> 
+    document.querySelector('#write1').addEventListener("click", alertWrite) 
 
+function alertWrite(){
+   alert("ALERT WRITE")
+    console.log("TEST123")
+}</script>
 </html>
