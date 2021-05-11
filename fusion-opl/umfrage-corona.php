@@ -71,43 +71,69 @@
                 <!-- </div> -->
                 <sf-title tvalue="Erhebung zum Thema Corona - Die Gefühlslage in Coronazeiten"></sf-title>
 
-                <sf-question value="Geschlecht?"></sf-question>
-                <div class="radio-kasten platzhalter">
-                    <sf-radio class="platzhalter" value="Männlich"></sf-radio>
-                    <sf-radio class="platzhalter" value="Weiblich"></sf-radio>
-                    <sf-radio class="platzhalter" value="Divers"></sf-radio>
+                <div class="spaceToPrior">
+                    <sf-question value="Geschlecht?"></sf-question>
+                    <div class="radio-kasten platzhalter">
+                        <sf-radio class="platzhalter" value="Männlich"></sf-radio>
+                        <sf-radio class="platzhalter" value="Weiblich"></sf-radio>
+                        <sf-radio class="platzhalter" value="Divers"></sf-radio>
+                    </div>
                 </div>
 
-                <sf-question value="Dein Alter in Jahren"></sf-question>
-                <sf-text-area class="platzhalter"></sf-text-area>
-
-                <sf-question value="Mir geht es..."></sf-question>
-                <sf-checkbox class="platzhalter" value="gut"></sf-checkbox>
-                <sf-checkbox class="platzhalter" value="mittel"></sf-checkbox>
-                <sf-checkbox class="platzhalter" value="schlecht"></sf-checkbox>
-
-                <sf-question value="Durch Corona fühle ich mich...">
-                </sf-question>
-                <sf-text-area class="platzhalter"></sf-text-area>
-
-
-                <sf-question value="Welche Strategien setzt Du ein, um mit Corona umzugehen?"></sf-question>
-                <sf-text-area class="platzhalter"></sf-text-area>
-
-                <sf-question value="Durch Corona fühle ich mich..."></sf-question>
-                <div class="radio-kasten platzhalter">
-                    <sf-radio class="platzhalter" value="wohl"></sf-radio>
-                    <sf-radio class="platzhalter" value="neutral"></sf-radio>
-                    <sf-radio class="platzhalter" value="unwohl"></sf-radio>
+                <div class="spaceToPrior">
+                    <sf-question value="Dein Alter in Jahren"></sf-question>
+                    <sf-text-area class="platzhalter"></sf-text-area>
                 </div>
 
-                <sf-question value="Welche Strategien nutzt Du, um dich im Alltag gut zu fühlen?"></sf-question>
-                <sf-text-area class="platzhalter"></sf-text-area>
+                <div class="spaceToPrior">
+                    <sf-question value="Mir geht es..."></sf-question>
+                    <div class="radio-kasten platzhalter">
+                        <sf-radio class="platzhalter" value="gut"></sf-radio>
+                        <sf-radio class="platzhalter" value="mittel">
+                        </sf-radio>
+                        <sf-radio class="platzhalter" value="schlecht">
+                        </sf-radio>
+                    </div>
+                </div>
 
-                <sf-question class="platzhalter" value="Wegen Corona bin ich…"></sf-question>
-                <sf-checkbox class="platzhalter" value="entspannt"></sf-checkbox>
-                <sf-checkbox class="platzhalter" value="neutral"></sf-checkbox>
-                <sf-checkbox class="platzhalter" value="gestresst"></sf-checkbox>
+                <div class="spaceToPrior">
+                    <sf-question value="Durch Corona fühle ich mich..."></sf-question>
+                    <div class="radio-kasten platzhalter">
+                        <sf-radio class="platzhalter" value="besser"></sf-radio>
+                        <sf-radio class="platzhalter" value="wie immer"></sf-radio>
+                        <sf-radio class="platzhalter" value="schlechter"></sf-radio>
+                    </div>
+                </div>
+
+                <div class="spaceToPrior">
+                    <sf-question value="Welche Strategien nutzt Du, um dich im Alltag trotz Corona gut zu fühlen?">
+                    </sf-question>
+                    <sf-text-area class="platzhalter"></sf-text-area>
+                </div>
+
+                <div class="spaceToPrior">
+                    <sf-question value="Welche positiven Dinge kannst du für dich aus der Situation mit Corona ziehen?">
+                    </sf-question>
+                    <sf-checkbox class="platzhalter" value="Mehr Zeit mich auf mich selbst zu konzentrieren">
+                    </sf-checkbox>
+                    <sf-checkbox class="platzhalter" value="Weniger Druck durch soziale Verpflichtungen"></sf-checkbox>
+                    <sf-checkbox class="platzhalter" value="Mehr selbstgekochtes Essen"></sf-checkbox>
+                    <sf-checkbox class="platzhalter" value="Mehr Zeit für (neue) Hobbys"></sf-checkbox>
+                    <sf-checkbox class="platzhalter"
+                        value="Mehr Kontakt zu Freunden und Bekannten, die weit entfernt wohnen"></sf-checkbox>
+                    <sf-checkbox class="platzhalter" value="Weniger Termine"></sf-checkbox>
+                    <sf-checkbox class="platzhalter" value="Andere halten an der Kasse mehr Abstand"></sf-checkbox>
+                    <sf-checkbox class="platzhalter" value="Mein technisches Wissen hat sich erweitert"></sf-checkbox>
+                    <sf-checkbox class="platzhalter" value="Ich kann im Homeoffice arbeiten"></sf-checkbox>
+                </div>
+
+                <div class="spaceToPrior">
+                    <sf-question value="Das würde ich mir im Zusammenhang mit Corona wünschen...">
+                    </sf-question>
+                    <sf-text-area class="platzhalter"></sf-text-area>
+                </div>
+
+
 
             </div>
             <a href="abschlussseite-teilnahme.php" class="btn btn-common">Antwort speichern</a>

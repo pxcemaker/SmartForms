@@ -74,6 +74,10 @@ ol {
   padding: 0;
 }
 
+.spaceToPrior {
+  margin-top: 60px;
+}
+
 .radio-kasten {
   background-color: #fff;
   border-radius: 10px;
