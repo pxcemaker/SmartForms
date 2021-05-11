@@ -72,9 +72,9 @@
               <sf-question value="Erhebung zum Thema Corona - Die Gefühlslage in Coronazeiten"></sf-question>
 
               <sf-question value="Geschlecht?"></sf-question>
-              <sf-checkbox class="platzhalter" value="Männlich"></sf-checkbox>
-              <sf-checkbox class="platzhalter" value="Weiblich"></sf-checkbox>
-              <sf-checkbox  class="platzhalter"value="Divers"></sf-checkbox>
+              <sf-radio class="platzhalter"value="Männlich"></sf-radio>
+              <sf-radio class="platzhalter"value="Weiblich"></sf-radio>
+              <sf-radio class="platzhalter"value="Divers"></sf-radio>
 
               <sf-question value="Dein Alter in Jahren"></sf-question>
               <sf-text-area class="platzhalter"></sf-text-area>
@@ -87,7 +87,17 @@
               <sf-question value="Durch Corona fühle ich mich..."></sf-question>
               <sf-text-area class="platzhalter"></sf-text-area>
 
-            
+              <sf-question value="Welche Strategien setzt Du ein, um mit Corona umzugehen?"></sf-question>
+              <sf-text-area class="platzhalter"></sf-text-area>
+
+              <sf-question value="Durch Corona fühle ich mich..."></sf-question>
+              <sf-radio class="platzhalter"value="entspannt"></sf-radio>
+              <sf-radio class="platzhalter"value="normal"></sf-radio>
+              <sf-radio class="platzhalter"value="gestresst"></sf-radio>
+
+              <sf-question value="Welche Strategien nutzt Du im Alltag, um dich im Alltag gut zu fühlen?"></sf-question>
+              <sf-text-area class="platzhalter"></sf-text-area>
+
             </div>
             <a href="abschlussseite-teilnahme.php" class="btn btn-common">Antwort speichern</a>
         </div>
