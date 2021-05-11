@@ -1,10 +1,13 @@
-<?php
-include_once 'includes/dbh.inc.php';
-?> 
-
 <!DOCTYPE html>
 <html lang="en">
+<style> 
 
+ .platzhalter{
+    margin: 5px;
+    display: block;
+    width: 50%;
+  }
+  </style>
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -40,7 +43,7 @@ include_once 'includes/dbh.inc.php';
         <div class="row">
           <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
             <!-- <div class="contents"> -->
-            <h2 class="head-title"> <br> <br>UMFRAGE<br>ERSTELLEN.<br> </h2>
+            <h2 class="head-title"> <br> <br>CORONA<br>UMFRAGE<br> </h2>
             <!-- <p>Umfrage-Tool zur Messung von Marktforschung, <br>Kundenzufriedenheit, Mitarbeiterbeurteilung und <br>vieles mehr.</p> -->
             <!-- <div class="header-button">
                   <a href="#" class="btn btn-border" id="start-btn">LOSLEGEN</i></a>
@@ -62,19 +65,19 @@ include_once 'includes/dbh.inc.php';
   
   <section id="services" class="section-padding">
         <div class="container">
-            <div class="row">
+            <div class="column">
               <!-- <div class="checkbox-container"> -->
-                <sf-editformarea></sf-editformarea>
+                <!--<sf-editformarea></sf-editformarea> -->
               <!-- </div> -->
               <sf-question value="Erhebung zum Thema Corona - Die Gefühlslage in Coronazeiten"></sf-question>
 
               <sf-question value="Geschlecht?"></sf-question>
-              <sf-checkbox value="Männlich"></sf-checkbox>
-              <sf-checkbox value="Weiblich"></sf-checkbox>
-              <sf-checkbox value="Divers"></sf-checkbox>
+              <sf-radio class="platzhalter"value="Männlich"></sf-radio>
+              <sf-radio class="platzhalter"value="Weiblich"></sf-radio>
+              <sf-radio class="platzhalter"value="Divers"></sf-radio>
 
               <sf-question value="Dein Alter in Jahren"></sf-question>
-              <sf-input-text></sf-input-text>
+              <sf-text-area class="platzhalter"></sf-text-area>
 
               <sf-question value="Mir geht es..."></sf-question>
               <sf-checkbox value="gut"></sf-checkbox>
@@ -82,9 +85,19 @@ include_once 'includes/dbh.inc.php';
               <sf-checkbox value="schlecht"></sf-checkbox>
 
               <sf-question value="Durch Corona fühle ich mich..."></sf-question>
-              <sf-input-text></sf-input-text>
+              <sf-text-area class="platzhalter"></sf-text-area>
 
-            
+              <sf-question value="Welche Strategien setzt Du ein, um mit Corona umzugehen?"></sf-question>
+              <sf-text-area class="platzhalter"></sf-text-area>
+
+              <sf-question value="Durch Corona fühle ich mich..."></sf-question>
+              <sf-radio class="platzhalter"value="entspannt"></sf-radio>
+              <sf-radio class="platzhalter"value="normal"></sf-radio>
+              <sf-radio class="platzhalter"value="gestresst"></sf-radio>
+
+              <sf-question value="Welche Strategien nutzt Du im Alltag, um dich im Alltag gut zu fühlen?"></sf-question>
+              <sf-text-area class="platzhalter"></sf-text-area>
+
             </div>
             <a href="abschlussseite-teilnahme.php" class="btn btn-common">Antwort speichern</a>
         </div>

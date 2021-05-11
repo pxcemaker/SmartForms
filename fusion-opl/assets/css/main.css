@@ -89,6 +89,15 @@ p {
   margin: 0px;
   font-size: 14px;
   margin-top: 30px;
+  
+}
+p1 {
+  font-weight: 400;
+  font-family: 'Roboto','Open Sans', sans-serif;
+  margin: 0px;
+  font-size: 14px;
+  float: left;
+  text-align: left;
 }
 
 ul, ol {
