@@ -14,7 +14,7 @@
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                         <div class="textwidget">
-                            <p><a href="impressum.html">IMPRESSUM</a> / <a href="datenschutz.html">DATENSCHUTZ</a></p>
+                            <p><a href="impressum.php">IMPRESSUM</a> / <a href="datenschutz.php">DATENSCHUTZ</a></p>
                         </div>
                     </div>
                 </div>
