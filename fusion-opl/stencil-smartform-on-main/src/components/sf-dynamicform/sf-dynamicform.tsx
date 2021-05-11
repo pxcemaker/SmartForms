@@ -128,11 +128,11 @@ export class SfDynamicform {
       this.result = this.radioMap;
       this.radioIdNmbr + 1;
       return (
-        <form>
+        <div class="radio-kasten">
           {this.radioMap.map(radiodef => (
             <sf-radio radio-Id={this.radioIdNmbr} value={radiodef.value} radio-Name={'radio'} radioGroup="group"></sf-radio>
           ))}
-        </form>
+        </div>
       );
     } else if (this.radio == 'rtx') {
       this.result = '';
@@ -249,6 +249,12 @@ export class SfDynamicform {
                 <a href="#" class="btn btn-common" onClick={ev => this.verschwinde(ev)}>
                   Speichern
                 </a>
+                <div class="tooltip">
+                  <div class="infocircle">
+                    <p>i</p>
+                  </div>
+                  <span class="tooltiptext">Speichere deine fertige Frage hier, damit sie später in der Umfrage gespeichert werden kann.</span>
+                </div>
               </div>
             </form>
           </div>
