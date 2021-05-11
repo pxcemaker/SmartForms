@@ -98,9 +98,7 @@ export class SfDynamicform {
     } else if (this.radio == 'radio') {
       return (
         <div class="item-1-3 answers">
-          <fieldset>
-            {this.returnEmptyRadio()} <sf-adddynform value="+" id="addBtn" onIsClicked={() => this.addAns()}></sf-adddynform>
-          </fieldset>
+          {this.returnEmptyRadio()} <sf-adddynform value="+" id="addBtn" onIsClicked={() => this.addAns()}></sf-adddynform>
         </div>
       );
     } else if (this.radio == 'bilder') {
