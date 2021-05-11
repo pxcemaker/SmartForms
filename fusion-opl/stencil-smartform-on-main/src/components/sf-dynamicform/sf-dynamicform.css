@@ -144,8 +144,9 @@ h2 {
 .tooltip .tooltiptext {
   visibility: hidden;
   width: 180px;
-  background-color: black;
-  color: #fff;
+  background-color: #fff;
+  border: #e99d42 2px solid;
+  color: #3b2878;
   /* text-align: center; */
   padding: 5px 10px;
   border-radius: 6px;

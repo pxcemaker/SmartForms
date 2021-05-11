@@ -47,7 +47,7 @@
 
         <sf-addformbutton></sf-addformbutton>
         <h2>
-          angefangene Umfragen
+          unveröffentlichte Umfragen
             </h2>
         <div class="survey-grid-container">
         
@@ -99,7 +99,7 @@
 
         
         <h2>
-         laufende Umfragen
+         veröffentlichte Umfragen
             </h2>
         <div class="survey-grid-container">
         

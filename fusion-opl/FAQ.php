@@ -144,9 +144,9 @@
                     <div class="services-item ">
                         <button class="accordion">Wie sende ich meine Umfragen weiter?</button>
                         <div class="panel">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            <p1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p1>
                         </div>
                     </div>
                 </div>
