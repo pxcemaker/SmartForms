@@ -65,6 +65,9 @@ include_once 'includes/dbh.inc.php';
             <div class="row">
               <!-- <div class="checkbox-container"> -->
                 <sf-editformarea></sf-editformarea>
+                <a href="#" class="btn btn-common">
+                Antworten speichern
+              </a>
               <!-- </div> -->
               <sf-question value="Das ist meine Frage"></sf-question>
               <sf-text-area></sf-text-area>
