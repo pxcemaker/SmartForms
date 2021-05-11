@@ -1564,6 +1564,12 @@ textarea {
   z-index: -10;
 
 }
+#sliderabschluss{
+  padding-left: 550px;
+  margin-top: -100px;
+  z-index: -10;
+
+}
 #sliderTitel
 {
   padding-top: 100px;
