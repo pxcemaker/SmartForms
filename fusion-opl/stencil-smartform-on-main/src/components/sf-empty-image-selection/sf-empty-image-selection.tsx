@@ -2,8 +2,7 @@ import { Component, EventEmitter, h, State, Event } from '@stencil/core';
 
 @Component({
   tag: 'sf-empty-image-selection',
-  styleUrl: 'sf-empty-image-selection.css',
-  shadow: true,
+  styleUrl: 'sf-empty-image-selection.css'
 })
 export class SfEmptyImageSelection {
   

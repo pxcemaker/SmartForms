@@ -186,7 +186,7 @@ export class SfDynamicform {
                 <sf-questionempty onQuestionInput={ev => (this.question = ev.detail)}></sf-questionempty>
               </div>
               <div class="item-1-2 grid-container marg-top">
-                <sf-descriptionempty onDescriptionInput={ev => (this.question = ev.detail)}></sf-descriptionempty>
+                <sf-descriptionempty onDescriptionInput={ev => (this.description = ev.detail)}></sf-descriptionempty>
               </div>
 
               <div class="item-2-2 grid-container" id="grid">
