@@ -136,7 +136,9 @@
 
 
             </div>
-            <a href="abschlussseite-teilnahme.php" class="btn btn-common">Antwort speichern</a>
+            <div class="spaceToPrior spaceToNext">
+                <a href="abschlussseite-teilnahme.php" class="btn btn-common">Antwort speichern</a>
+            </div>
         </div>
     </section>
 

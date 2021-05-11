@@ -77,6 +77,9 @@ ol {
 .spaceToPrior {
   margin-top: 60px;
 }
+.spaceToNext {
+  margin-bottom: 60px;
+}
 
 .radio-kasten {
   background-color: #fff;
