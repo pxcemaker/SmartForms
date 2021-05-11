@@ -91,12 +91,17 @@
               <sf-text-area class="platzhalter"></sf-text-area>
 
               <sf-question value="Durch Corona fühle ich mich..."></sf-question>
-              <sf-radio class="platzhalter"value="entspannt"></sf-radio>
-              <sf-radio class="platzhalter"value="normal"></sf-radio>
-              <sf-radio class="platzhalter"value="gestresst"></sf-radio>
+              <sf-radio class="platzhalter"value="wohl"></sf-radio>
+              <sf-radio class="platzhalter"value="neutral"></sf-radio>
+              <sf-radio class="platzhalter"value="unwohl"></sf-radio>
 
-              <sf-question value="Welche Strategien nutzt Du im Alltag, um dich im Alltag gut zu fühlen?"></sf-question>
+              <sf-question value="Welche Strategien nutzt Du, um dich im Alltag gut zu fühlen?"></sf-question>
               <sf-text-area class="platzhalter"></sf-text-area>
+
+              <sf-question value="Wegen Corona bin ich…"></sf-question>
+              <sf-checkbox value="entspannt"></sf-checkbox>
+              <sf-checkbox value="neutral"></sf-checkbox>
+              <sf-checkbox value="gestresst"></sf-checkbox>
 
             </div>
             <a href="abschlussseite-teilnahme.php" class="btn btn-common">Antwort speichern</a>
