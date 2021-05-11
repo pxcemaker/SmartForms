@@ -7,9 +7,10 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type      | Default |
-| -------- | --------- | ----------- | --------- | ------- |
-| `isOpen` | `is-open` |             | `boolean` | `false` |
+| Property | Attribute | Description | Type      | Default           |
+| -------- | --------- | ----------- | --------- | ----------------- |
+| `ftitle` | `ftitle`  |             | `string`  | `'Deine Umfrage'` |
+| `isOpen` | `is-open` |             | `boolean` | `false`           |
 
 
 ## Methods
@@ -30,12 +31,16 @@ Type: `Promise<void>`
 ### Depends on
 
 - [sf-dynamicform](../sf-dynamicform)
+- [sf-title](../sf-title)
+- [sf-title-empty](../sf-title-empty)
 - [sf-adddynform](../sf-adddynform)
 
 ### Graph
 ```mermaid
 graph TD;
   sf-editformarea --> sf-dynamicform
+  sf-editformarea --> sf-title
+  sf-editformarea --> sf-title-empty
   sf-editformarea --> sf-adddynform
   sf-dynamicform --> sf-emptycheckbox
   sf-dynamicform --> sf-radioempty

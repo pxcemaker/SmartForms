@@ -256,7 +256,7 @@ export class SfDynamicform {
                   <div class="infocircle">
                     <p>i</p>
                   </div>
-                  <span class="tooltiptext">Speichere deine fertige Frage hier, damit sie später in der Umfrage gespeichert werden kann.</span>
+                  <span class="tooltiptext">Speichern Sie Ihre fertige Frage hier, damit sie später in der Umfrage gespeichert werden kann.</span>
                 </div>
               </div>
             </form>
