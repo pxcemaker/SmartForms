@@ -109,6 +109,17 @@
                 <sf-checkbox class="platzhalter" value="neutral"></sf-checkbox>
                 <sf-checkbox class="platzhalter" value="gestresst"></sf-checkbox>
 
+                <sf-question value="Welche Faktoren belasten dich in der momentanen Situation mit Corona?"></sf-question>
+                <div class="radio-kasten platzhalter">
+                    <sf-radio class="platzhalter" value="reduzierte soziale Kontakte"></sf-radio>
+                    <sf-radio class="platzhalter" value="Angst um die Gesundheit anderer"></sf-radio>
+                    <sf-radio class="platzhalter" value="Angst um die eigene Gesundheit"></sf-radio>
+                    <sf-radio class="platzhalter" value="keine Möglichkeit Cafes, Bars oder Restaurants zu besuchen"></sf-radio>
+                    <sf-radio class="platzhalter" value="Erschwertes lokales Einkaufen"></sf-radio>
+                    <sf-radio class="platzhalter" value="Das Einhalten einer höheren Anzahl an Hygieneregeln"></sf-radio>
+                    <sf-radio class="platzhalter" value="Ungewissheit über eigene Impfsituation"></sf-radio>
+                </div>
+
             </div>
             <a href="abschlussseite-teilnahme.php" class="btn btn-common">Antwort speichern</a>
         </div>
