@@ -128,11 +128,11 @@ export class SfDynamicform {
       this.result = this.radioMap;
       this.radioIdNmbr + 1;
       return (
-        <form>
+        <div class="radio-kasten">
           {this.radioMap.map(radiodef => (
             <sf-radio radio-Id={this.radioIdNmbr} value={radiodef.value} radio-Name={'radio'} radioGroup="group"></sf-radio>
           ))}
-        </form>
+        </div>
       );
     } else if (this.radio == 'rtx') {
       this.result = '';
