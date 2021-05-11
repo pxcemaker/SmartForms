@@ -67,7 +67,7 @@ export class SfEditformarea {
           </div>
           <div class={this.isOpen ? 'hidden' : 'visible'}>
             <div class="title-input">
-              <h2>Frage erstellen</h2>
+              <h2>Umfragetitel ändern</h2>
                     <div class="tooltip">
                       <div class="infocircle">
                         <p>i</p>
