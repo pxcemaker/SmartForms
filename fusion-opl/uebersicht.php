@@ -26,9 +26,9 @@
                 </div>
             </div>
             <div class="profile-grid-item">
-                <button class="btn btn-common settings">Profilbild bearbeiten</button>
+                <button  id ="bild" class="btn btn-common settings">Profilbild bearbeiten</button>
             </div>
-            <div class="profile-grid-item">
+            <div id="daten" class="profile-grid-item">
                 <button class="btn btn-common settings">
                     Profildaten bearbeiten
                 </button>

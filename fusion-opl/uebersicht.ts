@@ -17,3 +17,9 @@ document.querySelectorAll('#bar').forEach(div => {
         alert("Da das eine Beta Version von SmartForm ist, kommst du hier leider nicht weiter. Mit dem Statistik-Symbol könntest du die Antworten deiner Umfragen einsehen.");
     });
 });
+document.querySelector("#bild").addEventListener("click", function(){
+    alert("Da das eine Beta Version von SmartForm ist, kommst du hier leider nicht weiter. Hier könntest du dein Profilbild bearbeiten.")
+})
+document.querySelector("#daten").addEventListener("click", function(){
+    alert("Da das eine Beta Version von SmartForm ist, kommst du hier leider nicht weiter. Hier könntest du dein Profildaten bearbeiten.")
+})
